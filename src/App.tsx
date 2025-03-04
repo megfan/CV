@@ -1,0 +1,25 @@
+import React from 'react';
+import './styles/App.css';
+import { SideBar } from './pages/main/SideBar';
+import { MenuBar } from './pages/main/MenuBar';
+import {StartPage} from './pages/main/corePages/StartPage'
+import {AboutPage} from './pages/main/corePages/AboutPage'
+import {Education} from './pages/main/corePages/Education'
+import {Experience} from './pages/main/corePages/Experience'
+
+function App() {
+  return (
+    <div className="flex w-full">
+      <SideBar/>
+      <div className='w-full flex flex-col m-0 p-0'>
+        <MenuBar/>
+        <StartPage/>
+        <AboutPage/>
+        <Education/>
+        <Experience/>
+      </div>
+    </div>
+  );
+}
+
+export default App;

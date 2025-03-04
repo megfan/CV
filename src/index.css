@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import './styles/App.css';
+@import './styles/MainPage.css';
+
+@theme {  
+  --color-darkPrimary: #2a2a2e;
+  --color-darkSec: #2C2D32;
+  --color-primary: #42c3bc;
+  --width-withSideBar: calc(100% -6rem);
+}
+
+
+html,body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Titilium", "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  width: 100%;
+}
+
+:root{
+  --dark-primary: #393939;
+  --primary: #42c3bc;
+  --secondary: #f2545b;
+  --light_primary: #fafaff;
+  --light-secondary: #c9c9c9;
+  --light-tertiary: #808080;
+  --grey: #565656;
+  --container: 1500px;
+}

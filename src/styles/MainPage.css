@@ -1,0 +1,164 @@
+.mainPage{
+    font-size: calc(10px + 2vmin);
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    height: calc(100vh - 6rem);
+}
+
+.menu_item {
+    padding: 10px;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 14px; 
+    font-weight: 600; 
+    display: flex;
+}
+.menuBarItem {
+    @apply float-left mr-20 ml-4 flex font-semibold tracking-wide items-center; 
+    transition: all 700ms linear;
+}
+.menuBarItem:hover {
+    color: #42c3bc;
+}
+
+.menuBarItem:hover:before {
+    background-color: #42c3bc;
+}
+.menuBarItem:before {
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: #6a7282;
+    position: relative;
+    right: 10px;
+    transition: all 700ms linear;
+}
+
+.burger:hover  span {
+    width: 100%;
+}
+.burgerItem {
+    height: 2px;
+    background: #42c3bc;
+    margin-bottom: 8px;
+    transition: all .2s ease-in-out;
+}
+
+.classicText {
+    @apply uppercase text-gray-400 text-xs;
+}
+
+.btnWIthBorders {
+    @apply h-full font-semibold tracking-wider;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 300ms linear;
+
+}
+.btnWIthBorders:hover { 
+    color: #42c3bc;
+}
+
+.gridVisibileItem {
+    width: 1px;
+    height: auto;
+    background-color: #6565651b;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.geologicalData {
+    @apply mt-12 col-start-5 col-end-7 row-start-1 tracking-[10px] relative flex flex-col items-start ml-20;
+}
+
+.geologicalData:before {
+    content: '';
+    width: 15px;
+    height: 2px;
+    left: -2rem;
+    top: 20px;
+    margin-right: 10px;
+    background-color: #42c3bc;
+    position: absolute;
+    right: 10px;
+    transition: all 700ms linear;
+}
+
+.geologicalData :first-child {
+    color: transparent;
+    transition: all .3s ease-in-out;
+    transform: translateY(-2rem);
+}
+
+.geologicalData:hover :first-child {
+    color: #9CA3AF;
+    transform: translateY(12px);
+}
+.geologicalData :last-child {
+    color: #9CA3AF;
+    transition: all .3s ease-in-out;
+    transform: translateY(-3px);
+}
+
+.geologicalData:hover :last-child {
+    color: transparent;
+    transform: translateY(2rem);
+}
+
+.tittle:after {
+    content: '';
+    width: 4rem;
+    height: 2px;
+    left: 0;
+    bottom: -20px;
+    margin-right: 10px;
+    background-color: #42c3bc;
+    position: absolute;
+    right: 10px;
+    transition: all 700ms linear;
+}
+
+.buttonMovingRight:hover {
+    transform: translateX(2.5rem);
+    transition: all .3s ease-in-out;
+}
+.buttonMovingRight {
+    transition: all .3s ease-in-out;
+    transform: translateX(0);
+}
+
+.educationImg img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    transform: scaleX(-1);
+    filter: brightness(30%);
+}
+
+.educationSection {
+    margin-right: 3rem;
+}
+
+.educationSection p:last-child{
+     font-size: 18px;
+     color: #42c3bc;
+     font-family: Titillium;
+     font-style: italic;
+     font-weight: 600;
+}
+
+.educationSection p:first-child{
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: Titillium;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.educationSection h2{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
