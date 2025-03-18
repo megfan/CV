@@ -1,12 +1,10 @@
 import React from 'react';
-import personWithComp from '../../../assets/personWithComp.jpg';
-import laptop from '../../../assets/laptop.jpg';
 import '../../../styles/MainPage.css'
 
 export const StartPage: React.FC = () => {
 
     return (
-    <div className='mainPage bg-darkPrimary w-full m-0 p-0'>
+    <div className='mainPage gridPage bg-darkPrimary w-full m-0 p-0'>
         <div  className='classicText geologicalData'>
          <span>based in warsaw / poland</span>
          <span>52°13′N  / 21°00′ E </span>
@@ -24,8 +22,7 @@ export const StartPage: React.FC = () => {
           </div>
         </div>
         <div className='h-full self-end flex items-center col-start-3 col-end-7 row-start-2 row-end-6'>
-            {/* <img src={personWithComp} className="personWithComp" alt="personWithComp" /> */}
-            <img src={laptop} className="personWithComp" alt="personWithComp" />
+            <img src={'assets/laptop.jpg'} alt="laptop" />
         </div>
         <span className='gridVisibileItem col-start-1'/>
         <span className='gridVisibileItem col-start-2'/>

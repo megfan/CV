@@ -6,7 +6,13 @@
   --color-darkPrimary: #2a2a2e;
   --color-darkSec: #2C2D32;
   --color-primary: #42c3bc;
+  --color-lightGray: #d7d7d747;
   --width-withSideBar: calc(100% -6rem);
+  --grid-row-start-10: 10;
+  --grid-row-start-11: 11;
+  --grid-row-start-12: 12;
+  --grid-row-start-13: 13;
+  --grid-row-start-14: 14;
 }
 
 

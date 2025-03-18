@@ -5,7 +5,8 @@ import { MenuBar } from './pages/main/MenuBar';
 import {StartPage} from './pages/main/corePages/StartPage'
 import {AboutPage} from './pages/main/corePages/AboutPage'
 import {Education} from './pages/main/corePages/Education'
-import {Experience} from './pages/main/corePages/Experience'
+import {Experience} from './pages/main/corePages/Experience/Experience'
+import {Skills} from './pages/main/corePages/Skills'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <AboutPage/>
         <Education/>
         <Experience/>
+        <Skills/>
       </div>
     </div>
   );

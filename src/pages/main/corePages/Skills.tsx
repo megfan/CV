@@ -1,15 +1,15 @@
 import React from 'react';
 import '../../../styles/MainPage.css'
 
-export const Education: React.FC = () => {
+export const Skills: React.FC = () => {
 
     return (
-    <div className='bg-white mainPage gridPage w-full relative'>
+    <div className='bg-primary grid w-full relative h-[130vh]'>
     
         <div className='z-10 flex flex-col text-white -ml-20 mt-24 mr-20 col-start-2 col-end-7 row-start-1 text-sm '>
             <span className='text-gray-400'>Intellectual growth should commence at birth <br/> and cease only at death – Albert Einstein</span>
             <h1 className='text-2xl font-bold mb-12 mt-2 relative tittle'>How it 
-                <span className='text-primary text-4xl font-[Titillium] lowercase italic'> started </span></h1>
+                <span className='text-primary text-4xl font-[Titillium] lowercase italic'> XX </span></h1>
             <div className='flex mt-12'>
                 <div className='educationSection'>
                     <p>2017 - 2018</p>
@@ -41,9 +41,9 @@ export const Education: React.FC = () => {
 
         <div className='bg-darkPrimary h-full w-full col-start-1 col-end-4 row-start-1 row-end-5'/>
         <div className="educationImg -ml-1 col-start-4 col-end-7 row-start-1 row-end-4 bg-center">
-            <img src={'assets/education.jpg'} alt="education" />
+            <img src={'assets/skills.jpg'} alt="skills" />
         </div>
-        <p className='text-[12rem] col-start-2 -ml-32 col-end-8 row-start-2 text-[#acacac1f] font-black z-10'>Education</p>
+        <p className='text-[12rem] col-start-2 -ml-32 col-end-8 row-start-2 text-[#acacac1f] font-black z-10'>Skills</p>
     </div>
     )
 }

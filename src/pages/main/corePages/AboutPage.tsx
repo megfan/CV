@@ -1,13 +1,12 @@
 import React from 'react';
-import aboutMe from '../../../assets/AboutMe.jpg';
 import '../../../styles/MainPage.css'
 
 export const AboutPage: React.FC = () => {
 
     return (
-    <div className='bg-white mainPage w-full relative'>
+    <div className='bg-white mainPage gridPage w-full relative'>
        <div className='z-10 h-auto w-1/4 flex items-start col-start-2 col-end-7 row-start-2 row-end-6 relative'>
-            <img src={aboutMe} className="z-10" alt="aboutMe" />
+            <img src={'assets/AboutMe.jpg'} className="z-10" alt="aboutMe" />
             <div className='bg-primary h-96 w-24 p-12 col-start-1 absolute top-0 left-0 -ml-10 mt-4'/>
         </div>
         <div className='z-10 flex flex-col text-darkPrimary -ml-20 mt-10 col-start-4 col-end-6 row-start-2 text-sm '>

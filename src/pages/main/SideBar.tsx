@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
+import logo from '../../images/logo.svg';
 import '../../styles/MainPage.css'
 
 export const SideBar: React.FC = () => {
