@@ -1,10 +1,20 @@
-import React from 'react';
-import '../../../styles/MainPage.css'
+import React, { useRef } from 'react';
+import '../../../styles/MainPage.css';
+import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
 
 export const Skills: React.FC = () => {
 
+    
+    const ref = useRef(null);
+      const { scrollYProgress } = useScroll({
+            target: ref,
+            offset: ["start start", "end 80%"]
+        });
+
+    const paralaxScale = useTransform(scrollYProgress, [0,1], ["0", "95%"]);
+
     return (
-    <div className='w-full relative h-[130vh] flex flex-col items-start justify-start'>
+    <div className='w-full relative h-screen flex flex-col items-start justify-start pt-40' id="skills" ref={ref}>
 
         <header className=' w-full flex items-start justify-between'>
             <div className=" w-full h-[40vh] bg-center m-0 brightness-90"
@@ -13,9 +23,7 @@ export const Skills: React.FC = () => {
                     backgroundPosition: "bottom",
                     backgroundSize: "cover"
                 }}
-            >
-                {/* <img src={'assets/skill.jpg'} alt="skills" /> */}
-            </div>
+            />
             <div className='z-10 p-30 w-full bg-darkPrimary h-[45vh] flex-col text-white items-start text-sm'>
                 <span className='text-gray-400'>The only source of knowledge is experience - Albert Einstein</span>
                 <h1 className='text-2xl font-bold mb-12 mt-2 relative tittle'>My 
@@ -39,11 +47,19 @@ export const Skills: React.FC = () => {
                 <div className='mt-8 flex flex-col w-full font-medium text-base'>
                     <div className='flex justify-between'>
                         <h2>REACT</h2>
-                        <h2>95%</h2>
+                        <motion.h2 
+                        >95%</motion.h2>
                     </div>
                     <div className='relative w-full h-2'>
-                        <div className='absolute bg-primary w-[95%] h-2 my-3 '/>
-                        <div className='bg-darkPrimary w-full h-2 my-3 '/>
+                        <motion.div 
+                         whileInView={{ width: "95%" }}
+                         initial={{ width: 0 }}
+                           transition={{
+                            type: "tween",
+                               duration: 1,
+                           }}
+                            className='relative bg-primary w-[95%] h-2 my-3 '/>
+                        {/* <div className='bg-darkPrimary w-full h-2 my-3 '/> */}
                     </div>
                 </div>
                 <div className='mt-8 flex flex-col w-full font-medium text-base'>

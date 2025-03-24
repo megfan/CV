@@ -6,7 +6,7 @@ import {experienceDataLeft} from './experienceData';
 export const Experience: React.FC = () => {
 
     return (
-    <div className='bg-white experiencePage w-full relative'>
+    <div className='bg-white experiencePage w-full relative pt-40' id="experience">
         <span className='relative bg-gray-300 col-start-3 row-start-1 row-end-19 z-20 h-full w-[1px]'/>
        
        <div className='h-auto w-1/4 flex items-start col-start-2 col-end-6 row-start-1 row-end-6 relative'>

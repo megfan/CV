@@ -148,7 +148,7 @@
     transform: translateX(0);
 }
 
-.educationImg img {
+.educationImg {
     height: auto;
     width: 100%;
     object-fit: contain;

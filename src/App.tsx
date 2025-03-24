@@ -7,18 +7,21 @@ import {AboutPage} from './pages/main/corePages/AboutPage'
 import {Education} from './pages/main/corePages/Education'
 import {Experience} from './pages/main/corePages/Experience/Experience'
 import {Skills} from './pages/main/corePages/Skills'
+import { BrowserRouter } from 'react-router';
 
 function App() {
   return (
     <div className="flex w-full">
       <SideBar/>
       <div className='w-full flex flex-col m-0 p-0'>
-        <MenuBar/>
-        <StartPage/>
-        <AboutPage/>
-        <Education/>
-        <Experience/>
-        <Skills/>
+        <BrowserRouter>
+          <MenuBar/>
+          <StartPage/>
+          <AboutPage/>
+          <Education/>
+          <Experience/>
+          <Skills/>
+        </BrowserRouter>
       </div>
     </div>
   );

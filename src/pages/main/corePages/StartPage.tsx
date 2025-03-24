@@ -1,10 +1,21 @@
-import React from 'react';
-import '../../../styles/MainPage.css'
+import React, { useRef } from 'react';
+import '../../../styles/MainPage.css';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const StartPage: React.FC = () => {
 
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end start"]
+    });
+
+    const paralax1 = useTransform(scrollYProgress, [0,1], ["0", "100%"]);
+
     return (
-    <div className='mainPage gridPage bg-darkPrimary w-full m-0 p-0'>
+    <div 
+        ref={ref}
+        className='mainPage gridPage bg-darkPrimary w-full m-0 p-0'>
         <div  className='classicText geologicalData'>
          <span>based in warsaw / poland</span>
          <span>52°13′N  / 21°00′ E </span>
@@ -21,9 +32,15 @@ export const StartPage: React.FC = () => {
               I create web and graphic design
           </div>
         </div>
-        <div className='h-full self-end flex items-center col-start-3 col-end-7 row-start-2 row-end-6'>
-            <img src={'assets/laptop.jpg'} alt="laptop" />
-        </div>
+       
+        <motion.div className=" h-full col-start-3 col-end-7 row-start-2 row-end-5 bg-center"
+                style={{
+                    backgroundImage: `url(assets/laptop.jpg)`,
+                    backgroundPosition: "bottom",
+                    backgroundSize: "cover",
+                    y: paralax1
+                }}
+            />
         <span className='gridVisibileItem col-start-1'/>
         <span className='gridVisibileItem col-start-2'/>
         <span className='gridVisibileItem col-start-3'/>
