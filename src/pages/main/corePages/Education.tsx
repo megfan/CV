@@ -1,5 +1,6 @@
 import React from 'react';
-import '../../../styles/MainPage.css'
+import '../../../styles/MainPage.css';
+import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
 
 export const Education: React.FC = () => {
 
@@ -40,13 +41,9 @@ export const Education: React.FC = () => {
         </div>
 
         <div className='bg-darkPrimary h-full w-full col-start-1 col-end-4 row-start-1 row-end-6'/>
-        <div className="educationImg col-start-4 col-end-7 row-start-1 row-end-6 bg-center"
-                style={{
-                    backgroundImage: `url(assets/education.jpg)`,
-                    backgroundPosition: "bottom",
-                    backgroundSize: "cover"
-                }}
-            />
+        <ParallaxPicFrame 
+            styles={'educationImg col-start-4 col-end-7 row-start-1 row-end-6 bg-center relative overflow-hidden'} 
+            src={'assets/education.jpg'}/>
         <p className='text-[12rem] col-start-2 -ml-32 col-end-8 row-start-3 -mt-10 text-[#4949491f] font-black z-10'>Education</p>
     </div>
     )

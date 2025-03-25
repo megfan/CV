@@ -130,7 +130,7 @@
 
 .beforeVertical:before {
     content: '';
-    width: 2px;
+    width: 4px;
     height: 10rem;
     left: 0;
     top: -20px;
@@ -205,4 +205,22 @@
     right: -2rem;
     top: 15px;
     float: right;
+}
+
+.chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    /* background: #42c3bc conic-gradient( from 0deg at 50% 50%, #42c3bc 0deg 190deg, rgb(235, 235, 235) 190deg 360deg) */
+}
+.chart::after {
+    content: "";
+    display: block;
+    background: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
 }
