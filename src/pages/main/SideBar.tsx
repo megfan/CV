@@ -17,7 +17,7 @@ export const SideBar: React.FC = () => {
           <div>MENU</div>
          </button>
         </div>
-        <button className='w-full h-16 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'>SHARE</button>
+        <button className='w-full h-30 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'>SHARE</button>
     </div>
     )
 }

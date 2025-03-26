@@ -16,7 +16,7 @@ export const Skills: React.FC = () => {
     const paralax1 = useTransform(scrollYProgress, [0,1], ["200%", "-200%"]);
     
     return (
-    <div className='w-full relative h-auto flex flex-col items-start justify-start pt-40' 
+    <div className='w-full relative h-auto flex flex-col items-start justify-start py-40' 
          id="skills" 
          ref={ref}>
         <header className=' w-full flex items-start justify-between'>
@@ -37,7 +37,7 @@ export const Skills: React.FC = () => {
                 </motion.p>
             </div>
         </header>
-        <main className='mx-30 my-20 gridPage w-full h-screen'>
+        <main className='px-30 my-20 gridPage w-full h-screen'>
             <section className='col-start-1 col-end-6 row-start-1 row-end-3 w-full h-full'>
                 <h1 className='text-2xl font-bold my-10 pl-10 relative h-[30px] beforeVertical'>Developer skills</h1>
                 <div className='ml-10 col-start-1 col-end-6 row-start-2 row-end-4 flex justify-between'>
@@ -69,15 +69,6 @@ export const Skills: React.FC = () => {
                     </div>
                     })}
                     </div>
-                {/* <motion.div 
-                        className='absolute bg-primary w-full h-2 my-3 z-10'
-                        //  whileInView={{ width: "95%" }}
-                        initial={{ width: 0 }}
-                        transition={{
-                            type: "tween",
-                            duration: 1,
-                        }}
-                        style={{width: `${e.percent}%`}}/> */}
                 </div>
             </section>
             <section className='mt-30 col-start-2 col-end-6 row-start-4 row-end-5 w-full h-full relative'>
@@ -123,7 +114,7 @@ export const Skills: React.FC = () => {
                 <span className='gridVisibileItem col-start-6'/>
                  <motion.div  
                     style={{ y: paralax1 }} 
-                    className='w-full col-start-1 col-end-6 row-start-2 row-end-7 flex flex-col align-start'>
+                    className='w-auto col-start-1 col-end-6 row-start-2 row-end-7 flex flex-col align-start'>
                          <p className='text-[12rem]  text-[#b6b6b61f] font-black uppercase'>Achievements</p>
                          <div className='w-40 h-20 bg-[#b6b6b61f] self-end'/>
                          <div className='w-40 h-20 mt-20 pt-40 bg-[#b6b6b61f] self-start'/>

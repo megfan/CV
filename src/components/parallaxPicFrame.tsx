@@ -22,7 +22,7 @@ export const ParallaxPicFrame: React.FC<ParallaxPicFrameProps> = ({styles, src})
             backgroundPosition: "center",
             backgroundSize: "cover"
       }}>
-        <motion.img src={src} className="z-10 block scale-150" alt="aboutMe" style={{y: paralax1}}/>
+        <motion.img src={src} className="block scale-150" alt="aboutMe" style={{y: paralax1}}/>
     </div>
     )
 }

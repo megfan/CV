@@ -14,10 +14,10 @@ function App() {
   return (
     <div className="flex w-full">
       <SideBar/>
-      <div className='w-full flex flex-col m-0 p-0'>
+      <div className='w-full flex flex-col m-0 p-0 relative'>
         <BrowserRouter>
-          <MenuBar/>
           <StartPage/>
+          <MenuBar/>
           <AboutPage/>
           <Education/>
           <Experience/>
