@@ -1,7 +1,7 @@
 .mainPage {
     font-size: calc(10px + 2vmin);
     color: #ffffff;
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 5rem);
 }
 .gridPage {
     display: grid;
@@ -77,20 +77,15 @@
     grid-row-end: 6;
 }
 
-.geologicalData {
-    @apply col-start-5 col-end-6 tracking-[10px] relative flex flex-col items-start ;
-}
-
 .geologicalData:before {
     content: '';
     width: 15px;
     height: 2px;
-    left: -2rem;
-    top: 24px;
-    margin-right: 10px;
+    left: 2rem;
+    top: 2.6rem;
+    /* margin-right: 10px; */
     background-color: #42c3bc;
     position: absolute;
-    right: 10px;
     transition: all 700ms linear;
 }
 
@@ -102,12 +97,12 @@
 
 .geologicalData:hover :first-child {
     color: #9CA3AF;
-    transform: translateY(12px);
+    transform: translateY(10px);
 }
 .geologicalData :last-child {
     color: #9CA3AF;
     transition: all .3s ease-in-out;
-    transform: translateY(-14px);
+    transform: translateY(-5px);
 }
 
 .geologicalData:hover :last-child {

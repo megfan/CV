@@ -46,7 +46,7 @@ export const ContactPage: React.FC = () => {
                 CONTACT ME</button>
             </div>
         </header>
-        <main className='h-auto w-full flex'>
+        <main className='h-auto w-full flex sticky'>
             <div className='z-10 flex flex-col text-darkPrimary p-40 text-sm w-1/2 h-full bg-white'>
                 <h1 className='text-2xl font-bold mb-12 mt-2 relative tittle'> 
                     <span className='text-primary text-4xl font-[Titillium] italic'>Contact </span>details</h1>

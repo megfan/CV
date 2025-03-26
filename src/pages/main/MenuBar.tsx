@@ -12,7 +12,10 @@ export const MenuBar: React.FC = () => {
                     initial={{top: 0}}
                     ref={ref}
         >
-            <button className=' bg-darkSec classicText btnWIthBorders font-semibold col-start-1 col-end-2'>scroll down</button>
+            <button className='pl-16 w-auto relative flex flex-col items-start justify-center bg-darkSec classicText geologicalData btnWIthBorders font-semibold col-start-1 col-end-2'>
+                <span>based in warsaw / poland</span>
+                <span>52°13′N  / 21°00′ E </span>
+            </button>
             <nav className='col-start-2 col-end-5 ml-20'>
                 <ul className="text-gray-500 h-full w-full uppercase text-xs float-left flex items-center">
                     <li className='menuBarItem'><HashLink smooth to={'#'}>start</HashLink></li>
@@ -22,10 +25,6 @@ export const MenuBar: React.FC = () => {
                     <li className='menuBarItem'><HashLink smooth to={'#skills'}>skills</HashLink></li>
                 </ul>
             </nav>
-            <div  className='classicText geologicalData'>
-            <span>based in warsaw / poland</span>
-            <span>52°13′N  / 21°00′ E </span>
-        </div >
             <button className='btnWIthBorders font-semibold classicText col-end-7'>contact</button>
         </motion.div>
       </>
