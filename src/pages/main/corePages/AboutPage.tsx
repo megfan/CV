@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import MouseMoveTile from '../../../components/mouseMoveTile';
 
 export const AboutPage: React.FC = () => {
 
@@ -18,7 +19,8 @@ export const AboutPage: React.FC = () => {
         className='bg-white mainPage gridPage w-full relative' 
         id="about">
        <div className='z-10 h-auto w-1/4 flex items-start col-start-2 col-end-7 row-start-2 row-end-6 relative'>
-            <img src={'assets/AboutMe.jpg'} className="z-10" alt="aboutMe" />
+            {/* <img src={'assets/AboutMe.jpg'} className="z-10" alt="aboutMe" /> */}
+            <MouseMoveTile children={<img src={'assets/AboutMe.jpg'} className="z-10" alt="aboutMe" />}/>
             <motion.div 
                 style={{ y: paralax1 }}
                 className='bg-primary h-96 w-24 p-12 col-start-1 absolute top-0 left-0 -ml-10 mt-4'/>

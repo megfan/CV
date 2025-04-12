@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import '../../../../styles/MainPage.css';
 import {experienceDataRight} from './experienceData';
 import {experienceDataLeft} from './experienceData';
+import MouseMoveTile from '../../../../components/mouseMoveTile';
 
 export const Experience: React.FC = () => {
       const ref = useRef(null);
@@ -30,7 +31,6 @@ export const Experience: React.FC = () => {
         </div>
         <div className='col-start-3 col-end-7 row-start-3 mr-24 z-10'>
             {experienceDataRight.map((e, idx) => {
-                console.log(idx, e.title)
                 return <section className='relative flex flex-col' key={idx}>
                     <div className='flex items-start text-2xl group'>
                         <div className='flex flex-col text-gray-600 items-start justify-start'>
@@ -45,7 +45,9 @@ export const Experience: React.FC = () => {
                                     <p className='mt-4'>{e.technologies}</p>
                                 </div>
                         </div>
-                         {e.employee && e.pic ? <img src={e.pic} alt='' className='h-full w-[30rem] my-4'/> : null}
+                         {e.employee && e.pic 
+                         ? <MouseMoveTile children={<img src={e.pic} alt='' className='h-full w-[90rem] my-4'/> }/>
+                         : null}
                   </div>
                 </section>
             })}

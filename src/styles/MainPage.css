@@ -28,11 +28,11 @@
     transition: all 700ms linear;
 }
 .menuBarItem:hover {
-    color: #42c3bc;
+    color: #c3428f;
 }
 
 .menuBarItem:hover:before {
-    background-color: #42c3bc;
+    background-color: var(--primary);
 }
 .menuBarItem:before {
     content: '';
@@ -49,7 +49,7 @@
 }
 .burgerItem {
     height: 2px;
-    background: #42c3bc;
+    background: var(--primary);
     margin-bottom: 8px;
     transition: all .2s ease-in-out;
 }
@@ -66,7 +66,7 @@
 
 }
 .btnWIthBorders:hover { 
-    color: #42c3bc;
+    color: var(--primary);
 }
 
 .gridVisibileItem {
@@ -84,7 +84,7 @@
     left: 2rem;
     top: 2.6rem;
     /* margin-right: 10px; */
-    background-color: #42c3bc;
+    background-color: var(--primary);
     position: absolute;
     transition: all 700ms linear;
 }
@@ -117,7 +117,7 @@
     left: 0;
     bottom: -20px;
     margin-right: 10px;
-    background-color: #42c3bc;
+    background-color: var(--primary);
     position: absolute;
     right: 10px;
     transition: all 700ms linear;
@@ -129,7 +129,7 @@
     height: 10rem;
     left: 0;
     top: -20px;
-    background-color: #42c3bc;
+    background-color: var(--primary);
     position: absolute;
     transition: all 700ms linear;
 }
@@ -179,7 +179,7 @@
     height: 4px;
     width: 1.5rem;
     position: relative;
-    background-color: #42c3bc;
+    background-color: var(--primary);
     display: block;
     left: -3rem;
     top: 20px;
@@ -189,7 +189,7 @@
     height: 4px;
     width: 1.5rem;
     position: relative;
-    background-color: #42c3bc;
+    background-color: var(--primary);
     display: block;
     right: -2rem;
     top: 15px;

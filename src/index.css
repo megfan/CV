@@ -5,7 +5,7 @@
 @theme {  
   --color-darkPrimary: #2a2a2e;
   --color-darkSec: #2C2D32;
-  --color-primary: #42c3bc;
+  --color-primary: #f60797;
   --color-lightGray: #d7d7d747;
   --width-withSideBar: calc(100% -6rem);
   --grid-row-start-10: 10;
@@ -39,7 +39,7 @@ body {
 
 :root{
   --dark-primary: #393939;
-  --primary: #42c3bc;
+  --primary: #f60797;
   --secondary: #f2545b;
   --light_primary: #fafaff;
   --light-secondary: #c9c9c9;

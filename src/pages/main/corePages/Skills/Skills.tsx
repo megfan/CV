@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import '../../../../styles/MainPage.css';
-import { motion, useMotionValueEvent, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { developerSkillsCol1, developerSkillsCol2 } from './skillsData';
 import { ParallaxPicFrame } from '../../../../components/parallaxPicFrame';
 
@@ -12,7 +12,6 @@ export const Skills: React.FC = () => {
           target: ref,
           offset: ["start start", "end start"]
     });
-    const scaleX = useTransform(scrollYProgress, [0,1], ["0", "100%"])
     const paralax1 = useTransform(scrollYProgress, [0,1], ["200%", "-200%"]);
     
     return (
@@ -76,31 +75,31 @@ export const Skills: React.FC = () => {
                 <div className='mt-20 flex w-full justify-between'>
                     <div className='flex flex-col items-center justify-center'>
                         <div className="chart" style={{
-                            background:"conic-gradient( from 0deg at 50% 50%, #42c3bc 0deg 340deg, rgb(235, 235, 235) 340deg 360deg)"
+                            background:"conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 340deg, rgb(235, 235, 235) 340deg 360deg)"
                         }}/>
                         <span>Photoshop</span>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
                         <div className="chart" style={{
-                            background:"conic-gradient( from 0deg at 50% 50%, #42c3bc 0deg 350deg, rgb(235, 235, 235) 350deg 360deg)"
+                            background:"conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 350deg, rgb(235, 235, 235) 350deg 360deg)"
                         }}/>
                         <span>Illustartor</span>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
                         <div className="chart" style={{
-                            background:"conic-gradient( from 0deg at 50% 50%, #42c3bc 0deg 210deg, rgb(235, 235, 235) 210deg 360deg)"
+                            background:"conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 210deg, rgb(235, 235, 235) 210deg 360deg)"
                         }}/>
                         <span>InDesign</span>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
                         <div className="chart" style={{
-                            background:"conic-gradient( from 0deg at 50% 50%, #42c3bc 0deg 190deg, rgb(235, 235, 235) 190deg 360deg)"
+                            background:"conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 190deg, rgb(235, 235, 235) 190deg 360deg)"
                         }}/>
                         <span>After Effect</span>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
                         <div className="chart" style={{
-                            background:"conic-gradient( from 0deg at 50% 50%, #42c3bc 0deg 300deg, rgb(235, 235, 235) 300deg 360deg)"
+                            background:"conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 300deg, rgb(235, 235, 235) 300deg 360deg)"
                         }}/>
                         <span>Figma</span>
                     </div>
