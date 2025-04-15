@@ -1,0 +1,29 @@
+
+.educationImg {
+    object-fit: contain;
+    transform: scaleX(-1);
+    filter: brightness(30%);
+}
+
+.educationSection {
+    margin-right: 1rem;
+    display: inline-flex;
+    width: full;
+    white-space: nowrap;
+
+}
+    
+.educationSection p:first-child{
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    padding-right: 1rem;
+    width: 12%;
+}
+    
+.educationSection h2{
+    padding-right: 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}

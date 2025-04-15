@@ -68,6 +68,7 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
 
   const stopScramble = () => {
     clearInterval(intervalRef.current || undefined);
+    setIndex(null);
   };
   
     return (
@@ -92,8 +93,10 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
             >
               <div className="p-5">
                 <header className='w-full h-40 no-wrap flex flex-col'>
-                    <div className=' text-primary text-4xl font-[Titillium] italic'>Małgorzata</div>
-                    <div className='text-white font-normal text-3xl font-[Poppins] not-italic ml-20'> Staszewska </div>
+                    <motion.div className='text-primary text-4xl font-[Titillium] italic'
+                    >Małgorzata</motion.div>
+                    <motion.div className='text-white font-normal text-3xl font-[Poppins] not-italic ml-20'
+                    > Staszewska </motion.div>
                 </header>
                 <main className="text-neutral-400">
                     <nav className=''>
@@ -102,6 +105,12 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
                             return <motion.li className='sideMenu'
                             onMouseEnter={() => scramble(link.name, idx)}
                             onMouseLeave={() => stopScramble()}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                              duration: 0.45,
+                              delay: idx / 10,
+                            }}
                             >
                                 <HashLink 
                                 className="sideMenuItem"

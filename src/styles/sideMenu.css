@@ -1,7 +1,6 @@
 .sideMenuItem {
     width: 100%;
     padding: 10px 20px;
-    /* background-color: var(--color-darkPrimary); */
     position: relative;
     z-index: 1;
     letter-spacing: .2rem;
@@ -11,8 +10,6 @@
 .sideMenu {
     margin-bottom: 1rem;
     width: 100%;
-    /* padding: 10px 20px; */
-    /* background-color: var(--color-darkPrimary); */
     position: relative;
     z-index: 1;
     letter-spacing: .2rem;
@@ -32,7 +29,6 @@
 }
 
 .sideMenuItem:hover {
-    /* color: var(--color-darkPrimary); */
     color: white    
  }
 

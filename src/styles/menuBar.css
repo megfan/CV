@@ -1,15 +1,15 @@
-.menuBar {
-    @apply float-left mr-20 ml-4 flex font-semibold tracking-wide items-center; 
+.menuBarItem {
+    @apply float-left mr-10 ml-4 flex font-semibold tracking-wide items-center; 
     transition: all 700ms linear;
 }
-.menuBar:hover {
+.menuBarItem:hover {
     color: #c3428f;
 }
 
-.menuBar:hover:before {
+.menuBarItem:hover:before {
     background-color: var(--primary);
 }
-.menuBar:before {
+.menuBarItem:before {
     content: '';
     width: 15px;
     height: 2px;

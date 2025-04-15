@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import '../../../../styles/MainPage.css';
+import '../../../../styles/mainPage.css';
 import {experienceDataRight} from './experienceData';
 import {experienceDataLeft} from './experienceData';
 import MouseMoveTile from '../../../../components/mouseMoveTile';
