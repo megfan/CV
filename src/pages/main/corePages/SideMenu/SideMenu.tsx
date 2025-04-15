@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import useMeasure from "react-use-measure";
 import {
   useDragControls,
@@ -20,19 +20,55 @@ interface SideMenuProps {
 }
 export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
 
-    const [scope, animate] = useAnimate();
-  
-    const handleClose = async () => {
-      animate(scope.current, {
-        opacity: [1, 0],
-      });
-      await animate("#drawer", {
-        x: [0, "-10%"],
-      });
-  
-      setOpen(false);
-    };
+  const [scope, animate] = useAnimate();
 
+  const handleClose = async () => {
+    animate(scope.current, {
+      opacity: [1, 0],
+    });
+    await animate("#drawer", {
+      x: [0, "-10%"],
+    });
+
+    setOpen(false);
+  };
+
+  const CYCLES_PER_LETTER = 4;
+  const SHUFFLE_TIME = 30;
+
+  const CHARS = "DFUKC98745KHI97345";
+
+  const intervalRef = useRef<any>(null);
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState<number | null>(null);
+
+  const scramble = (txt: string, index: number) => {
+    let pos = 0;
+    intervalRef.current = setInterval(() => {
+      const scrambled = txt.split("")
+        .map((char, index) => {
+          if (pos / CYCLES_PER_LETTER > index) {
+            return char;
+          }
+          const randomCharIndex = Math.floor(Math.random() * CHARS.length);
+          const randomChar = CHARS[randomCharIndex];
+          return randomChar;
+        })
+        .join("");
+
+      setText(scrambled);
+      setIndex(index);
+      pos++;
+
+      if (pos >= txt.length * CYCLES_PER_LETTER) {
+        stopScramble();
+      }
+    }, SHUFFLE_TIME);
+  };
+
+  const stopScramble = () => {
+    clearInterval(intervalRef.current || undefined);
+  };
   
     return (
       <>
@@ -61,15 +97,18 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
                 </header>
                 <main className="text-neutral-400">
                     <nav className=''>
-                        <ul className="text-gray-500 h-full w-full uppercase text-xs flex flex-col items-start">
-                          {hashLinksArray.map(l => {
-                            return <li className='menuBarItem'>
+                        <ul className=" h-full w-full uppercase text-sm flex flex-col items-start">
+                          {hashLinksArray.map((link, idx) => {
+                            return <motion.li className='sideMenu'
+                            onMouseEnter={() => scramble(link.name, idx)}
+                            onMouseLeave={() => stopScramble()}
+                            >
                                 <HashLink 
-                                    smooth to={l.hash} 
-                                    onClick={() => setOpen(false)} 
-                                    className="mb-5"
-                                    >{l.name}</HashLink>
-                              </li>
+                                className="sideMenuItem"
+                                    smooth to={link.hash} 
+                                    onClick={() => handleClose()} 
+                                    >{idx === index ? text : link.name}</HashLink>
+                              </motion.li> 
                           })}
                         </ul>
                       </nav>
