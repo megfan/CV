@@ -8,6 +8,11 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router";
+import { hashLinksArray } from "./hashLinks";
+import '../../../../styles/sideMenu.css';
+
 
 interface SideMenuProps {
     open: boolean;
@@ -16,16 +21,6 @@ interface SideMenuProps {
 export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
 
     const [scope, animate] = useAnimate();
-    const [drawerRef, { width }] = useMeasure();
-  
-    const x = useMotionValue(0);
-    const ref = useRef(null);
-    const { scrollXProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "start end"]
-    });
-
-    const openingTransition = useTransform(scrollXProgress, [1,0], ["-100%", "100%"]);
   
     const handleClose = async () => {
       animate(scope.current, {
@@ -37,6 +32,7 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
   
       setOpen(false);
     };
+
   
     return (
       <>
@@ -50,52 +46,35 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
           >
             <motion.div
               id="drawer"
-              ref={drawerRef}
               onClick={(e) => e.stopPropagation()}
               initial={{ x: "-10%" }}
               animate={{ x: "0%" }}
               transition={{
                 ease: "easeInOut",
               }}
-              className="absolute top-0 left-24 h-[75vh] w-[50vw] overflow-hidden bg-neutral-900"
+              className="absolute top-0 left-24 h-[100vh] w-[30vw] overflow-hidden bg-neutral-900 flex items-center justify-center"
             >
-              <div className="relative z-0 h-full p-30">
-                <header className='w-full h-40 no-wrap flex space-y-4'>
-                    <button className=' text-white font-normal text-2xl'>Ready to talk about
-                    <span className='text-primary text-4xl font-[Titillium] lowercase italic'> your </span> project?</button>
+              <div className="p-5">
+                <header className='w-full h-40 no-wrap flex flex-col'>
+                    <div className=' text-primary text-4xl font-[Titillium] italic'>Małgorzata</div>
+                    <div className='text-white font-normal text-3xl font-[Poppins] not-italic ml-20'> Staszewska </div>
                 </header>
-                <div className="max-w-2xl space-y-4 text-neutral-400">
-                    <h2 className="text-4xl font-bold text-neutral-200">
-                        Have an idea for a website and need an experienced developer 
-                        or designer?
-                    </h2>
-                    <p>
-                        Together, we’ll create a modern and 
-                        functional project tailored to your needs. Drop me a message, 
-                        and let’s discuss the details!
-                    </p>
-                </div>
-                    <div className=' text-white flex w-full mt-10 justify-between items-center'>
-                        <div className="flex mr-5 items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#f60797" className="size-6 mr-5">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                            </svg>
-                            <p className='leading-loose text-justify'>+48 693 518 447</p>
-                        </div>
-                        <div className="flex mr-5 items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#f60797" className="size-6 mr-5">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                            </svg>
-                            <p className='leading-loose text-justify'>megfa@yahoo.com</p>
-                        </div>
-                        <div className="flex mr-5 items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#f60797" className="size-6 mr-5">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                            </svg>
-                            <p className='leading-loose text-justify'>Warsaw, Poland, Europe</p>
-                        </div>
-                    </div>
+                <main className="text-neutral-400">
+                    <nav className=''>
+                        <ul className="text-gray-500 h-full w-full uppercase text-xs flex flex-col items-start">
+                          {hashLinksArray.map(l => {
+                            return <li className='menuBarItem'>
+                                <HashLink 
+                                    smooth to={l.hash} 
+                                    onClick={() => setOpen(false)} 
+                                    className="mb-5"
+                                    >{l.name}</HashLink>
+                              </li>
+                          })}
+                        </ul>
+                      </nav>
+                </main>
+                   
                 </div>
             </motion.div>
           </motion.div>

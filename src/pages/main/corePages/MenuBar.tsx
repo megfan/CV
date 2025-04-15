@@ -1,5 +1,6 @@
 import React,  {useRef, useState} from 'react';
 import '../../../styles/MainPage.css';
+import '../../../styles/menuBar.css';
 import { motion } from "motion/react";
 import { HashLink } from "react-router-hash-link";
 import { ContactBar } from "./Contact/ContactBar";
@@ -22,11 +23,12 @@ export const MenuBar: React.FC = () => {
             </button>
             <nav className='col-start-2 col-end-5 ml-20'>
                 <ul className="text-gray-500 h-full w-full uppercase text-xs float-left flex items-center">
-                    <li className='menuBarItem'><HashLink smooth to={'#'}>start</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#about'}>about</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#education'}>education</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#experience'}>experience</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#skills'}>skills</HashLink></li>
+                    <li className='menuBar'><HashLink smooth to={'#'}>start</HashLink></li>
+                    <li className='menuBar'><HashLink smooth to={'#about'}>about</HashLink></li>
+                    <li className='menuBar'><HashLink smooth to={'#education'}>education</HashLink></li>
+                    <li className='menuBar'><HashLink smooth to={'#experience'}>experience</HashLink></li>
+                    <li className='menuBar'><HashLink smooth to={'#skills'}>skills</HashLink></li>
+                    <li className='menuBar'><HashLink smooth to={'#contact'}>contact</HashLink></li>
                 </ul>
             </nav>
             <button className='btnWIthBorders font-semibold classicText col-end-7' onClick={() => setOpenContact(true)}>

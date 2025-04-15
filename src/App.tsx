@@ -12,20 +12,20 @@ import { BrowserRouter } from 'react-router';
 
 function App() {
   return (
-    <div className="flex w-full">
-      <SideBar/>
-      <div className='w-full flex flex-col m-0 p-0 relative'>
-        <BrowserRouter>
-          <StartPage/>
-          <MenuBar/>
-          <AboutPage/>
-          <Education/>
-          <Experience/>
-          <Skills/>
-          <ContactPage/>
-        </BrowserRouter>
+    <BrowserRouter>
+      <div className="flex w-full">
+        <SideBar />
+        <div className='w-full flex flex-col m-0 p-0 relative'>
+          <StartPage />
+          <MenuBar />
+          <AboutPage />
+          <Education />
+          <Experience />
+          <Skills />
+          <ContactPage />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

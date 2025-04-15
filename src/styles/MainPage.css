@@ -23,7 +23,7 @@
     font-weight: 600; 
     display: flex;
 }
-.menuBarItem {
+/* .menuBarItem {
     @apply float-left mr-20 ml-4 flex font-semibold tracking-wide items-center; 
     transition: all 700ms linear;
 }
@@ -42,17 +42,7 @@
     position: relative;
     right: 10px;
     transition: all 700ms linear;
-}
-
-.burger:hover  span {
-    width: 100%;
-}
-.burgerItem {
-    height: 2px;
-    background: var(--primary);
-    margin-bottom: 8px;
-    transition: all .2s ease-in-out;
-}
+} */
 
 .classicText {
     @apply uppercase text-gray-400 text-xs;

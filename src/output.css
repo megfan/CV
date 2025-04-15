@@ -6,6 +6,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-pink-600: oklch(0.592 0.249 0.584);
     --color-gray-300: oklch(0.872 0.01 258.338);
     --color-gray-400: oklch(0.707 0.022 261.325);
     --color-gray-500: oklch(0.551 0.027 264.364);
@@ -27,6 +28,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -479,6 +482,12 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
@@ -603,6 +612,9 @@
   .h-\[80\%\] {
     height: 80%;
   }
+  .h-\[100vh\] {
+    height: 100vh;
+  }
   .h-auto {
     height: auto;
   }
@@ -668,6 +680,9 @@
   }
   .w-\[16rem\] {
     width: 16rem;
+  }
+  .w-\[30vw\] {
+    width: 30vw;
   }
   .w-\[45rem\] {
     width: 45rem;
@@ -799,9 +814,6 @@
   .border-primary {
     border-color: var(--color-primary);
   }
-  .bg-\[\#2c2d3240\] {
-    background-color: #2c2d3240;
-  }
   .bg-\[\#b6b6b61f\] {
     background-color: #b6b6b61f;
   }
@@ -838,8 +850,14 @@
   .bg-neutral-950\/70 {
     background-color: color-mix(in oklab, var(--color-neutral-950) 70%, transparent);
   }
+  .bg-pink-600 {
+    background-color: var(--color-pink-600);
+  }
   .bg-primary {
     background-color: var(--color-primary);
+  }
+  .bg-transparent {
+    background-color: transparent;
   }
   .bg-white {
     background-color: var(--color-white);
@@ -865,8 +883,14 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
   }
   .p-12 {
     padding: calc(var(--spacing) * 12);
@@ -947,6 +971,10 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -996,10 +1024,6 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-  }
-  .tracking-\[\.5em\] {
-    --tw-tracking: .5em;
-    letter-spacing: .5em;
   }
   .tracking-wide {
     --tw-tracking: var(--tracking-wide);
@@ -1057,6 +1081,9 @@
   }
   .italic {
     font-style: italic;
+  }
+  .not-italic {
+    font-style: normal;
   }
   .underline {
     text-decoration-line: underline;
@@ -1214,42 +1241,6 @@
   font-size: 14px;
   font-weight: 600;
   display: flex;
-}
-.menuBarItem {
-  float: left;
-  margin-right: calc(var(--spacing) * 20);
-  margin-left: calc(var(--spacing) * 4);
-  display: flex;
-  align-items: center;
-  --tw-font-weight: var(--font-weight-semibold);
-  font-weight: var(--font-weight-semibold);
-  --tw-tracking: var(--tracking-wide);
-  letter-spacing: var(--tracking-wide);
-  transition: all 700ms linear;
-}
-.menuBarItem:hover {
-  color: #c3428f;
-}
-.menuBarItem:hover:before {
-  background-color: var(--primary);
-}
-.menuBarItem:before {
-  content: '';
-  width: 15px;
-  height: 2px;
-  background-color: #6a7282;
-  position: relative;
-  right: 10px;
-  transition: all 700ms linear;
-}
-.burger:hover span {
-  width: 100%;
-}
-.burgerItem {
-  height: 2px;
-  background: var(--primary);
-  margin-bottom: 8px;
-  transition: all .2s ease-in-out;
 }
 .classicText {
   font-size: var(--text-xs);

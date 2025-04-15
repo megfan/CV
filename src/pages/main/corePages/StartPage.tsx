@@ -4,8 +4,8 @@ import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } fr
 import { cubicBezier } from 'motion';
 import { useSpring } from 'motion/react';
 
-const ROTATION_RANGE = 22.5;
-const HALF_ROTATION_RANGE = 22.5 / 2;
+const ROTATION_RANGE = 30;
+const HALF_ROTATION_RANGE = 30 / 2;
 
 export const StartPage: React.FC = () => {
 
@@ -75,7 +75,7 @@ export const StartPage: React.FC = () => {
                 transformStyle: "preserve-3d",
                 transform,
             }}
-            className="relative h-[80%] w-[80%] rounded-xl bg-[#2c2d3240] shadow-lg flex justify-between"
+            className="relative h-[80%] w-[80%] rounded-xl bg-transparent  flex justify-between"
             >
             <div className='flex w-full items-center'>
                 <div className='w-1/2 ml-24'>
