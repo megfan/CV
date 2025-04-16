@@ -545,12 +545,6 @@
   .ml-40 {
     margin-left: calc(var(--spacing) * 40);
   }
-  .ml-\[1p2\] {
-    margin-left: 1p2;
-  }
-  .ml-\[1px\] {
-    margin-left: 1px;
-  }
   .ml-auto {
     margin-left: auto;
   }
@@ -1121,10 +1115,6 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .tracking-\[\.5em\] {
-    --tw-tracking: .5em;
-    letter-spacing: .5em;
-  }
   .tracking-wide {
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
@@ -1326,12 +1316,6 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, minmax(0, 1fr));
 }
-.experiencePage {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(18, minmax(0, 110px));
-  height: auto;
-}
 .menu_item {
   padding: 10px;
   color: var(--primary);
@@ -1424,27 +1408,6 @@
 }
 .new-line {
   white-space: pre-line;
-}
-.titleBeforeDecorationRight::before {
-  content: "";
-  height: 4px;
-  width: 1.5rem;
-  position: relative;
-  background-color: var(--primary);
-  display: block;
-  left: -3rem;
-  top: 20px;
-}
-.titleBeforeDecorationLeft::after {
-  content: "";
-  height: 4px;
-  width: 1.5rem;
-  position: relative;
-  background-color: var(--primary);
-  display: block;
-  right: -2rem;
-  top: 15px;
-  float: right;
 }
 .chart {
   width: 150px;
