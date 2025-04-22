@@ -1,7 +1,6 @@
 import React from "react";
 import useMeasure from "react-use-measure";
 import {
-  useDragControls,
   useMotionValue,
   useAnimate,
   motion,
@@ -17,7 +16,6 @@ export const ContactBar = ({ open, setOpen }: ContactBarProps) => {
   const [drawerRef, { height }] = useMeasure();
 
   const y = useMotionValue(0);
-  const controls = useDragControls();
 
   const handleClose = async () => {
     animate(scope.current, {

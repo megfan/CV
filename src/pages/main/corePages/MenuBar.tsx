@@ -11,7 +11,7 @@ export const MenuBar: React.FC = () => {
     const [openContact, setOpenContact] = useState(false);
 
     return (<>
-        <motion.div className='sticky w-full m-0 p-0 z-30 right-0 top-0 h-20 bg-darkPrimary inset-0 grid
+        <motion.div className='sticky w-full m-0 p-0 z-30 right-0 top-0 h-20 bg-darkPrimary inset-0 xl:grid hidden
             justify-between items-center grid-cols-6 '
                     initial={{top: 0}}
                     ref={ref}
@@ -21,7 +21,7 @@ export const MenuBar: React.FC = () => {
                 <span>based in warsaw / poland</span>
                 <span>52°13′N  / 21°00′ E </span>
             </button>
-            <nav className='col-start-2 col-end-5 ml-20'>
+            <nav className='col-start-2 col-end-5 ml-10'>
                 <ul className="text-gray-500 h-full w-full uppercase text-xs float-left flex items-center">
                     <li className='menuBarItem'><HashLink smooth to={'#'}>start</HashLink></li>
                     <li className='menuBarItem'><HashLink smooth to={'#about'}>about</HashLink></li>

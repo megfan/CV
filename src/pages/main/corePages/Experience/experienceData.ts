@@ -1,3 +1,5 @@
+import work2 from '../../../../assets/work2.jpg';
+import work3 from '../../../../assets/work3.jpg';
 
 interface experienceDataProps {
     title: string;
@@ -19,7 +21,7 @@ export const experienceDataRight: experienceDataProps[] = [
         description: ' Building responsive, scalable UIs / Creating interactive maps and data visualizations using Open Layers / Ensuring seamless frontend-backend data flow in collaboration with backend developers and GIS specialists / Leveraging Next.js for server-side rendering and performance optimization / Ensuring responsive design and cross-device compatibility /',
         technologies: 'REACT / TYPESCRIPT /TAILWIND CSS / PRIME REACT /REDUX / NEXT.JS',
         employee: true,
-        pic: 'assets/1.jpg',
+        pic: work2,
     },
     {
         title: 'Web App for Electronic Invoice Management',
@@ -45,7 +47,7 @@ export const experienceDataRight: experienceDataProps[] = [
         link: "www.coderslab.pl",
         technologies: 'PHOTOSHOP / ILLUSTRATOR / AFTER EFFECTS / INDESIGN / FIGMA ',
         employee: true,
-        pic: 'assets/codersLab.jpg',
+        pic: work3,
     },
     {
         title: 'Work for Instytut Monitorowania Mediów',

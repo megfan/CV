@@ -13,16 +13,16 @@ import { BrowserRouter } from 'react-router';
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex w-full">
+      <div className="flex w-full h-full">
         <SideBar />
         <div className='w-full flex flex-col m-0 p-0 relative'>
           <StartPage />
           <MenuBar />
           <AboutPage />
           <Education />
-          <Experience />
-          <Skills />
-          <ContactPage />
+          {/* <Experience /> */}
+          {/* <Skills /> */}
+          {/* <ContactPage /> */}
         </div>
       </div>
     </BrowserRouter>

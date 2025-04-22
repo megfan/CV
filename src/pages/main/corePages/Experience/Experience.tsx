@@ -5,6 +5,8 @@ import '../../../../styles/experiencePage.css';
 import { experienceDataRight } from './experienceData';
 import { experienceDataLeft } from './experienceData';
 import MouseMoveTile from '../../../../components/mouseMoveTile';
+import work from '../../../../assets/work.jpg';
+
 
 export const Experience: React.FC = () => {
     const ref = useRef(null);
@@ -21,7 +23,7 @@ export const Experience: React.FC = () => {
             <span className='relative bg-gray-300 col-start-3 row-start-1 row-end-19 z-20 h-full w-[1px]' />
 
             <div className='h-auto w-1/4 flex items-start col-start-2 col-end-6 row-start-1 row-end-6 relative'>
-                <img src={'assets/work1.jpg'} className="z-10" alt="aboutMe" />
+                <img src={work} className="z-10" alt="aboutMe" />
                 <div className='bg-primary h-60 w-24 p-12 col-start-1 absolute -top-10 left-0 -ml-10' />
             </div>
 
@@ -75,13 +77,13 @@ export const Experience: React.FC = () => {
 
             <motion.p
                 style={{ y: paralaxTxt }}
-                className='text-[10rem] col-start-2 -ml-32 col-end-8 row-start-2 text-[#acacac1f] font-black '>
+                className='text-[10rem] col-start-2 -ml-32 col-end-8 row-start-2 text-[#acacac1f] font-black lg:block  hidden'>
                 Working & envolve
             </motion.p>
             <div className='z-20 bg-gradient-to-t to-transparent from-white col-start-1 col-end-7col-start-1 col-end-7 h-auto mb-0 ' />
             <motion.div
                 style={{ y: paralaxTxt }}
-                className='ml-40 w-full col-start-1 col-end-6 row-start-2 row-end-7 flex flex-col align-start'>
+                className='ml-40 w-full col-start-1 col-end-6 row-start-2 row-end-7 flex flex-col align-start lg:block  hidden'>
                 <p className='text-[12rem]  text-[#b6b6b61f] font-black uppercase'> Working & envolve</p>
                 <div className='w-40 h-20 bg-[#b6b6b61f] self-end' />
                 <div className='w-40 h-20 mt-20 pt-40 bg-[#b6b6b61f] self-start' />

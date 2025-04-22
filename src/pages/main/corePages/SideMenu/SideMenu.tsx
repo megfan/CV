@@ -1,15 +1,9 @@
 import React, { useRef, useState } from "react";
-import useMeasure from "react-use-measure";
 import {
-  useDragControls,
-  useMotionValue,
   useAnimate,
   motion,
-  useScroll,
-  useTransform,
 } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router";
 import { hashLinksArray } from "./hashLinks";
 import '../../../../styles/sideMenu.css';
 

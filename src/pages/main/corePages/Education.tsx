@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
 import "../../../styles/education.css";
+import education from '../../../assets/education.jpg';
 
 export const Education: React.FC = () => {
     const ref = useRef(null);
@@ -48,7 +49,7 @@ export const Education: React.FC = () => {
                 </div>
                 <ParallaxPicFrame
                     styles={'educationImg bottom-0 right-0 w-full h-[23rem] bg-center absolute overflow-hidden'}
-                    src={'assets/education.jpg'} />
+                    src={education} />
             </main>
         </div>
     )

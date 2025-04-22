@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../../styles/mainPage.css';
 import { HashLink } from "react-router-hash-link";
-import { Link } from 'react-router';
+// import file from "../../../../assets/CV.pdf"
 
 export const ContactPage: React.FC = () => {
 
@@ -25,7 +25,8 @@ export const ContactPage: React.FC = () => {
                         <span className='text-primary text-4xl font-[Titillium] italic'>Contact </span>details</h1>
                     <p className='leading-loose text-justify mb-10'>Have an idea for a website and need an experienced developer or designer? Get in touch! Together, we’ll create a modern and functional project tailored to your needs. Drop me a message, and let’s discuss the details!</p>
 
-                    <a href={'assets/MStaszewska_2025.pdf'} type='button' target="_blank" className='w-40 py-4 px-12 uppercase font-bold text-white tracking-wider text-xs bg-primary'>
+                    <a href={require('../../../../assets/CV.pdf')} type='button' target="_blank" rel="noreferrer" download={'CV'}
+                        className='w-40 py-4 px-12 uppercase font-bold text-white tracking-wider text-xs bg-primary'>
                         resume
                     </a>
                 </div>
@@ -46,6 +47,7 @@ export const ContactPage: React.FC = () => {
                         <a
                             href={"https://megfoto.wixsite.com/mfantom"}
                             target="_blank"
+                            rel="noreferrer"
                         >portfolio</a>
                     </button>
                 </div>

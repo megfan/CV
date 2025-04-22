@@ -3,6 +3,11 @@ import '../../../styles/mainPage.css';
 import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { cubicBezier } from 'motion';
 import { useSpring } from 'motion/react';
+import statue from '../../../assets/statue.png';
+import cloud from '../../../assets/cloud.png';
+import paintBrush from '../../../assets/paintBrush.png';
+import brushes from '../../../assets/brushes.png';
+import car from '../../../assets/car.png';
 
 const ROTATION_RANGE = 30;
 const HALF_ROTATION_RANGE = 30 / 2;
@@ -11,15 +16,12 @@ export const StartPage: React.FC = () => {
 
     const ref = useRef(null);
     const ref2 = useRef<HTMLDivElement>(null);
-    const { scrollYProgress, scrollXProgress, scrollY } = useScroll({
+    const { scrollYProgress, scrollY, scrollXProgress } = useScroll({
         target: ref,
         offset: ["start start", "end start"]
     });
     const paralax1 = useTransform(scrollYProgress, [0, 1], ["0", "100%"]);
-    const paralaxCar = useTransform(scrollY,
-        [0, 150],
-        [0, 60],
-        { clamp: false });
+    const paralaxCar = useTransform(scrollYProgress, [1, 0], ["-100%", "0"]);
     const paralaxPaintBrush = useTransform(scrollY,
         [0, 1],
         [0, 2],
@@ -63,7 +65,7 @@ export const StartPage: React.FC = () => {
     };
 
     return (
-        <div className='mainPage gridPage bg-darkPrimary w-full m-0 p-0 relative overflow-hidden '>
+        <div className='mainPage gridPage bg-darkPrimary w-full m-0 p-0 relative overflow-hidden'>
             <motion.div className='col-start-1 col-end-7 row-start-1 row-end-6 relative flex justify-center items-center'
                 ref={ref}>
                 <motion.div
@@ -74,61 +76,43 @@ export const StartPage: React.FC = () => {
                         transformStyle: "preserve-3d",
                         transform,
                     }}
-                    className="relative h-[80%] w-[80%] rounded-xl bg-transparent  flex justify-between"
+                    className="relative h-[80%] w-[80%] rounded-xl bg-transparent m-auto flex justify-between"
                 >
-                    <div className='flex w-full items-center'>
-                        <div className='w-1/2 ml-24'>
-                            <h1 className='font-semibold text-5xl font-[Poppins] leading-[5rem] drop-shadow-[(-18px 17px 20px 0px rgba(0,0,0, 1))]'>
+                    <div className='flex w-full items-center lg:flex-row flex-col'>
+                        <div className='lg:w-1/2 w-full lg:ml-12 p-8'>
+                            <h1 className='break-words font-semibold lg:text-5xl text-3xl font-[Poppins] lg:leading-[5rem] drop-shadow-[(-18px 17px 20px 0px rgba(0,0,0, 1))]'>
                                 Hi there! <br />
                                 I'm Meg Staszewska <br />
-                                <span className='text-primary whitespace-nowrap'>Developer and Designer</span> <br />
+                                <span className='text-primary lg:whitespace-nowrap'>Developer and Designer</span>
                             </h1>
                             <div className='buttonMovingRight py-4 px-6 mt-4 bg-[#ffffff21] w-fit uppercase text-sm tracking-widest' >
                                 I create web and graphic design
                             </div>
                         </div>
-                        <div className='relative flex h-full mt-20 w-1/2 items-center justify-center '>
-                            <motion.div className="w-[5rem] h-[13rem] inset-0 z-30 absolute top-15 right-[40%] left-auto -rotate-5"
-                                style={{
-                                    backgroundImage: `url(assets/statue.png)`,
-                                    backgroundPosition: "bottom",
-                                    backgroundSize: "cover",
-                                }}
+                        <div className='relative flex h-full lg:w-1/2 w-full items-center justify-center '>
+                            <motion.img className="w-[20%] h-[40%] object-contain z-30 absolute top-10 right-[35%] left-auto -rotate-5"
+                                src={statue}
+                                style={{ x: paralaxCar }}
                             />
-                            <motion.div
-                                className="w-[16rem] h-[10rem] inset-0 z-30 absolute top-[30%] left-18 rotate-20"
-                                style={{
-                                    backgroundImage: `url(assets/car.png)`,
-                                    backgroundPosition: "center",
-                                    backgroundSize: "cover",
-                                    y: paralaxCar
-                                }}
+                            <motion.img
+                                className="w-[60%] h-[60%] object-contain z-30 absolute top-[10%] -left-[10%] rotate-20"
+                                src={car}
+                                style={{ x: paralaxCar }}
                             />
-                            <motion.div className="w-[15rem] h-[3rem] inset-0 z-30 absolute top-[47%] left-[60%] -rotate-40"
-                                style={{
-                                    backgroundImage: `url(assets/brushes.png)`,
-                                    backgroundPosition: "right",
-                                    backgroundSize: "cover",
-                                    y: paralaxbrushes
-                                }}
+                            <motion.img
+                                className="w-[35%] h-[8%] z-30 absolute top-[47%] left-auto right-[-0%] -rotate-40"
+                                src={brushes}
+                                style={{ y: paralaxbrushes }}
                             />
-                            <motion.div
-                                className="w-[3rem] h-[10rem] inset-0 z-10 absolute top-[10%] right-[25%] rotate-20 left-auto"
-                                style={{
-                                    backgroundImage: `url(assets/PaintBrush.png)`,
-                                    backgroundPosition: "center",
-                                    backgroundSize: "cover",
-                                    y: paralaxPaintBrush
-                                }}
+                            <motion.img
+                                className="w-[40%] h-[40%] object-contain z-10 absolute top-[10%] right-[5%] rotate-20 left-auto"
+                                src={paintBrush}
+                                style={{ y: paralaxPaintBrush }}
                             />
-                            <motion.div
-                                className="w-[45rem] h-[25rem] inset-0 z-20"
-                                style={{
-                                    backgroundImage: `url(assets/cloud.png)`,
-                                    backgroundPosition: "center",
-                                    backgroundSize: "cover",
-                                    y: paralax1
-                                }}
+                            <motion.img
+                                src={cloud}
+                                className="w-full h-full z-20 object-contain"
+                                style={{ y: paralax1 }}
                             />
                         </div>
                     </div>

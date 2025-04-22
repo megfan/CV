@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import MouseMoveTile from '../../../components/mouseMoveTile';
+import aboutMe from '../../../assets/aboutMe.jpg';
 
 export const AboutPage: React.FC = () => {
 
@@ -12,20 +13,20 @@ export const AboutPage: React.FC = () => {
 
     const paralax1 = useTransform(scrollYProgress, [1,0], ["100%", "0"]);
     const paralaxBgText = useTransform(scrollYProgress, [1,0], ["-100%", "100%"]);
+    const isDesktop = window.innerWidth >= 1280;
 
     return (
     <div
         ref={ref}
         className='bg-white mainPage gridPage w-full relative' 
         id="about">
-       <div className='z-10 h-auto w-1/4 flex items-start col-start-2 col-end-7 row-start-2 row-end-6 relative'>
-            {/* <img src={'assets/AboutMe.jpg'} className="z-10" alt="aboutMe" /> */}
-            <MouseMoveTile children={<img src={'assets/AboutMe.jpg'} className="z-10" alt="aboutMe" />}/>
+       <div className='z-10 h-auto lg:w-1/4 w-full flex items-start col-start-2 col-end-7 lg:row-start-2 row-start-1 row-end-6 relative'>
+            <MouseMoveTile children={<img src={aboutMe} className="z-10" alt="aboutMe" />}/>
             <motion.div 
                 style={{ y: paralax1 }}
-                className='bg-primary h-96 w-24 p-12 col-start-1 absolute top-0 left-0 -ml-10 mt-4'/>
+                className='bg-primary h-96 w-24 p-12 absolute top-0 left-0 -ml-10 mt-4'/>
         </div>
-        <div className='z-10 flex flex-col text-darkPrimary -ml-20 mt-10 col-start-4 col-end-6 row-start-2 text-sm '>
+        <div className='z-10 flex flex-col lg:text-darkPrimary -ml-20 mt-10 col-start-4 col-end-6 row-start-2 text-sm '>
             <span className='text-gray-400'>From Photography to Frontend Innovation</span>
             <h1 className='text-2xl font-bold mb-12 mt-6 relative tittle'>My 
                 <span className='text-primary text-4xl font-[Titillium] lowercase italic'> creative </span>evolution</h1>
@@ -34,9 +35,17 @@ export const AboutPage: React.FC = () => {
         </div>
         <motion.p  
             style={{ y: paralaxBgText }} 
-            className='text-[10rem] col-start-2 -ml-32 col-end-8 row-start-2 text-[#acacac1f] font-black '>
+            className='text-[10rem] col-start-2 -ml-32 col-end-8 row-start-2 text-[#acacac1f] font-black lg:block hidden'>
                 Words about
         </motion.p>
+        {isDesktop && <>
+            <span className='gridVisibileItem col-start-1' />
+            <span className='gridVisibileItem col-start-2' />
+            <span className='gridVisibileItem col-start-3' />
+            <span className='gridVisibileItem col-start-4' />
+            <span className='gridVisibileItem col-start-5' />
+            <span className='gridVisibileItem col-start-6' />
+        </>}
     </div>
     )
 }
