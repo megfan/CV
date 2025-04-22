@@ -20,7 +20,7 @@ function App() {
           <MenuBar />
           <AboutPage />
           <Education />
-          {/* <Experience /> */}
+          <Experience />
           {/* <Skills /> */}
           {/* <ContactPage /> */}
         </div>

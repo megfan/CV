@@ -102,14 +102,14 @@
     transition: all 700ms linear;
 }
 
-.buttonMovingRight:hover {
+/* .buttonMovingRight:hover {
     transform: translateX(2.5rem);
     transition: all .3s ease-in-out;
 }
 .buttonMovingRight {
     transition: all .3s ease-in-out;
     transform: translateX(0);
-}
+} */
 /* 
 .educationImg {
     object-fit: contain;
