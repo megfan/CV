@@ -102,67 +102,9 @@
     transition: all 700ms linear;
 }
 
-/* .buttonMovingRight:hover {
-    transform: translateX(2.5rem);
-    transition: all .3s ease-in-out;
-}
-.buttonMovingRight {
-    transition: all .3s ease-in-out;
-    transform: translateX(0);
-} */
-/* 
-.educationImg {
-    object-fit: contain;
-    transform: scaleX(-1);
-    filter: brightness(30%);
-}
-
-.educationSection {
-    margin-right: 1rem;
-    display: inline-flex;
-    width: full;
-
-}
-    
-.educationSection p:first-child{
-    font-size: 16px;
-    font-family: Poppins;
-    font-weight: 400;
-    padding-right: 1.2rem;
-    width: 12%;
-}
-    
-.educationSection h2{
-    padding-right: 2rem;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-} */
 .new-line {
     white-space: pre-line;
   }
-/* 
-.titleBeforeDecorationRight::before {
-    content: "";
-    height: 4px;
-    width: 1.5rem;
-    position: relative;
-    background-color: var(--primary);
-    display: block;
-    left: -3rem;
-    top: 20px;
-}
-.titleBeforeDecorationLeft::after {
-    content: "";
-    height: 4px;
-    width: 1.5rem;
-    position: relative;
-    background-color: var(--primary);
-    display: block;
-    right: -2rem;
-    top: 15px;
-    float: right;
-} */
 
 .chart {
     width: 10rem;
@@ -171,7 +113,6 @@
     display: grid;
     place-items: center;
     margin-bottom: 20px;
-    /* background: #42c3bc conic-gradient( from 0deg at 50% 50%, #42c3bc 0deg 190deg, rgb(235, 235, 235) 190deg 360deg) */
 }
 .chart::after {
     content: "";

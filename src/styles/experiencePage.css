@@ -5,24 +5,13 @@
     height: auto;
 }
 
-.titleBeforeDecorationRight::before {
+.titleBeforeDecoration::before {
     content: "";
     height: 4px;
     width: 1.5rem;
     position: relative;
     background-color: var(--primary);
     display: block;
-    left: -3rem;
+    left: -6rem;
     top: 20px;
-}
-.titleBeforeDecorationLeft::after {
-    content: "";
-    height: 4px;
-    width: 1.5rem;
-    position: relative;
-    background-color: var(--primary);
-    display: block;
-    right: -2rem;
-    top: 15px;
-    float: right;
 }

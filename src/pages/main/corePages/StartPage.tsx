@@ -20,13 +20,13 @@ export const StartPage: React.FC = () => {
         target: ref,
         offset: ["start start", "end start"]
     });
-    const paralax1 = useTransform(scrollYProgress, [0, 1], ["0", "100%"]);
+    const paralaxCloud = useTransform(scrollYProgress, [0, 1], ["0", "100%"]);
     const paralaxCar = useTransform(scrollYProgress, [1, 0], ["-100%", "0"]);
     const paralaxPaintBrush = useTransform(scrollY,
         [0, 1],
         [0, 2],
         { ease: cubicBezier(0.17, 0.67, 0.83, 0.67) });
-    const paralaxbrushes = useTransform(scrollY,
+    const paralaxBrushes = useTransform(scrollY,
         [0, 100],
         [0, 60],
         { clamp: false });
@@ -102,7 +102,7 @@ export const StartPage: React.FC = () => {
                             <motion.img
                                 className="w-[35%] h-[8%] z-30 absolute top-[47%] left-auto right-[-0%] -rotate-40"
                                 src={brushes}
-                                style={{ y: paralaxbrushes }}
+                                style={{ y: paralaxBrushes }}
                             />
                             <motion.img
                                 className="w-[40%] h-[40%] object-contain z-10 absolute top-[10%] right-[5%] rotate-20 left-auto"
@@ -112,7 +112,7 @@ export const StartPage: React.FC = () => {
                             <motion.img
                                 src={cloud}
                                 className="w-full h-full z-20 object-contain"
-                                style={{ y: paralax1 }}
+                                style={{ y: paralaxCloud }}
                             />
                         </div>
                     </div>

@@ -7,13 +7,12 @@ import skill from "../../../../assets/skill.jpg";
 
 export const Skills: React.FC = () => {
 
-
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end start"]
     });
-    const paralax1 = useTransform(scrollYProgress, [0, 1], ["200%", "-200%"]);
+    const paralaxBgTxt = useTransform(scrollYProgress, [0, 1], ["200%", "-200%"]);
     const bg = "conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 40deg, rgb(235, 235, 235) 40deg 360deg)"
     const bg1In = "conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 340deg, rgb(235, 235, 235) 340deg 360deg)"
     const bg2In = "conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 350deg, rgb(235, 235, 235) 350deg 360deg)"
@@ -22,7 +21,7 @@ export const Skills: React.FC = () => {
     const bg5In = "conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 200deg, rgb(235, 235, 235) 200deg 360deg)"
 
     return (
-        <div className='w-full relative h-auto flex flex-col items-start justify-start py-40'
+        <div className='w-full relative h-auto flex flex-col items-start justify-start pb-40'
             id="skills"
             ref={ref}>
             <header className=' w-full flex items-start justify-between'>
@@ -148,7 +147,7 @@ export const Skills: React.FC = () => {
                 <span className='gridVisibileItem col-start-5' />
                 <span className='gridVisibileItem col-start-6' />
                 <motion.div
-                    style={{ y: paralax1 }}
+                    style={{ y: paralaxBgTxt }}
                     className='w-auto col-start-1 col-end-6 row-start-2 row-end-7 flex-col align-start lg:flex hidden'>
                     <p className='text-[12rem]  text-[#b6b6b61f] font-black uppercase '>Achievements</p>
                     <div className='w-40 h-20 bg-[#b6b6b61f] self-end' />

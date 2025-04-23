@@ -7,11 +7,10 @@ import logo from "../../../../assets/logo.svg";
 export const SideBar: React.FC = () => {
 
    const [openMenu, setOpenMenu] = useState(false);
-   const isMobileFloor = window.innerWidth >= 1280;
-   console.log(window.innerWidth)
+   const isDesktop = window.innerWidth >= 1280;
 
    return (<>
-      {isMobileFloor 
+      {isDesktop 
       ? (
       <div className='sticky z-100 top-0 left-0 h-screen w-24 min-w-24 inset-0 bg-darkSec flex flex-col justify-between items-center'>
          <div className='flex flex-col items-center'>
