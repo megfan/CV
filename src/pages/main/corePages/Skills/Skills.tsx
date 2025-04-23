@@ -36,7 +36,7 @@ export const Skills: React.FC = () => {
                             type: "tween",
                             duration: 1,
                         }}
-                        className='text-[12rem] ml-32 text-[#acacac1f] font-black z-10 top-50 absolute rotate-90'>
+                        className='text-[12rem] ml-32 text-[#acacac1f] font-black z-10 top-50 absolute rotate-90 lg:block hidden'>
                         Skills
                     </motion.p>
                 </div>

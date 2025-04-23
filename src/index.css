@@ -2,6 +2,7 @@
 @import './styles/App.css';
 @import './styles/mainPage.css';
 @import './styles/menuBar.css';
+@import './styles/experiencePage.css';
 
 @theme {  
   --color-darkPrimary: #2a2a2e;

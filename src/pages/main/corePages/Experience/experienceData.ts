@@ -3,7 +3,8 @@ import work2 from '../../../../assets/work2.jpg';
 import work3 from '../../../../assets/work3.jpg';
 import imm from '../../../../assets/imm.avif';
 import closi from '../../../../assets/closi.avif';
-import coders from '../../../../assets/coders.webp';
+import coders from '../../../../assets/coders.png';
+import granatowi from '../../../../assets/granatowi.png';
 
 interface experienceDataChildrenProps {
     title: string;
@@ -78,7 +79,7 @@ export const experienceData: experienceDataProps[] = [
         link: "www.coderslab.pl",
         technologies: 'PHOTOSHOP / ILLUSTRATOR / AFTER EFFECTS / INDESIGN / FIGMA ',
         employee: true,
-        pic: closi,
+        pic: coders,
         order: 3,
     },
     {
@@ -104,22 +105,25 @@ export const experienceData: experienceDataProps[] = [
     },
     {
         title: 'Work for Clos Brothers',
-        subtitle: "Graphic Designer",
+        subtitle: "Digital Advertising & Website Content Designer",
         duration: "2015 - 2016 / 11 months",
         link: "www.closbrothers.pl",
+        description: 'Creates engaging digital ads and website content with a focus on visual impact, brand consistency, and user engagement across online platforms.',
         technologies: 'PHOTOSHOP / ILLUSTRATOR / AFTER EFFECTS / INDESIGN',
         employee: true,
         order: 6,
-        pic: coders,
+        pic: closi,
     },
     {
         title: 'Work for Granatowi',
-        subtitle: "Graphic Designer",
+        subtitle: "Marketing Campaign & Print Media Specialist",
         duration: "2013 - 2014 / 14 months",
         link: "www.closbrothers.pl",
         technologies: 'PHOTOSHOP / ILLUSTRATOR / AFTER EFFECTS / FLESH',
         employee: true,
+        description: 'Designs compelling advertising materials for both digital and print, with a strong focus on visual consistency, branding, and clear communication across campaigns.',
         order: 7,
+        pic: granatowi
     },
     {
         title: 'And some more ...',
