@@ -1,15 +1,30 @@
 {
   "files": {
-    "main.css": "/CV/static/css/main.50547e16.css",
-    "main.js": "/CV/static/js/main.c30740fe.js",
+    "main.css": "/CV/static/css/main.e1809713.css",
+    "main.js": "/CV/static/js/main.efda820f.js",
     "static/js/453.f19e9853.chunk.js": "/CV/static/js/453.f19e9853.chunk.js",
+    "static/media/work.jpg": "/CV/static/media/work.37df209633966266aa4c.jpg",
+    "static/media/statue.png": "/CV/static/media/statue.231bb640623b104563c4.png",
+    "static/media/skills.jpg": "/CV/static/media/skills.72106d2a5edd2351e75c.jpg",
+    "static/media/cloud.png": "/CV/static/media/cloud.57e84e204896c529b896.png",
+    "static/media/car.png": "/CV/static/media/car.a140997146f91919a0e7.png",
+    "static/media/skill.jpg": "/CV/static/media/skill.e8ec64a94ef355c87565.jpg",
+    "static/media/granatowi.png": "/CV/static/media/granatowi.ea1c13a9909b9afa1d53.png",
+    "static/media/coders.png": "/CV/static/media/coders.bf6397e7c92b42744d87.png",
+    "static/media/paintBrush.png": "/CV/static/media/paintBrush.4f27fc3216a60021ac1a.png",
+    "static/media/brushes.png": "/CV/static/media/brushes.521855f53ba2e18d4889.png",
+    "static/media/aboutMe.png": "/CV/static/media/aboutMe.33c7d3daa35a1de4c09c.png",
+    "static/media/closi.avif": "/CV/static/media/closi.a2a8c0376151f4b07ef8.avif",
+    "static/media/imm.avif": "/CV/static/media/imm.6eb15f8e455c5e1686f4.avif",
+    "static/media/CV.pdf": "/CV/static/media/CV.c40a67e6f856912f10df.pdf",
+    "static/media/logo.svg": "/CV/static/media/logo.a48637cae8fb6e7616ab9e39071edd02.svg",
     "index.html": "/CV/index.html",
-    "main.50547e16.css.map": "/CV/static/css/main.50547e16.css.map",
-    "main.c30740fe.js.map": "/CV/static/js/main.c30740fe.js.map",
+    "main.e1809713.css.map": "/CV/static/css/main.e1809713.css.map",
+    "main.efda820f.js.map": "/CV/static/js/main.efda820f.js.map",
     "453.f19e9853.chunk.js.map": "/CV/static/js/453.f19e9853.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.50547e16.css",
-    "static/js/main.c30740fe.js"
+    "static/css/main.e1809713.css",
+    "static/js/main.efda820f.js"
   ]
 }
