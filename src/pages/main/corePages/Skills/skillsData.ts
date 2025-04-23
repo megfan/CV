@@ -6,7 +6,7 @@ interface skillsDataProps {
 export const developerSkillsCol1: skillsDataProps[] = [
 
     {
-        name: 'JavaScript / Typescript',
+        name: 'JS / Typescript',
         percent: '95%',
     },
     {
@@ -34,7 +34,7 @@ export const developerSkillsCol1: skillsDataProps[] = [
         percent: '95%',
     },
     {
-        name: 'TAILWIND / MATERIAL UI',
+        name: 'TAILWIND / MATERIAL',
         percent: '80%',
     },
     {

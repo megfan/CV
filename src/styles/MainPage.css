@@ -94,7 +94,7 @@
 .beforeVertical:before {
     content: '';
     width: 4px;
-    height: 10rem;
+    height: 15rem;
     left: 0;
     top: -20px;
     background-color: var(--primary);
@@ -107,18 +107,16 @@
   }
 
 .chart {
-    width: 10rem;
-    height: 10rem;
+    @apply lg:w-40 w-[5rem] lg:h-40 h-[5rem];
     border-radius: 100%;
     display: grid;
     place-items: center;
     margin-bottom: 20px;
 }
 .chart::after {
+    @apply lg:w-[100px] w-[50px] lg:h-[100px] h-[50px];
     content: "";
     display: block;
     background: white;
-    width: 100px;
-    height: 100px;
     border-radius: 100%;
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles/App.css';
 import { SideBar } from './pages/main/corePages/SideMenu/SideBar';
 import { MenuBar } from './pages/main/corePages/MenuBar';
@@ -22,7 +21,7 @@ function App() {
           <Education />
           <Experience />
           <Skills />
-          {/* <ContactPage /> */}
+          <ContactPage />
         </div>
       </div>
     </BrowserRouter>

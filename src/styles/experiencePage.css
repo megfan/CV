@@ -13,8 +13,6 @@
     position: relative;
     background-color: var(--primary);
     display: block;
-    /* left: -6rem; */
-    /* top: 20px; */
 }
 
 .container {

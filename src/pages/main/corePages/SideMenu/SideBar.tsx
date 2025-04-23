@@ -28,9 +28,9 @@ export const SideBar: React.FC = () => {
          <button className='w-full h-30 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'>SHARE</button>
       </div>
       ) : (
-         <div className='absolute top-0 left-0 z-50 px-4'>
-         <img src={logo} alt="logo" className='h-8 mt-8' />
-         <button className='cursor-pointer burger w-8 text-gray-500 hover:text-white capitalize xl:mt-5 m-0 font-semibold text-xs font-[Poppins] tracking-widest'
+         <div className='fixed top-0 left-0 z-50 px-4'>
+         <img src={logo} alt="logo" className='h-4 mt-8' />
+         <button className='cursor-pointer burger w-5 text-gray-500 hover:text-white capitalize xl:mt-5 m-0 font-semibold text-xs font-[Poppins] tracking-widest'
                onClick={() => setOpenMenu(!openMenu)}>
                <div className=' mt-8 mb-4 flex flex-col items-start'>
                   <span className={'burgerItem w-full ' + (openMenu ? 'activeFirst' : '')} />
