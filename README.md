@@ -39,6 +39,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 
 
-
-###Tailwind watch
-npx @tailwindcss/cli -i ./src/index.css -o ./src/output.css --watch

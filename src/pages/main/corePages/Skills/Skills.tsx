@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import '../../../../styles/mainPage.css';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { developerSkillsCol1, developerSkillsCol2 } from './skillsData';
 import { ParallaxPicFrame } from '../../../../components/parallaxPicFrame';

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../../../../styles/mainPage.css';
 import '../../../../styles/sideBar.css';
 import { SideMenu } from "./SideMenu";
 import logo from "../../../../assets/logo.svg";

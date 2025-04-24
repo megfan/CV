@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../../../styles/mainPage.css';
 import { HashLink } from "react-router-hash-link";
 
 export const ContactPage: React.FC = () => {

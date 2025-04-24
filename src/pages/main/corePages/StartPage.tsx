@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import '../../../styles/mainPage.css';
 import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { cubicBezier } from 'motion';
 import { useSpring } from 'motion/react';
