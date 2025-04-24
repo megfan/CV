@@ -1,6 +1,5 @@
 import React,  {useRef, useState} from 'react';
-// import '../../../styles/mainPage.css';
-import '../../../styles/menuBar.css';
+import '../../styles/menuBar.css';
 import { motion } from "motion/react";
 import { HashLink } from "react-router-hash-link";
 import { ContactBar } from "./Contact/ContactBar";

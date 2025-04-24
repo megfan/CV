@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import '../../../../styles/experiencePage.css';
+import '../../../styles/experiencePage.css';
 import { experienceData } from './experienceData';
-import { ParallaxPicFrame } from '../../../../components/parallaxPicFrame';
+import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
 
 
 export const Experience: React.FC = () => {
@@ -153,7 +153,7 @@ export const Experience: React.FC = () => {
                         <div className='bg-lightGray lg:p-12 p-4 flex lg:w-1/3 lg:mr-10 relative'>
                             <h1 className='titleBeforeDecoration'>{others?.title}</h1>
                             <button className='absolute lg:-right-40 -right-20 lg:top-auto top-16 hover:translate-x-12 duration-300'>
-                                <a href={require('../../../../assets/CV.pdf')} type='button' target="_blank" rel="noreferrer" download={'CV'}
+                                <a href={require('../../../assets/CV.pdf')} type='button' target="_blank" rel="noreferrer" download={'CV'}
                                     className='w-40 py-4 px-12 uppercase font-bold text-white tracking-wider text-xs bg-primary'>
                                     download resume
                                 </a>

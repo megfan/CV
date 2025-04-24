@@ -2,11 +2,11 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { cubicBezier } from 'motion';
 import { useSpring } from 'motion/react';
-import statue from '../../../assets/statue.png';
-import cloud from '../../../assets/cloud.png';
-import paintBrush from '../../../assets/paintBrush.png';
-import brushes from '../../../assets/brushes.png';
-import car from '../../../assets/car.png';
+import statue from '../../assets/statue.png';
+import cloud from '../../assets/cloud.png';
+import paintBrush from '../../assets/paintBrush.png';
+import brushes from '../../assets/brushes.png';
+import car from '../../assets/car.png';
 
 const ROTATION_RANGE = 30;
 const HALF_ROTATION_RANGE = 30 / 2;
@@ -29,8 +29,6 @@ export const StartPage: React.FC = () => {
         [0, 100],
         [0, 60],
         { clamp: false });
-
-
 
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -63,6 +61,28 @@ export const StartPage: React.FC = () => {
         y.set(0);
     };
 
+    const container = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3
+            }
+        }
+    }
+    const child = {
+        hidden: { opacity: 0, y: 20, filter: "blur(20px)" },
+        visible: {
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            transition: {
+                duration: 0.8,
+                ease: "easeOut"
+            }
+        }
+    }
+
     return (
         <div className='mainPage gridPage bg-darkPrimary w-full m-0 p-0 relative overflow-hidden'>
             <motion.div className='col-start-1 col-end-7 row-start-1 row-end-6 relative flex justify-center items-center'
@@ -78,16 +98,29 @@ export const StartPage: React.FC = () => {
                     className="relative h-[80%] w-[80%] rounded-xl bg-transparent m-auto flex justify-between"
                 >
                     <div className='flex w-full items-center lg:flex-row flex-col'>
-                        <div className='lg:w-1/2 w-full lg:ml-12 p-8'>
-                            <h1 className='break-words font-semibold lg:text-5xl text-3xl font-[Poppins] lg:leading-[5rem] drop-shadow-[(-18px 17px 20px 0px rgba(0,0,0, 1))]'>
-                                Hi there! <br />
-                                I'm Meg Staszewska <br />
-                                <span className='text-primary lg:whitespace-nowrap'>Developer and Designer</span>
-                            </h1>
-                            <div className='buttonMovingRight py-4 px-6 mt-4 bg-[#ffffff21] w-fit uppercase text-sm tracking-widest' >
-                                I create web and graphic design
-                            </div>
-                        </div>
+                        <motion.div className='lg:w-1/2 w-full lg:ml-12 p-8'
+                            //  initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
+                            //  whileInView={{ y: 0, opacity: 1, filter: "blur(0px)"}}
+                            transition={{
+                                duration: 1.3,
+                            }}
+                            variants={container}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <motion.h1 className='break-words font-semibold lg:text-5xl text-3xl font-[Poppins] 
+                                lg:leading-[5rem] drop-shadow-[(-18px 17px 20px 0px rgba(0,0,0, 1))]'
+                                variants={child}
+                            > Hi there! </motion.h1>
+                            <motion.h1 className='break-words font-semibold lg:text-5xl text-3xl font-[Poppins] 
+                                lg:leading-[5rem] drop-shadow-[(-18px 17px 20px 0px rgba(0,0,0, 1))]'
+                                variants={child}
+                            > I'm Meg Staszewska </motion.h1>
+                            <motion.span className='text-primary lg:whitespace-nowrap' variants={child}>
+                                Developer and Designer</motion.span>
+                            <motion.div className='py-4 px-6 mt-4 bg-[#ffffff21] w-fit uppercase text-sm tracking-widest'
+                                variants={child}>I create web and graphic design</motion.div>
+                        </motion.div>
                         <div className='relative flex h-full lg:w-1/2 w-full items-center justify-center '>
                             <motion.img className="w-[20%] h-[40%] object-contain z-30 absolute top-10 right-[35%] left-auto -rotate-5"
                                 src={statue}

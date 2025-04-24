@@ -22,7 +22,7 @@ export const ContactPage: React.FC = () => {
                         <span className='text-primary text-4xl font-[Titillium] italic'>Contact </span>details</h1>
                     <p className='leading-loose text-justify mb-10'>Have an idea for a website and need an experienced developer or designer? Get in touch! Together, we’ll create a modern and functional project tailored to your needs. Drop me a message, and let’s discuss the details!</p>
 
-                    <a href={require('../../../../assets/CV.pdf')} type='button' target="_blank" rel="noreferrer" download={'CV'}
+                    <a href={require('../../../assets/CV.pdf')} type='button' target="_blank" rel="noreferrer" download={'CV'}
                         className='w-40 py-4 px-12 uppercase font-bold text-white tracking-wider text-xs bg-primary'>
                         resume
                     </a>

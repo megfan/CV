@@ -1,13 +1,15 @@
 import './styles/App.css';
-import { SideBar } from './pages/main/corePages/SideMenu/SideBar';
-import { MenuBar } from './pages/main/corePages/MenuBar';
-import {StartPage} from './pages/main/corePages/StartPage';
-import {AboutPage} from './pages/main/corePages/AboutPage';
-import {Education} from './pages/main/corePages/Education';
-import {Experience} from './pages/main/corePages/Experience/Experience';
-import {ContactPage} from './pages/main/corePages/Contact/Contact';
-import {Skills} from './pages/main/corePages/Skills/Skills';
+import { SideBar } from './pages/main/SideMenu/SideBar';
+import { MenuBar } from './pages/main/MenuBar';
+import {StartPage} from './pages/main/StartPage';
+import {AboutPage} from './pages/main/AboutPage';
+import {Education} from './pages/main/Education';
+import {Experience} from './pages/main/Experience/Experience';
+import {ContactPage} from './pages/main/Contact/Contact';
+import {Skills} from './pages/main/Skills/Skills';
+import {Slider} from './pages/main/Slider/Slider';
 import { BrowserRouter } from 'react-router';
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Education />
           <Experience />
           <Skills />
+          <Slider/>
           <ContactPage />
         </div>
       </div>

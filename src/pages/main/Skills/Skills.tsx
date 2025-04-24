@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { developerSkillsCol1, developerSkillsCol2 } from './skillsData';
-import { ParallaxPicFrame } from '../../../../components/parallaxPicFrame';
-import skill from "../../../../assets/skill.jpg";
+import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
+import skill from "../../../assets/skill.jpg";
 
 export const Skills: React.FC = () => {
 

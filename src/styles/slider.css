@@ -1,0 +1,67 @@
+.item {
+    max-height: 30rem;
+    min-width: 20rem;
+    object-fit: contain;
+    filter: brightness(30%);
+    margin-right: 5rem;
+    background-color: aqua;
+    transition: all .4s ease-in-out;
+}
+.item img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    position: relative;
+}
+.item.active {
+    filter: brightness(100%);
+    transform: scale(1.3) translateY(-20px);
+    transition: all .4s ease-in-out;
+}
+.innerCarousel {
+    display: flex;
+    position: relative;
+    margin-left: 50%;
+    width: auto;
+}
+.carousel {
+    cursor: grab;
+    overflow: hidden;
+    position: relative;
+}
+.arrow {
+    @apply w-12 h-12 bg-[#ffffff2b] flex justify-center items-center absolute z-20 border border-[#ffffff69];
+    transition: all .4s ease;
+    border-radius: 20%;
+}
+.arrow:hover {
+    border-radius: 100%;
+    transition: all .7s ease;
+}
+.imageDescription {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: var(--color-darkSec);
+    height: auto;
+    width: 100%;
+    position: absolute;
+    color: rgb(184, 184, 184);
+    padding: 2rem 2rem 2rem 4rem ;
+    font-size: 12px;
+    transform: translateY(-6rem);
+    transition: all .4s ease-in-out;
+    z-index: 0;
+}
+.imageDescription::before {
+    content: '';
+    width: 1rem;
+    height: 2px;
+    left: 2rem;
+    top: 2.6rem;
+    background-color: var(--primary);
+    position: absolute;
+}
+.item.active > .imageDescription{
+    transform: translateY(0);
+}

@@ -5,7 +5,7 @@ import {
 } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
 import { hashLinksArray } from "./hashLinks";
-import '../../../../styles/sideMenu.css';
+import '../../../styles/sideMenu.css';
 
 
 interface SideMenuProps {

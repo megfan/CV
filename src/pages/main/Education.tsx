@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
-import "../../../styles/educationPage.css";
-import education from '../../../assets/skills.jpg';
+import { ParallaxPicFrame } from '../../components/parallaxPicFrame';
+import "../../styles/educationPage.css";
+import education from '../../assets/skills.jpg';
 
 export const Education: React.FC = () => {
     const ref = useRef(null);

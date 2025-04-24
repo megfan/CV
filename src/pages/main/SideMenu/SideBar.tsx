@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../../../../styles/sideBar.css';
+import '../../../styles/sideBar.css';
 import { SideMenu } from "./SideMenu";
-import logo from "../../../../assets/logo.svg";
+import logo from "../../../assets/logo.svg";
 
 export const SideBar: React.FC = () => {
 
