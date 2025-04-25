@@ -23,12 +23,12 @@ export const Experience: React.FC = () => {
             {/* {isDesktop ? ( */}
             <div className='bg-white h-auto flex flex-col w-full lg:pt-40 lg:pr-20 col-start-2 col-end-8 row-start-1 row-end-8'>
                 <span className='absolute top-0 lg:left-0 -left-5 bg-gray-300 z-20 h-full w-[1px] col-start-2' />
-                <div className='flex flex-col text-darkPrimary lg:ml-50 my-10 text-sm'>
+                <div className='flex flex-col text-darkPrimary lg:ml-50 text-sm'>
                     <h1 className='lg:text-4xl text-2xl font-bold mb-12 relative tittle'>How it
                         <span className='text-primary lg:text-5xl text-4xl font-[Titillium] lowercase italic'> develops </span></h1>
                     <span className='text-gray-400'>The most difficult thing is the decision to act, the rest is merely tenacity - Amelia Earhart</span>
                 </div>
-                <div className='z-10 w-full lg:mt-20'>
+                <div className='z-10 w-full'>
                     {/* alumbrados */}
                     <div className='container'>
                         <div className='bg-lightGray titleBox'>

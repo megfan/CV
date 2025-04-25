@@ -9,7 +9,7 @@ interface designSkillsProps {
     circle: string;
 }
 
-export const developerSkillsCol1: skillsDataProps[] = [
+export const developerSkills: skillsDataProps[] = [
 
     {
         name: 'JS / Typescript',
@@ -47,11 +47,6 @@ export const developerSkillsCol1: skillsDataProps[] = [
         name: 'NEXT.JS',
         percent: '50%',
     },
-    
-];
-
-
-export const developerSkillsCol2: skillsDataProps[] = [
     {
         name: 'JIRA / ASANA / GIT',
         percent: '80%',
@@ -88,7 +83,9 @@ export const developerSkillsCol2: skillsDataProps[] = [
         name: 'SQL / MSSMS / Docker',
         percent: '30%',
     },
+    
 ];
+
 
 export const designSkills: designSkillsProps[] = [
     {
