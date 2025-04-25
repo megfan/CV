@@ -93,10 +93,10 @@
 
 .beforeVertical:before {
     content: '';
-    width: 4px;
-    height: 15rem;
-    left: 0;
-    top: -20px;
+    width: 10rem;
+    height: 2px;
+    left: 0px;
+    top: 50px;
     background-color: var(--primary);
     position: absolute;
     transition: all 700ms linear;
@@ -107,14 +107,14 @@
   }
 
 .chart {
-    @apply lg:w-40 w-[5rem] lg:h-40 h-[5rem];
+    @apply lg:w-30 w-[5rem] lg:h-30 h-[5rem];
     border-radius: 100%;
     display: grid;
     place-items: center;
     margin-bottom: 20px;
 }
 .chart::after {
-    @apply lg:w-[100px] w-[50px] lg:h-[100px] h-[50px];
+    @apply lg:w-[80px] w-[50px] lg:h-[80px] h-[50px];
     content: "";
     display: block;
     background: white;
