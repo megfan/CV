@@ -18,7 +18,7 @@ export const AboutPage: React.FC = () => {
     return (
         <div
             ref={ref}
-            className='bg-white mainPage gridPage w-full relative'
+            className='sticky top-0 bg-white mainPage gridPage w-full relative'
             id="about">
             <div className='z-10 h-auto lg:w-1/4 lg:flex hidden items-start col-start-2 col-end-7 lg:row-start-2 row-start-1 row-end-6 relative'>
                 <MouseMoveTile children={<img src={aboutMe} className="z-10" alt="aboutMe" />} />
@@ -31,26 +31,28 @@ export const AboutPage: React.FC = () => {
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                     transition={{ duration: .5, delay: .4 }}
-                >From Photography to Frontend Innovation</motion.span>
+                    >From Photography to Frontend Innovation</motion.span>
                 <motion.h1 className='lg:text-4xl text-2xl font-bold mb-12 mt-6 relative tittle'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                    transition={{ duration: .5, delay: .6 }}>My creative
+                    transition={{ duration: .5, delay: .6 }}
+                    >My creative
                     <span className='text-primary lg:text-5xl text-4xl font-[Titillium] lowercase italic'> evolution </span></motion.h1>
-                <motion.p className='leading-loose text-justify'
+                <motion.p 
+                    className='leading-loose text-justify'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                     transition={{ duration: .5, delay: .8 }}
-                >What started as a passion for photography and media arts soon evolved into visual design and,
-                    ultimately, frontend development. Over the years, my focus has shifted from crafting static visuals to building dynamic, interactive
-                    digital experiences across diverse industries. With six years in frontend development and 14 in graphic design, I bring a blend of
-                    creativity and technical expertise to every project. Experienced in agency work, startup consulting, and developing solutions for
-                    businesses and consumers, I thrive on collaboration and continuous learning, always pushing my skills to the next level.</motion.p>
+                    >What began as a journey in saving lives slowly transformed into a pursuit of creating beauty and logic through art and code. 
+                    From emergency rooms to creative studios, from life-or-death decisions to designing digital experiences—each step taught me 
+                    something new about problem-solving, precision, and creativity. Over time, I moved from the urgency of medicine to the art 
+                    of design, and eventually, to the language of code. Now, I blend the skills of empathy, creativity, and technical expertise 
+                    to craft seamless, meaningful digital experiences.</motion.p>
                 <motion.button className='py-4 px-6 lg:block hidden mt-10 uppercase font-bold text-white tracking-wider text-xs bg-primary w-fit'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                     transition={{ duration: .5, delay: .8 }}
-                >photography / soon</motion.button>
+                    >photography / soon</motion.button>
             </div>
             <motion.p
                 style={{ y: paralaxBgText }}

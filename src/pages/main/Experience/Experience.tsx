@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import '../../../styles/experiencePage.css';
 import { experienceData } from './experienceData';
 import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
+import { motion } from 'framer-motion';
 
 
 export const Experience: React.FC = () => {
@@ -19,15 +20,18 @@ export const Experience: React.FC = () => {
 
 
     return (<>
-        <div className='gridPage w-full h-auto relative m-0 p-0 overflow-hidden' id="experience" ref={ref}>
+        <div className='z-20 bg-white lg:pr-40 gridPage w-full h-auto relative m-0 p-0 overflow-hidden' id="experience" ref={ref}>
             {/* {isDesktop ? ( */}
             <div className='bg-white h-auto flex flex-col w-full lg:pt-40 lg:pr-20 col-start-2 col-end-8 row-start-1 row-end-8'>
                 <span className='absolute top-0 lg:left-0 -left-5 bg-gray-300 z-20 h-full w-[1px] col-start-2' />
-                <div className='flex flex-col text-darkPrimary lg:ml-50 text-sm'>
+                <motion.div className='flex flex-col text-darkPrimary lg:ml-50 text-sm'
+                      initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
+                      whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                      transition={{ duration: .5, delay: .2 }}>
                     <h1 className='lg:text-4xl text-2xl font-bold mb-12 relative tittle'>How it
                         <span className='text-primary lg:text-5xl text-4xl font-[Titillium] lowercase italic'> develops </span></h1>
                     <span className='text-gray-400'>The most difficult thing is the decision to act, the rest is merely tenacity - Amelia Earhart</span>
-                </div>
+                </motion.div>
                 <div className='z-10 w-full'>
                     {/* alumbrados */}
                     <div className='container'>

@@ -9,20 +9,22 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 1.4rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
 }
 
 .educationSection p:first-child{
-    font-size: 16px;
-    font-family: Poppins;
-    font-weight: 400;
+    /* font-family: Poppins; */
+    /* font-weight: 400; */
     width: 15%;
     white-space: nowrap;
 }
     
 .educationSection h2{
-    font-size: 16px;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-transform: uppercase;
     margin-right: 20px;
 }

@@ -31,7 +31,7 @@
     position: relative;
 }
 .arrow {
-    @apply w-12 h-12 bg-[#ffffff2b] flex justify-center items-center absolute z-20 border border-[#ffffff69];
+    @apply w-12 h-12 bg-[#ffffff2b] flex justify-center items-center absolute z-50 border border-[#ffffff69];
     transition: all .4s ease;
     border-radius: 20%;
 }

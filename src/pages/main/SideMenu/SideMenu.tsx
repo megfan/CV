@@ -7,6 +7,10 @@ import { HashLink } from "react-router-hash-link";
 import { hashLinksArray } from "./hashLinks";
 import '../../../styles/sideMenu.css';
 
+const CYCLES_PER_LETTER = 4;
+const SHUFFLE_TIME = 30;
+
+const CHARS = "DFUKC98745KHI97345";
 
 interface SideMenuProps {
   open: boolean;
@@ -16,6 +20,9 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
   const [openMenu, setOpenMenu] = useState(false);
   const [scope, animate] = useAnimate();
   const hasMounted = useRef(false);
+  const intervalRef = useRef<any>(null);
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState<number | null>(null);
 
   useEffect(() => {
     if (!hasMounted.current) {
@@ -41,15 +48,6 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
     setOpenMenu(false)
     setOpen(false);
   };
-
-  const CYCLES_PER_LETTER = 4;
-  const SHUFFLE_TIME = 30;
-
-  const CHARS = "DFUKC98745KHI97345";
-
-  const intervalRef = useRef<any>(null);
-  const [text, setText] = useState('');
-  const [index, setIndex] = useState<number | null>(null);
 
   const scramble = (txt: string, index: number) => {
     let pos = 0;

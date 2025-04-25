@@ -24,16 +24,16 @@ export const Skills: React.FC = () => {
     const bg = "conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 40deg, rgb(235, 235, 235) 40deg 360deg)"
 
     return (
-        <div className='w-full relative h-auto flex flex-col items-start justify-start'
+        <div className='z-10 bg-white w-full relative h-auto flex flex-col items-start justify-start'
             id="skills"
             ref={ref}>
             <header className='z-10 w-full flex items-start justify-between h-[40vh] lg:h-[60vh] relative'>
                 <div className='bg-darkPrimary z-10 lg:ml-30 lg:p-30 p-12 w-2/5 flex-col text-white text-sm absolute'>
                     <span className='text-gray-400'>The only source of knowledge is experience - Albert Einstein</span>
                     <h1 className='text-2xl font-bold mb-12 mt-2 relative tittle'>My
-                        <span className='text-primary text-4xl font-[Titillium] lowercase italic'> developer's </span>and design skills</h1>
+                        <span className='text-primary text-4xl font-[Titillium] lowercase italic'> programming </span>and design skills</h1>
                 </div>
-                <ParallaxPicFrame styles={'lg:w-screen lg:h-[60vh] h-[40vh] bg-center m-0 lg:brightness-90 brightness-20 lg:relative absolute overflow-hidden'}
+                <ParallaxPicFrame styles={'lg:w-full lg:h-[60vh] h-[40vh] bg-center m-0 lg:brightness-90 brightness-20 lg:relative absolute overflow-hidden'}
                     src={skill} />
             </header>
             <main className=' w-full h-auto z-10 flex justify-between'>
@@ -49,7 +49,7 @@ export const Skills: React.FC = () => {
                     />
                 </div>
                 <motion.div className='w-2/3' whileInView={{ top: 100 }}>
-                    <section className=' px-30 py-50 flex flex-col w-full h-auto relative items-start justify-start hover:bg-gray-100'>
+                    <section className=' px-30 py-40 flex flex-col w-full h-auto relative items-start justify-start hover:bg-gray-100'>
                         <div className='lg:w-1/2 ml-30 w-full relative'>
                             <span className='font-bold text-4xl absolute bottom-10 -left-30 text-gray-300'>01</span>
                             <h1 className='text-2xl pb-10 text-darkPrimary beforeVertical'>Designer skills</h1>
@@ -78,7 +78,7 @@ export const Skills: React.FC = () => {
                     <section className='w-full h-auto px-30 py-40 flex flex-col hover:bg-gray-100'>
                         <div className='lg:w-1/2 ml-30 w-full relative'>
                         <span className='font-bold text-4xl absolute bottom-10 -left-30 text-gray-300'>02</span>
-                            <h1 className='text-2xl pb-8 text-darkPrimary beforeVertical'>Developer skills</h1>
+                            <h1 className='text-2xl pb-8 text-darkPrimary beforeVertical'>Full-stack development skills</h1>
                             <p className='text-gray-500 text-justify'>Focused on building responsive, user-friendly
                                 websites and interfaces, combining clean code with modern front-end technologies.</p>
                         </div>
