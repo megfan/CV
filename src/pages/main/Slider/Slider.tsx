@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } from 'framer-motion';
 import images from './images';
-import {ReactComponent as Arrow} from '../../../assets/arrow-left.svg';
+import { ReactComponent as Arrow } from '../../../assets/arrow-left.svg';
 
 
 export const Slider = () => {
@@ -12,41 +12,39 @@ export const Slider = () => {
     const ref = useRef<HTMLDivElement>(null);
 
     const handleActiveIndexChange = (value: number) => {
-        const maxVal = images.length -1;
+        const maxVal = images.length - 1;
         const index = activeIndex + value;
-        if(index > maxVal) setActiveIndex(0);
-        if(index < 0) setActiveIndex(maxVal);
-        if(index <= maxVal && index >= 0) setActiveIndex(index)
+        if (index > maxVal) setActiveIndex(0);
+        if (index < 0) setActiveIndex(maxVal);
+        if (index <= maxVal && index >= 0) setActiveIndex(index)
     }
 
 
-    console.log(`${activeIndex * 2}`)
     return (
-        <div className='z-30 bg-darkPrimary w-full h-[100vh] m-0 p-0 relative overflow-hidden'>
+        <div className='z-30 bg-darkPrimary w-full h-[100vh] m-0 p-0 relative overflow-hidden' id='gallery'>
             <header className='w-full flex flex-col items-start justify-start absolute z-20 top-[15%] left-40'>
                 <div className='w-full flex-col text-white text-sm'>
-                    {/* <span className='text-gray-400'>The only source of knowledge is experience - Albert Einstein</span> */}
-                    <h1 className='text-3xl font-bold mb-12 mt-2 relative tittle'>Sample of my 
+                    <h1 className='text-3xl font-bold mb-12 mt-2 relative tittle'>Sample of my
                         <span className='text-primary text-4xl font-[Titillium] lowercase italic'> graphic design </span>portfolio</h1>
                 </div>
             </header>
             <main className='w-full mx-4 mt-10 max-w-[90vw] h-full flex items-center justify-center'>
-                <motion.div className='carousel flex items-center justify-start h-full' whileTap={{cursor: "grabbing"}}>
-                    <motion.div drag='x' 
-                        className='innerCarousel' 
+                <motion.div className='carousel flex items-center justify-start h-full' whileTap={{ cursor: "grabbing" }}>
+                    <motion.div drag='x'
+                        className='innerCarousel'
                         ref={ref}
-                        dragConstraints={{right: 0, left: 0}} 
+                        dragConstraints={{ right: 0, left: 0 }}
                         animate={{
                             translateX: `-${activeIndex * 11}%`,
                         }}
                         transition={{
                             duration: 0.45,
-                          }}
-                        >
+                        }}
+                    >
                         {images.map((image, index) => {
-                            return(
+                            return (
                                 <motion.div className={'item' + (activeIndex === index ? ' active' : '')}>
-                                    <img src={image.imgSrc} alt={image.title}/>
+                                    <img src={image.imgSrc} alt={image.title} />
                                     <div className='imageDescription'>{image.title}</div>
                                 </motion.div>
                             )
@@ -54,10 +52,10 @@ export const Slider = () => {
                     </motion.div>
                 </motion.div>
                 <button className='arrow left-10' onClick={() => handleActiveIndexChange(- 1)}>
-                    <Arrow className='text-primary h-6 w-6 stroke-2'/>
+                    <Arrow className='text-primary h-6 w-6 stroke-2' />
                 </button>
                 <button className='arrow right-10' onClick={() => handleActiveIndexChange(1)}>
-                    <Arrow className='text-primary h-6 w-6 scale-x-[-1] stroke-2'/>
+                    <Arrow className='text-primary h-6 w-6 scale-x-[-1] stroke-2' />
                 </button>
             </main>
         </div>

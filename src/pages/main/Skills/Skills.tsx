@@ -1,12 +1,8 @@
-"use client"
-
-
-import React, { useRef, useEffect } from 'react';
-import { animate, motion, useScroll, useTransform, useMotionValue } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { developerSkills, designSkills, services } from './skillsData';
 import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
 import skill from "../../../assets/1.jpg";
-import skill2 from "../../../assets/skill.jpg";
 import blocks from "../../../assets/blocks.jpg";
 import clouds from "../../../assets/clouds.jpg";
 import fale from "../../../assets/fale.jpg";
@@ -14,8 +10,6 @@ import fale from "../../../assets/fale.jpg";
 export const Skills: React.FC = () => {
 
     const ref = useRef(null);
-    const ref2 = useRef(null);
-    const refImg = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end end"]
@@ -49,7 +43,7 @@ export const Skills: React.FC = () => {
                     />
                 </div>
                 <motion.div className='w-2/3' whileInView={{ top: 100 }}>
-                    <section className=' px-30 py-40 flex flex-col w-full h-auto relative items-start justify-start hover:bg-gray-100'>
+                    <section className=' px-30 py-0 flex flex-col w-full h-auto relative items-start justify-start hover:bg-gray-100'>
                         <div className='lg:w-1/2 ml-30 w-full relative'>
                             <span className='font-bold text-4xl absolute bottom-10 -left-30 text-gray-300'>01</span>
                             <h1 className='text-2xl pb-10 text-darkPrimary beforeVertical'>Designer skills</h1>
@@ -58,7 +52,7 @@ export const Skills: React.FC = () => {
                         </div>
                         <div className='flex flex-wrap justify-center self-end mt-20 mx-auto'>
                             {designSkills.map((e, index) => {
-                                return <div className='flex flex-col items-center justify-center mx-5 mb-10' key={index}>
+                                return <div className='flex flex-col items-center justify-center mx-5' key={index}>
                                     <motion.div className="chart" style={{
                                     }}
                                         initial={{ background: bg }}
@@ -73,11 +67,9 @@ export const Skills: React.FC = () => {
 
                         </div>
                     </section>
-
-                  
                     <section className='w-full h-auto px-30 py-40 flex flex-col hover:bg-gray-100'>
                         <div className='lg:w-1/2 ml-30 w-full relative'>
-                        <span className='font-bold text-4xl absolute bottom-10 -left-30 text-gray-300'>02</span>
+                            <span className='font-bold text-4xl absolute bottom-10 -left-30 text-gray-300'>02</span>
                             <h1 className='text-2xl pb-8 text-darkPrimary beforeVertical'>Full-stack development skills</h1>
                             <p className='text-gray-500 text-justify'>Focused on building responsive, user-friendly
                                 websites and interfaces, combining clean code with modern front-end technologies.</p>

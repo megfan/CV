@@ -14,6 +14,7 @@ export const AboutPage: React.FC = () => {
     const paralaxImg = useTransform(scrollYProgress, [1, 0], ["100%", "0"]);
     const paralaxBgText = useTransform(scrollYProgress, [1, 0], ["-100%", "100%"]);
     const isDesktop = window.innerWidth >= 1280;
+    
 
     return (
         <div

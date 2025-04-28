@@ -1,4 +1,4 @@
-import React,  {useRef, useState} from 'react';
+import React,  {useEffect, useRef, useState} from 'react';
 import '../../styles/menuBar.css';
 import { motion } from "motion/react";
 import { HashLink } from "react-router-hash-link";
@@ -8,6 +8,10 @@ import { ContactBar } from "./Contact/ContactBar";
 export const MenuBar: React.FC = () => {
     const ref = useRef(null)
     const [openContact, setOpenContact] = useState(false);
+
+    useEffect(() => {
+        console.log(window.location.hash)
+    }, [window.location.hash])
 
     return (<>
         <motion.div className='sticky w-full m-0 p-0 z-30 right-0 top-0 h-20 bg-darkPrimary inset-0 xl:grid hidden
@@ -24,9 +28,9 @@ export const MenuBar: React.FC = () => {
                 <ul className="text-gray-500 h-full w-full uppercase text-xs float-left flex items-center">
                     <li className='menuBarItem'><HashLink smooth to={'#'}>start</HashLink></li>
                     <li className='menuBarItem'><HashLink smooth to={'#about'}>about</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#education'}>education</HashLink></li>
                     <li className='menuBarItem'><HashLink smooth to={'#experience'}>experience</HashLink></li>
                     <li className='menuBarItem'><HashLink smooth to={'#skills'}>skills</HashLink></li>
+                    <li className='menuBarItem'><HashLink smooth to={'#gallery'}>gallery</HashLink></li>
                     <li className='menuBarItem'><HashLink smooth to={'#contact'}>contact</HashLink></li>
                 </ul>
             </nav>

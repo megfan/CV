@@ -26,7 +26,7 @@ export const educationArray = [
     },
     {
         data: '2008',
-        name: 'Advanced Adobe Photoshop Course',
+        name: 'Advanced Photoshop Course',
         school: 'Academy of Photography in Warsaw',
         isTitle: false
     },

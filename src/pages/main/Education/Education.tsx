@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export const Education: React.FC = () => {
     const ref = useRef(null);
-
+ 
     return (
         <div className='z-10 sticky top-0 bg-darkPrimary h-[140vh] w-full flex justify-between'
             id="education" ref={ref}>

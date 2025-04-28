@@ -8,6 +8,7 @@ import {Experience} from './pages/main/Experience/Experience';
 import {ContactPage} from './pages/main/Contact/Contact';
 import {Skills} from './pages/main/Skills/Skills';
 import {Slider} from './pages/main/Slider/Slider';
+import {Process} from './pages/main/Process';
 import { BrowserRouter } from 'react-router';
 
 
@@ -24,6 +25,7 @@ function App() {
           <Experience />
           <Skills />
           <Slider/>
+          <Process/>
           <ContactPage />
         </div>
       </div>

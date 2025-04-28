@@ -13,16 +13,16 @@ interface hashLinksProps {
       hash: '#about',
     },
     {
-      name: 'education',
-      hash: '#education',
-    },
-    {
       name: 'experience',
       hash: '#experience',
     },
     {
       name: 'skills',
       hash: '#skills',
+    },
+    {
+      name: 'gallery',
+      hash: '#gallery',
     },
     {
       name: 'contact',
