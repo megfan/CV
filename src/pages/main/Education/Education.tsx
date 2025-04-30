@@ -9,9 +9,9 @@ export const Education: React.FC = () => {
     const ref = useRef(null);
  
     return (
-        <div className='z-10 sticky top-0 bg-darkPrimary h-[140vh] w-full flex justify-between'
+        <div className='z-10 sticky top-0 bg-darkPrimary h-[90vh] w-full flex justify-between'
             id="education" ref={ref}>
-            <div className='w-1/2 h-full flex flex-col lg:p-30 p-12 justify-start items-center '>
+            <div className='w-1/2 h-full flex flex-col justify-center items-center lg:p-30 p-12 '>
                 <header className='w-full mb-20'>
                     <motion.span className='text-gray-400'
                         initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}

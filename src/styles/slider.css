@@ -22,7 +22,7 @@
 .innerCarousel {
     display: flex;
     position: relative;
-    margin-left: 50%;
+    /* margin-left: 50%; */
     width: auto;
 }
 .carousel {

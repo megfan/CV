@@ -20,7 +20,7 @@ export const Experience: React.FC = () => {
 
 
     return (<>
-        <div className='z-20 bg-white lg:pr-40 gridPage w-full h-auto relative m-0 p-0 overflow-hidden' id="experience" ref={ref}>
+        <div className='z-20 bg-white xl:pr-20 lg:pr-40 gridPage w-full h-auto relative m-0 p-0 overflow-hidden' id="experience" ref={ref}>
             {/* {isDesktop ? ( */}
             <div className='bg-white h-auto flex flex-col w-full lg:pt-40 lg:pr-20 col-start-2 col-end-8 row-start-1 row-end-8'>
                 <span className='absolute top-0 lg:left-0 -left-5 bg-gray-300 z-20 h-full w-[1px] col-start-2' />
@@ -34,7 +34,7 @@ export const Experience: React.FC = () => {
                 </motion.div>
                 <div className='z-10 w-full'>
                     {/* alumbrados */}
-                    <div className='container'>
+                    <div className='containerBox'>
                         <div className='bg-lightGray titleBox'>
                             <p className=' duration'>{alumbrados?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{alumbrados?.title}</h1>
@@ -57,7 +57,7 @@ export const Experience: React.FC = () => {
                             <h1 className='titleBeforeDecoration'>{onwelo?.title}</h1>
                             <span className='text-sm italic font-[Titillium] font-bold'>{onwelo?.link}</span>
                         </div>
-                        <div className='container'>
+                        <div className='containerBox'>
                             {onwelo?.children?.map(e => {
                                 return <div className='descriptionBox lg:mr-12'>
                                     <p className=' duration'>{e.duration}</p>
@@ -71,7 +71,7 @@ export const Experience: React.FC = () => {
                     </div>
 
                     {/* coders */}
-                    <div className='container'>
+                    <div className='containerBox'>
                         <div className='titleBox bg-lightGray'>
                             <p className=' duration'>{coders?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{coders?.title}</h1>
@@ -88,7 +88,7 @@ export const Experience: React.FC = () => {
                     </div>
 
                     {/* imm*/}
-                    <div className='container'>
+                    <div className='containerBox'>
                         <div className='bg-primary text-white titleBox'>
                             <p className=' text-sm mb-4'>{imm?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{imm?.title}</h1>
@@ -105,7 +105,7 @@ export const Experience: React.FC = () => {
                     </div>
 
                     {/* fakturownia */}
-                    <div className='container'>
+                    <div className='containerBox'>
                         <div className='titleBox bg-lightGray'>
                             <p className=' duration'>{fakturownia?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{fakturownia?.title}</h1>
@@ -119,7 +119,7 @@ export const Experience: React.FC = () => {
                     </div>
 
                     {/* closi */}
-                    <div className='container'>
+                    <div className='containerBox'>
                         <div className='bg-primary text-white titleBox'>
                             <p className=' text-sm mb-4'>{closi?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{closi?.title}</h1>
@@ -136,7 +136,7 @@ export const Experience: React.FC = () => {
                     </div>
 
                     {/* grnatowi */}
-                    <div className='container'>
+                    <div className='containerBox'>
                         <div className='titleBox bg-lightGray'>
                             <p className=' duration'>{granatowi?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{granatowi?.title}</h1>

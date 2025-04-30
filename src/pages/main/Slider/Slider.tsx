@@ -1,24 +1,52 @@
-import React, { useRef, useState } from 'react';
-import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+import { animate, motion, useMotionValue } from 'framer-motion';
 import images from './images';
 import { ReactComponent as Arrow } from '../../../assets/arrow-left.svg';
+import useMeasure from 'react-use-measure';
 
+
+const DURATION = 35;
 
 export const Slider = () => {
 
-    const [activeIndex, setActiveIndex] = useState(0);
-    const { scrollXProgress } = useScroll()
+    const [activeIndex, setActiveIndex] = useState(2);
 
     const ref = useRef<HTMLDivElement>(null);
 
+    const imagesArray = [...images, ... images, ...images];
+    console.log(imagesArray.length)
     const handleActiveIndexChange = (value: number) => {
-        const maxVal = images.length - 1;
+        const maxVal = imagesArray.length;
         const index = activeIndex + value;
         if (index > maxVal) setActiveIndex(0);
         if (index < 0) setActiveIndex(maxVal);
         if (index <= maxVal && index >= 0) setActiveIndex(index)
     }
 
+    let [refSlider, {width}] = useMeasure();
+    const xTranslation = useMotionValue(0);
+
+    useEffect(() => {
+        let controls;
+        let finalPosition = -width / 2 -8
+
+        controls = animate(xTranslation, [200, finalPosition], {
+            ease: "linear",
+            duration: DURATION,
+            repeat: Infinity,
+            repeatType: "loop",
+            repeatDelay: 0,
+        });
+
+        return controls.stop;
+    },[xTranslation, width]);
+
+useEffect(() => {
+    const interval = setInterval(() => {
+        handleActiveIndexChange(1);
+    }, 1700);
+    return () => clearInterval(interval);
+}, [activeIndex]);
 
     return (
         <div className='z-30 bg-darkPrimary w-full h-[100vh] m-0 p-0 relative overflow-hidden' id='gallery'>
@@ -32,16 +60,17 @@ export const Slider = () => {
                 <motion.div className='carousel flex items-center justify-start h-full' whileTap={{ cursor: "grabbing" }}>
                     <motion.div drag='x'
                         className='innerCarousel'
-                        ref={ref}
-                        dragConstraints={{ right: 0, left: 0 }}
-                        animate={{
-                            translateX: `-${activeIndex * 11}%`,
-                        }}
-                        transition={{
-                            duration: 0.45,
-                        }}
+                        ref={refSlider}
+                        // dragConstraints={{ right: 0, left: 0 }}
+                        // animate={{
+                        //     translateX: `-${activeIndex * 11}%`,
+                        // }}
+                        // transition={{
+                        //     duration: 0.45,
+                        // }}
+                        style={{x: xTranslation}}
                     >
-                        {images.map((image, index) => {
+                        {imagesArray.map((image, index) => {
                             return (
                                 <motion.div className={'item' + (activeIndex === index ? ' active' : '')}>
                                     <img src={image.imgSrc} alt={image.title} />
@@ -51,12 +80,12 @@ export const Slider = () => {
                         })}
                     </motion.div>
                 </motion.div>
-                <button className='arrow left-10' onClick={() => handleActiveIndexChange(- 1)}>
+                {/* <button className='arrow left-10' onClick={() => handleActiveIndexChange(- 1)}>
                     <Arrow className='text-primary h-6 w-6 stroke-2' />
                 </button>
                 <button className='arrow right-10' onClick={() => handleActiveIndexChange(1)}>
                     <Arrow className='text-primary h-6 w-6 scale-x-[-1] stroke-2' />
-                </button>
+                </button> */}
             </main>
         </div>
     )
