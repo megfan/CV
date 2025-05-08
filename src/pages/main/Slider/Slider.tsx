@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { animate, motion, useMotionValue } from 'framer-motion';
 import images from './images';
-import { ReactComponent as Arrow } from '../../../assets/arrow-left.svg';
 import useMeasure from 'react-use-measure';
 
 
@@ -9,20 +8,9 @@ const DURATION = 35;
 
 export const Slider = () => {
 
-    const [activeIndex, setActiveIndex] = useState(2);
-
-    const ref = useRef<HTMLDivElement>(null);
 
     const imagesArray = [...images, ... images, ...images];
-    console.log(imagesArray.length)
-    const handleActiveIndexChange = (value: number) => {
-        const maxVal = imagesArray.length;
-        const index = activeIndex + value;
-        if (index > maxVal) setActiveIndex(0);
-        if (index < 0) setActiveIndex(maxVal);
-        if (index <= maxVal && index >= 0) setActiveIndex(index)
-    }
-
+   
     let [refSlider, {width}] = useMeasure();
     const xTranslation = useMotionValue(0);
 
@@ -41,12 +29,6 @@ export const Slider = () => {
         return controls.stop;
     },[xTranslation, width]);
 
-useEffect(() => {
-    const interval = setInterval(() => {
-        handleActiveIndexChange(1);
-    }, 1700);
-    return () => clearInterval(interval);
-}, [activeIndex]);
 
     return (
         <div className='z-30 bg-darkPrimary w-full h-[100vh] m-0 p-0 relative overflow-hidden' id='gallery'>
@@ -61,18 +43,11 @@ useEffect(() => {
                     <motion.div drag='x'
                         className='innerCarousel'
                         ref={refSlider}
-                        // dragConstraints={{ right: 0, left: 0 }}
-                        // animate={{
-                        //     translateX: `-${activeIndex * 11}%`,
-                        // }}
-                        // transition={{
-                        //     duration: 0.45,
-                        // }}
                         style={{x: xTranslation}}
                     >
-                        {imagesArray.map((image, index) => {
+                        {imagesArray.map((image) => {
                             return (
-                                <motion.div className={'item' + (activeIndex === index ? ' active' : '')}>
+                                <motion.div className={'item'}>
                                     <img src={image.imgSrc} alt={image.title} />
                                     <div className='imageDescription'>{image.title}</div>
                                 </motion.div>
@@ -80,12 +55,6 @@ useEffect(() => {
                         })}
                     </motion.div>
                 </motion.div>
-                {/* <button className='arrow left-10' onClick={() => handleActiveIndexChange(- 1)}>
-                    <Arrow className='text-primary h-6 w-6 stroke-2' />
-                </button>
-                <button className='arrow right-10' onClick={() => handleActiveIndexChange(1)}>
-                    <Arrow className='text-primary h-6 w-6 scale-x-[-1] stroke-2' />
-                </button> */}
             </main>
         </div>
     )

@@ -2,7 +2,7 @@
     max-height: 30rem;
     min-width: 20rem;
     object-fit: contain;
-    filter: brightness(30%);
+    filter: brightness(70%);
     margin-right: 5rem;
     background-color: aqua;
     transition: all .4s ease-in-out;
@@ -14,7 +14,7 @@
     z-index: 10;
     position: relative;
 }
-.item.active {
+.item:hover {
     filter: brightness(100%);
     transform: scale(1.3) translateY(-20px);
     transition: all .4s ease-in-out;
@@ -22,7 +22,6 @@
 .innerCarousel {
     display: flex;
     position: relative;
-    /* margin-left: 50%; */
     width: auto;
 }
 .carousel {
@@ -62,6 +61,6 @@
     background-color: var(--primary);
     position: absolute;
 }
-.item.active > .imageDescription{
+.item:hover > .imageDescription{
     transform: translateY(0);
 }
