@@ -25,7 +25,7 @@ export const Experience: React.FC = () => {
             <div className='bg-white h-auto flex flex-col w-full lg:pt-40 lg:pr-20 col-start-2 col-end-8 row-start-1 row-end-8'>
                 <span className='absolute top-0 lg:left-0 -left-5 bg-gray-300 z-20 h-full w-[1px] col-start-2' />
                 <motion.div className='flex flex-col text-darkPrimary lg:ml-50 text-sm'
-                      initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
+                      initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
                       whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                       transition={{ duration: .5, delay: .2 }}>
                     <h1 className='lg:text-4xl text-2xl font-bold mb-12 relative tittle'>How it
@@ -34,7 +34,10 @@ export const Experience: React.FC = () => {
                 </motion.div>
                 <div className='z-10 w-full'>
                     {/* alumbrados */}
-                    <div className='containerBox'>
+                    <motion.div className='containerBox'
+                      initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                      whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                      transition={{ duration: .5, delay: .2 }}>
                         <div className='bg-lightGray titleBox'>
                             <p className=' duration'>{alumbrados?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{alumbrados?.title}</h1>
@@ -48,30 +51,39 @@ export const Experience: React.FC = () => {
                             <p className='descriptionTxt'>{alumbrados?.description}</p>
                             <p className='descriptionTechnologies'>{alumbrados?.technologies}</p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* onwelo */}
-                    <div className='flex flex-col text-gray-600 text-2xl items-start justify-start w-full mt-15 lg:pr-30 relative h-auto'>
+                    <motion.div className='flex flex-col text-gray-600 text-2xl items-start justify-start w-full mt-15 lg:pr-30 relative h-auto'
+                     initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                     transition={{ duration: .5, delay: .2 }}>
                         <div className='bg-primary titleBox text-white'>
                             <p className=' text-white text-sm mb-4'>{onwelo?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{onwelo?.title}</h1>
                             <span className='text-sm italic font-[Titillium] font-bold'>{onwelo?.link}</span>
                         </div>
                         <div className='containerBox'>
-                            {onwelo?.children?.map(e => {
-                                return <div className='descriptionBox lg:mr-12'>
+                            {onwelo?.children?.map((e, idx) => {
+                                return <motion.div className='descriptionBox lg:mr-12' 
+                                initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                                transition={{ duration: .5, delay: .2 * idx }}>
                                     <p className=' duration'>{e.duration}</p>
                                     <h1 className='descriptionTitle'>{e.title}</h1>
                                     <h2 className='descriptionSubtitle'>{e.subtitle}</h2>
                                     <p className='descriptionTxt lg:text-base text-sm'>{e.description}</p>
                                     <p className='descriptionTechnologies'>{e.technologies}</p>
-                                </div>
+                                </motion.div>
                             })}
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* coders */}
-                    <div className='containerBox'>
+                    <motion.div className='containerBox'
+                     initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                     transition={{ duration: .5, delay: .2 }}>
                         <div className='titleBox bg-lightGray'>
                             <p className=' duration'>{coders?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{coders?.title}</h1>
@@ -85,10 +97,13 @@ export const Experience: React.FC = () => {
                             <p className='descriptionTxt'>{coders?.description}</p>
                             <p className='descriptionTechnologies'>{coders?.technologies}</p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* imm*/}
-                    <div className='containerBox'>
+                    <motion.div className='containerBox'
+                     initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                     transition={{ duration: .5, delay: .2 }}>
                         <div className='bg-primary text-white titleBox'>
                             <p className=' text-sm mb-4'>{imm?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{imm?.title}</h1>
@@ -102,10 +117,13 @@ export const Experience: React.FC = () => {
                         <div className='photoParallaxContainer'>
                             <ParallaxPicFrame src={imm?.pic ?? ''} styles={'photoParallax'} />
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* fakturownia */}
-                    <div className='containerBox'>
+                    <motion.div className='containerBox'
+                     initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                     transition={{ duration: .5, delay: .2 }}>
                         <div className='titleBox bg-lightGray'>
                             <p className=' duration'>{fakturownia?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{fakturownia?.title}</h1>
@@ -116,10 +134,13 @@ export const Experience: React.FC = () => {
                             <p className='descriptionTxt'>{fakturownia?.description}</p>
                             <p className='descriptionTechnologies'>{fakturownia?.technologies}</p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* closi */}
-                    <div className='containerBox'>
+                    <motion.div className='containerBox'
+                     initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                     transition={{ duration: .5, delay: .2 }}>
                         <div className='bg-primary text-white titleBox'>
                             <p className=' text-sm mb-4'>{closi?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{closi?.title}</h1>
@@ -133,10 +154,13 @@ export const Experience: React.FC = () => {
                         <div className='photoParallaxContainer'>
                             <ParallaxPicFrame src={closi?.pic ?? ''} styles={'photoParallax'} />
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* grnatowi */}
-                    <div className='containerBox'>
+                    <motion.div className='containerBox'
+                     initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                     transition={{ duration: .5, delay: .2 }}>
                         <div className='titleBox bg-lightGray'>
                             <p className=' duration'>{granatowi?.duration}</p>
                             <h1 className='titleBeforeDecoration'>{granatowi?.title}</h1>
@@ -150,10 +174,13 @@ export const Experience: React.FC = () => {
                             <p className='descriptionTxt'>{granatowi?.description}</p>
                             <p className='descriptionTechnologies'>{granatowi?.technologies}</p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* others */}
-                    <div className='flex  text-gray-600 text-xl items-start justify-start w-full lg:my-40 my-20 h-auto'>
+                    <motion.div className='flex  text-gray-600 text-xl items-start justify-start w-full lg:my-40 my-20 h-auto'
+                     initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                     transition={{ duration: .5, delay: .2 }}>
                         <div className='bg-lightGray lg:p-12 p-4 flex lg:w-1/3 lg:mr-10 relative'>
                             <h1 className='titleBeforeDecoration'>{others?.title}</h1>
                             <button className='absolute lg:-right-40 -right-20 lg:top-auto top-16 hover:translate-x-12 duration-300'>
@@ -163,7 +190,7 @@ export const Experience: React.FC = () => {
                                 </a>
                             </button>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             {isDesktop && <>

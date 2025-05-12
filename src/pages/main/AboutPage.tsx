@@ -12,7 +12,6 @@ export const AboutPage: React.FC = () => {
     });
 
     const paralaxImg = useTransform(scrollYProgress, [1, 0], ["100%", "0"]);
-    const paralaxBgText = useTransform(scrollYProgress, [1, 0], ["-100%", "100%"]);
     const isDesktop = window.innerWidth >= 1280;
     
 
@@ -31,19 +30,19 @@ export const AboutPage: React.FC = () => {
                 <motion.span className='text-gray-400'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                    transition={{ duration: .5, delay: .4 }}
+                    transition={{ duration: .5, delay: .2 }}
                     >From Photography to Frontend Innovation</motion.span>
                 <motion.h1 className='lg:text-4xl text-2xl font-bold mb-12 mt-6 relative tittle'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                    transition={{ duration: .5, delay: .6 }}
+                    transition={{ duration: .5, delay: .4 }}
                     >My creative
                     <span className='text-primary lg:text-5xl text-4xl font-[Titillium] lowercase italic'> evolution </span></motion.h1>
                 <motion.p 
                     className='leading-loose text-justify'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                    transition={{ duration: .5, delay: .8 }}
+                    transition={{ duration: .5, delay: .5 }}
                     >What began as a journey in saving lives slowly transformed into a pursuit of creating beauty and logic through art and code. 
                     From emergency rooms to creative studios, from life-or-death decisions to designing digital experiences—each step taught me 
                     something new about problem-solving, precision, and creativity. Over time, I moved from the urgency of medicine to the art 
@@ -55,11 +54,6 @@ export const AboutPage: React.FC = () => {
                     transition={{ duration: .5, delay: .8 }}
                     >photography / soon</motion.button>
             </div>
-            <motion.p
-                style={{ y: paralaxBgText }}
-                className='text-[10rem] col-start-2 -ml-32 col-end-8 row-start-2 text-[#acacac1f] font-black lg:block hidden'>
-                Words about
-            </motion.p>
             {isDesktop && <>
                 <span className='gridVisibileItem col-start-1' />
                 <span className='gridVisibileItem col-start-2' />

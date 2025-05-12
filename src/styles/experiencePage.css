@@ -43,7 +43,7 @@
     @apply lg:text-xl text-base text-gray-500 mb-5;
 }
 .descriptionTxt {
-    @apply text-justify lg:text-xl text-sm;
+    @apply text-justify lg:text-base text-sm;
 }
 .descriptionTechnologies {
     @apply mt-4 text-primary font-bold;

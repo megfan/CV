@@ -9,7 +9,7 @@ export const Education: React.FC = () => {
     const ref = useRef(null);
  
     return (
-        <div className='z-10 sticky top-0 bg-darkPrimary h-[90vh] w-full flex justify-between'
+        <div className='z-10 sticky top-0 bg-darkPrimary h-[110vh] w-full flex justify-between'
             id="education" ref={ref}>
             <div className='w-1/2 h-full flex flex-col justify-center items-center lg:p-30 p-12 '>
                 <header className='w-full mb-20'>

@@ -7,6 +7,7 @@
 @import './styles/sideBar.css';
 @import './styles/sideMenu.css';
 @import './styles/slider.css';
+@import './styles/process.css';
 
 @theme {  
   --color-darkPrimary: #2a2a2e;
