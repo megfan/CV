@@ -1,25 +1,31 @@
 .stageBox {
     @apply flex flex-col items-start relative;
 }
+.stageBox:not-last {
+    margin-right: 2rem;
+}
 
-.stageBox:after {
+/* .stageBox:after {
         content: '\f101';
         position: absolute;
         bottom: 2px;
         right: 40px;
         color: #424242;
         font-size: 16px;
-}
+} */
 
 .stageBoxTitle {
     @apply p-4 text-xl text-gray-500;
 }
 .stageBoxContent {
-    @apply relative bg-lightGray lg:p-12 p-4 flex flex-col mr-4
+    @apply relative bg-lightGray lg:p-12 p-4 flex flex-col;
+}
+.stageBoxContent p {
+    line-height: 2rem;
 }
 
 .stageBoxContentNumber {
-    @apply font-extrabold text-4xl absolute text-gray-300;
-    bottom: 60;
-    left: -30;
+    @apply font-extrabold text-6xl absolute text-gray-300;
+    bottom: -20px;
+    left: -10px;
 }

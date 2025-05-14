@@ -22,10 +22,17 @@ export const Skills: React.FC = () => {
             id="skills"
             ref={ref}>
             <header className='z-10 bg-darkPrimary top-20 h-[30vh] w-full flex flex-col text-white items-center justify-center'>
-                    <h1 className='text-2xl font-bold relative'>My
-                        <span className='text-primary text-4xl font-[Titillium] lowercase italic'> programming </span>and design skills</h1>
+                    <motion.h1 className='text-2xl font-bold relative' 
+                      initial={{ x: 40, filter: "blur(20px)" }}
+                      whileInView={{ x: 0, filter: "blur(0px)" }}
+                      transition={{ duration: .5 }}>My
+                        <span className='text-primary text-4xl font-[Titillium] lowercase italic'> programming </span>and design skills</motion.h1>
                         <span className='h-0.5 w-16 bg-primary my-4'/>
-                    <span className='text-gray-400'>The only source of knowledge is experience - Albert Einstein</span>
+                    <motion.span className='text-gray-400'
+                      initial={{ x: -40, filter: "blur(20px)" }}
+                      whileInView={{ x: 0, filter: "blur(0px)" }}
+                      transition={{ duration: .5 }}
+                    >The only source of knowledge is experience - Albert Einstein</motion.span>
             </header>
             <main className=' w-full h-auto z-10 flex justify-between bg-white'>
                 <div className='w-1/3 h-full sticky'>
@@ -41,15 +48,18 @@ export const Skills: React.FC = () => {
                 </div>
                 <motion.div className='w-2/3' whileInView={{ top: 100 }}>
                     <section className='w-full relative h-[100vh] border-box px-30 py-50 flex flex-col items-start justify-center hover:bg-gray-100'>
-                        <div className='lg:w-1/2 ml-30 w-full relative'>
-                            <span className='font-bold text-4xl absolute bottom-10 -left-30 text-gray-300'>01</span>
+                        <motion.div className='lg:w-1/2 ml-30 w-full relative'
+                              initial={{ x: 140, filter: "blur(20px)"  }}
+                              whileInView={{ x: 0, filter: "blur(0px)"  }}
+                              transition={{ duration: .5 }}>
+                            <span className='font-bold text-6xl absolute bottom-10 -left-30 text-gray-300'>01</span>
                             <h1 className='text-2xl pb-10 text-darkPrimary beforeVertical'>Designer skills</h1>
                             <p className='text-gray-500 text-justify'>Experienced in creating impactful visuals
                                 across digital and print media, with a strong eye for composition, branding, and user-centered design.</p>
-                        </div>
+                        </motion.div>
                         <div className='flex flex-wrap justify-center self-end mt-20 mx-auto'>
                             {designSkills.map((e, index) => {
-                                return <div className='flex flex-col items-center justify-center mx-5' key={index}>
+                                return <div className='flex flex-col items-center justify-center mx-5 hover:scale-110 duration-300 uppercase text-gray-500' key={index}>
                                     <motion.div className="chart" style={{
                                     }}
                                         initial={{ background: bg }}
@@ -65,12 +75,15 @@ export const Skills: React.FC = () => {
                         </div>
                     </section>
                     <section className='w-full h-[100vh] border-box px-30 py-40 flex flex-col justify-center hover:bg-gray-100'>
-                        <div className='lg:w-1/2 ml-30 w-full relative'>
-                            <span className='font-bold text-4xl absolute bottom-10 -left-30 text-gray-300'>02</span>
+                        <motion.div className='lg:w-1/2 ml-30 w-full relative'
+                            initial={{ x: 140, filter: "blur(20px)"  }}
+                            whileInView={{ x: 0, filter: "blur(0px)"  }}
+                            transition={{ duration: .5 }}>
+                            <span className='font-bold text-6xl absolute bottom-10 -left-30 text-gray-300'>02</span>
                             <h1 className='text-2xl pb-8 text-darkPrimary beforeVertical'>Full-stack development skills</h1>
                             <p className='text-gray-500 text-justify'>Focused on building responsive, user-friendly
                                 websites and interfaces, combining clean code with modern front-end technologies.</p>
-                        </div>
+                        </motion.div>
                         <div className='flex items-start justify-start flex-col mt-20'>
                             <div className='w-full'>
                                 {developerSkills.map((e, idx) => {
@@ -94,16 +107,20 @@ export const Skills: React.FC = () => {
                         </div>
                     </section>
                     <section className='py-30 px-20 flex flex-col w-full h-[100vh] border-box relative justify-center hover:bg-gray-100'>
-                        <div className='lg:w-1/2 ml-30 w-full relative'>
-                            <span className='font-bold text-4xl absolute bottom-10 -left-30 text-gray-300'>03</span>
+                        <motion.div className='lg:w-1/2 ml-30 w-full relative'
+                            initial={{ x: 140, filter: "blur(20px)"  }}
+                            whileInView={{ x: 0, filter: "blur(0px)"  }}
+                            transition={{ duration: .5 }}>
+                            <span className='font-bold text-6xl absolute bottom-10 -left-30 text-gray-300'>03</span>
                             <h1 className='text-2xl pb-10 text-darkPrimary beforeVertical'>Services</h1>
                             <p className='text-gray-500 text-justify'>Offering tailored design and development solutions —
                                 from brand identity and UI/UX design to front-end implementation and website optimization —
                                 to help businesses stand out and grow online.</p>
-                        </div>
+                        </motion.div>
                         <div className='w-full flex items-start justify-center mt-20 pb-25 px-30'>
                             {services.map((e, idx) => {
-                                return <div className='flex flex-col items-center w-full h-[40vh] font-sm uppercase lg:text-base text-[10px] mb-2' key={e.name}>
+                                return <div className='flex flex-col items-center w-full h-[40vh] font-sm uppercase 
+                                lg:text-base text-[10px] mb-2 hover:scale-110 duration-300' key={e.name}>
                                     <div className='relative w-18 h-full mr-2'>
                                         <div className='absolute bg-[#e5e5e5] h-full w-18 top-0' />
                                         <motion.div className='absolute bg-primary h-full w-18 bottom-0'
@@ -115,7 +132,7 @@ export const Skills: React.FC = () => {
                                             style={{ height: e.percent }}
                                         />
                                     </div>
-                                    <motion.pre className='w-auto text-center text-gray-500 pt-4 text-sm whitespace-nowrap'>{e.name}</motion.pre>
+                                    <motion.p className='w-auto text-center text-gray-500 pt-4 text-sm whitespace-nowrap'>{e.name}</motion.p>
                                     <h2 className='lg:text-sm text-primary font-bold'>{e.percent}%</h2>
                                 </div>
                             })}

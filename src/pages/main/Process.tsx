@@ -34,23 +34,21 @@ export const Process: React.FC = () => {
                     </div>
                     <span className='stageBoxContentNumber'>1.</span>
                 </div>
-                <div className='bg-lightGray lg:p-12 p-4 flex flex-col mr-4'>
-                    <h1 className=''>
-                        2. Develop
-                    </h1>
-                    <div className=''>
+                <div className='stageBox'>
+                    <h1 className='stageBoxTitle'>Develop</h1>
+                    <div className='stageBoxContent'>
                         <p>I handle both the frontend and backend development, keeping the client updated with progress and demos.
                             Feedback during this stage ensures everything stays on track and fits the client's vision.</p>
                     </div>
+                    <span className='stageBoxContentNumber'>2.</span>
                 </div>
-                <div className='bg-lightGray lg:p-12 p-4 flex flex-col'>
-                    <h1 className=''>
-                        3. Final Approvement
-                    </h1>
-                    <div className=''>
+                <div className='stageBox'>
+                    <h1 className='stageBoxTitle'>Final Approvement</h1>
+                    <div className='stageBoxContent'>
                         <p>Once the app is complete and tested, I share the final version for review. After the client approves,
                             I deploy it and provide any needed support or documentation.</p>
                     </div>
+                    <span className='stageBoxContentNumber'>3.</span>
                 </div>
             </main>
         </div>
