@@ -34,8 +34,12 @@ export const Slider = () => {
         <div className='z-30 bg-darkPrimary w-full h-[100vh] m-0 p-0 relative overflow-hidden' id='gallery'>
             <header className='w-full flex flex-col items-start justify-start absolute z-20 top-[15%] left-40'>
                 <div className='w-full flex-col text-white text-sm'>
-                    <h1 className='text-3xl font-bold mb-12 mt-2 relative tittle'>Sample of my
-                        <span className='text-primary text-4xl font-[Titillium] lowercase italic'> graphic design </span>portfolio</h1>
+                    <motion.h1 className='text-3xl font-bold mb-12 mt-2 relative tittle'
+                         initial={{ x: -40, filter: "blur(20px)" }}
+                         whileInView={{ x: 0, filter: "blur(0px)" }}
+                         transition={{ duration: .5 }}
+                    >Sample of my
+                        <span className='text-primary text-4xl font-[Titillium] lowercase italic'> graphic design </span>portfolio</motion.h1>
                 </div>
             </header>
             <main className='w-full mx-4 mt-10 max-w-[90vw] h-full flex items-center justify-center'>
