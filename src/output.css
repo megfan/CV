@@ -277,6 +277,9 @@
   .end-1 {
     inset-inline-end: calc(var(--spacing) * 1);
   }
+  .-top-60 {
+    top: calc(var(--spacing) * -60);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -779,17 +782,11 @@
   .h-96 {
     height: calc(var(--spacing) * 96);
   }
-  .h-\[00vh\] {
-    height: 00vh;
-  }
   .h-\[8\%\] {
     height: 8%;
   }
   .h-\[20rem\] {
     height: 20rem;
-  }
-  .h-\[20vh\] {
-    height: 20vh;
   }
   .h-\[30vh\] {
     height: 30vh;
@@ -815,11 +812,11 @@
   .h-\[110vh\] {
     height: 110vh;
   }
+  .h-\[120vh\] {
+    height: 120vh;
+  }
   .h-\[140vh\] {
     height: 140vh;
-  }
-  .h-\[200vh\] {
-    height: 200vh;
   }
   .h-auto {
     height: auto;
@@ -850,9 +847,6 @@
   }
   .w-2\/3 {
     width: calc(2/3 * 100%);
-  }
-  .w-2\/5 {
-    width: calc(2/5 * 100%);
   }
   .w-3 {
     width: calc(var(--spacing) * 3);
@@ -890,6 +884,9 @@
   .w-\[1px\] {
     width: 1px;
   }
+  .w-\[5rem\] {
+    width: 5rem;
+  }
   .w-\[20\%\] {
     width: 20%;
   }
@@ -899,6 +896,9 @@
   .w-\[40\%\] {
     width: 40%;
   }
+  .w-\[50px\] {
+    width: 50px;
+  }
   .w-\[60\%\] {
     width: 60%;
   }
@@ -907,6 +907,9 @@
   }
   .w-\[80\%\] {
     width: 80%;
+  }
+  .w-\[140vh\] {
+    width: 140vh;
   }
   .w-auto {
     width: auto;
@@ -977,10 +980,6 @@
     --tw-scale-x: 150%;
     --tw-scale-y: 150%;
     --tw-scale-z: 150%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .scale-x-\[-1\] {
-    --tw-scale-x: -1;
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .-rotate-5 {
@@ -2523,26 +2522,6 @@
       }
     }
   }
-  .hover\:scale-50 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 50%;
-        --tw-scale-y: 50%;
-        --tw-scale-z: 50%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:scale-105 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 105%;
-        --tw-scale-y: 105%;
-        --tw-scale-z: 105%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
   .hover\:scale-110 {
     &:hover {
       @media (hover: hover) {
@@ -2550,30 +2529,6 @@
         --tw-scale-y: 110%;
         --tw-scale-z: 110%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:scale-125 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 125%;
-        --tw-scale-y: 125%;
-        --tw-scale-z: 125%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:animate-bounce {
-    &:hover {
-      @media (hover: hover) {
-        animation: var(--animate-bounce);
-      }
-    }
-  }
-  .hover\:animate-ping {
-    &:hover {
-      @media (hover: hover) {
-        animation: var(--animate-ping);
       }
     }
   }
@@ -2596,11 +2551,6 @@
       @media (hover: hover) {
         color: var(--color-white);
       }
-    }
-  }
-  .lg\:relative {
-    @media (width >= 64rem) {
-      position: relative;
     }
   }
   .lg\:sticky {
@@ -2678,11 +2628,6 @@
       margin-left: calc(var(--spacing) * 12);
     }
   }
-  .lg\:ml-30 {
-    @media (width >= 64rem) {
-      margin-left: calc(var(--spacing) * 30);
-    }
-  }
   .lg\:ml-50 {
     @media (width >= 64rem) {
       margin-left: calc(var(--spacing) * 50);
@@ -2698,14 +2643,19 @@
       display: flex;
     }
   }
+  .lg\:h-30 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 30);
+    }
+  }
   .lg\:h-40 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 40);
     }
   }
-  .lg\:h-\[60vh\] {
+  .lg\:h-\[80px\] {
     @media (width >= 64rem) {
-      height: 60vh;
+      height: 80px;
     }
   }
   .lg\:w-1\/2 {
@@ -2728,14 +2678,19 @@
       width: calc(2/3 * 100%);
     }
   }
+  .lg\:w-30 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 30);
+    }
+  }
   .lg\:w-\[30vw\] {
     @media (width >= 64rem) {
       width: 30vw;
     }
   }
-  .lg\:w-full {
+  .lg\:w-\[80px\] {
     @media (width >= 64rem) {
-      width: 100%;
+      width: 80px;
     }
   }
   .lg\:translate-y-80 {
@@ -2864,12 +2819,6 @@
   .lg\:whitespace-nowrap {
     @media (width >= 64rem) {
       white-space: nowrap;
-    }
-  }
-  .lg\:brightness-40 {
-    @media (width >= 64rem) {
-      --tw-brightness: brightness(40%);
-      filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
     }
   }
   .xl\:mt-5 {
