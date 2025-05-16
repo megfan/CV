@@ -45,9 +45,9 @@ body {
 }
 
 :root{
-  --dark-primary: #393939;
+  --dark-primary: #2a2a2e;
   --primary: #f60797;
-  --secondary: #f2545b;
+  --darkSec: #2C2D32;
   --light_primary: #fafaff;
   --light-secondary: #c9c9c9;
   --light-tertiary: #808080;
