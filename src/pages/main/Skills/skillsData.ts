@@ -9,7 +9,7 @@ interface designSkillsProps {
     circle: string;
 }
 
-export const developerSkills: skillsDataProps[] = [
+export const frontendSkills: skillsDataProps[] = [
 
     {
         name: 'JS / Typescript',
@@ -44,9 +44,37 @@ export const developerSkills: skillsDataProps[] = [
         percent: '80%',
     },
     {
-        name: 'NEXT.JS',
+        name: 'Angular',
+        percent: '30%',
+    },
+    {
+        name: 'RESTful APIs',
+        percent: '90%',
+    },
+];
+
+export const backendSkills: skillsDataProps[] = [
+
+    {
+        name: 'NODE.JS',
         percent: '50%',
     },
+    {
+        name: 'RESTful APIs',
+        percent: '90%',
+    },
+    {
+        name: '.Net Core / EF',
+        percent: '20%',
+    },
+    {
+        name: 'SQL / MSSMS / Docker',
+        percent: '30%',
+    },
+    
+];
+export const testingToolsSkills: skillsDataProps[] = [
+
     {
         name: 'JIRA / ASANA / GIT',
         percent: '80%',
@@ -60,14 +88,6 @@ export const developerSkills: skillsDataProps[] = [
         percent: '60%',
     },
     {
-        name: 'Angular',
-        percent: '30%',
-    },
-    {
-        name: 'RESTful APIs',
-        percent: '90%',
-    },
-    {
         name: 'Performance',
         percent: '80%',
     },
@@ -75,15 +95,22 @@ export const developerSkills: skillsDataProps[] = [
         name: 'Debugging Tools',
         percent: '70%',
     },
+];
+
+export const languagesSkills: skillsDataProps[] = [
+
     {
-        name: '.Net Core / EF',
-        percent: '20%',
+        name: 'English',
+        percent: 'Fluent',
     },
     {
-        name: 'SQL / MSSMS / Docker',
-        percent: '30%',
+        name: 'Italian',
+        percent: 'Intermediate',
     },
-    
+    {
+        name: 'Spanish',
+        percent: 'Basic',
+    },
 ];
 
 

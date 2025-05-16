@@ -14,7 +14,7 @@ export const MenuBar: React.FC = () => {
     }, [window.location.hash])
 
     return (<>
-        <motion.div className='sticky w-full m-0 p-0 z-30 right-0 top-0 h-20 bg-darkPrimary inset-0 xl:grid hidden
+        <motion.div className='sticky w-full m-0 p-0 z-40 right-0 top-0 h-20 bg-darkPrimary inset-0 xl:grid hidden
             justify-between items-center grid-cols-6 '
                     initial={{top: 0}}
                     ref={ref}
