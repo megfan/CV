@@ -1,0 +1,58 @@
+.skillSection {
+    @apply w-full h-[100vh] flex sticky top-0 bg-white;
+}
+
+.motionImage {
+    @apply sticky lg:flex hidden top-20 h-[100vh] w-1/4 object-cover;
+}
+
+.contentBox {
+    @apply w-full lg:w-3/4 box-border lg:px-30 py-40 flex flex-col justify-center items-start hover:bg-gray-100;
+}
+
+.contentBoxDescrition {
+    @apply lg:w-1/2 lg:ml-30 w-full px-10 lg:px-0 relative;
+}
+
+.contentBoxDescritionPinkLine {
+    @apply font-bold text-6xl absolute lg:bottom-10 lg:top-auto -top-10 lg:-left-30 right-10 text-gray-200;
+}
+
+.contentBoxDescritionTitle {
+ @apply lg:text-2xl text-base pb-10 text-darkPrimary relative;
+}
+
+.contentBoxDescritionText {
+@apply text-sm lg:text-base text-gray-500 text-justify;
+}
+
+.contentBoxGraph {
+    @apply w-full flex flex-col items-start justify-start mt-20 px-10;
+}
+
+.contentBoxGraphLine {
+    @apply flex w-full items-center text-sm uppercase lg:text-base text-[10px] mb-2;
+}
+.contentBoxGraphHeader {
+    @apply w-1/4 text-right text-gray-500 mr-4;
+}
+
+.contentBoxGraphContent {
+    @apply relative w-1/2 h-2 mr-2;
+}
+
+.contentBoxGraphContentDiv {
+    @apply absolute bg-[#e5e5e5] w-full h-2 top-0;
+}
+
+.contentBoxGraphContentMotionDiv {
+    @apply absolute bg-primary w-full h-2 top-0;
+}
+
+.contentBoxGraphContentTitle {
+    @apply lg:text-sm text-primary font-bold;
+}
+
+.contentBoxCircles {
+    @apply flex flex-wrap justify-center self-end mt-20 mx-auto;
+}

@@ -27,8 +27,12 @@ interface experienceDataProps {
     order: number;
     children?: experienceDataChildrenProps[] 
 }
-export const experienceData: experienceDataProps[] = [
 
+interface experienceDataObjectProps {
+    [key: string]: experienceDataProps;
+}
+export const experienceData: experienceDataObjectProps = {
+    'alumbrados': 
     {
         title: 'Work for Alubrados Varios',
         subtitle: "Application for Managing Poland's Road and Bridge Infrastructure",
@@ -39,7 +43,8 @@ export const experienceData: experienceDataProps[] = [
         employee: true,
         pic: work,
         order: 1,
-    },
+},
+"onwelo":
     {
         title: 'Work for Onwelo',
         duration: "2019 - 2024 / 4 years",
@@ -70,7 +75,7 @@ export const experienceData: experienceDataProps[] = [
             },
         ]
     },
-    
+    "coders":
     {
         title: 'Work for Coders Lab',
         subtitle: "Senior Brand Strategist & Creative Campaign Lead",
@@ -82,6 +87,7 @@ export const experienceData: experienceDataProps[] = [
         pic: coders,
         order: 3,
     },
+      "imm":
     {
         title: 'Work for Instytut Monitorowania Mediów',
         subtitle: "Brand Identity & Advertising Campaign Designer",
@@ -93,6 +99,7 @@ export const experienceData: experienceDataProps[] = [
         order: 4,
         pic: imm
     },
+     "fakturownia":
     {
         title: 'Work for Fakturownia',
         subtitle: "Online platform allowing quick invoice creation and managing.",
@@ -103,6 +110,7 @@ export const experienceData: experienceDataProps[] = [
         employee: true,
         order: 5,
     },
+     "closi":
     {
         title: 'Work for Clos Brothers',
         subtitle: "Digital Advertising & Website Content Designer",
@@ -114,6 +122,7 @@ export const experienceData: experienceDataProps[] = [
         order: 6,
         pic: closi,
     },
+    "granatowi":
     {
         title: 'Work for Granatowi',
         subtitle: "Marketing Campaign & Print Media Specialist",
@@ -125,10 +134,11 @@ export const experienceData: experienceDataProps[] = [
         order: 7,
         pic: granatowi
     },
+    "others":
     {
         title: 'And some more ...',
         employee: false,
         order: 8,
     },
 
-]
+}

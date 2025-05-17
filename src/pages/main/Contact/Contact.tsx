@@ -28,7 +28,7 @@ export const ContactPage: React.FC = () => {
                 </div>
             </header>
             <main className='h-full w-full flex lg:flex-row flex-col lg:sticky'>
-                <div className='z-10 flex flex-col lg:items-start items-center justify-center text-darkPrimary lg:p-32 p-10 text-sm lg:w-1/2 h-full bg-white'>
+                <div className='z-10 flex flex-col lg:items-start items-center justify-center text-darkPrimary lg:p-32 xl:p-72 p-10 text-sm lg:w-1/2 h-full bg-white'>
                     <h1 className='text-2xl font-bold mb-12 mt-2 relative tittle'>
                         <span className='text-primary text-4xl font-[Titillium] italic'>Contact </span>details</h1>
                     <p className='leading-loose text-justify mb-10'>Have an idea for a website and need an experienced developer or designer? Get in touch! Together, we’ll create a modern and functional project tailored to your needs. Drop me a message, and let’s discuss the details!</p>

@@ -8,9 +8,15 @@ export const Process: React.FC = () => {
     return (
         <div
             ref={ref}
-            className='top-0 z-20 px-40 py-10 text-sm bg-white flex flex-col items-start justify-center w-full h-[110vh]'
+            className='top-0 z-20 lg:px-40 px-10 py-10 text-sm bg-white flex flex-col items-start justify-center w-full lg:h-[110vh]'
             id="process">
-            <header className='w-1/2 mb-20'>
+            <header className='lg:w-1/2 w-full mb-20'>
+                <motion.h1 className='lg:text-4xl text-2xl font-bold mb-12 mt-6 relative tittle text-darkPrimary'
+                    initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
+                    whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                    transition={{ duration: .5, delay: .2 }}
+                >How it
+                    <span className='text-primary lg:text-5xl text-4xl font-[Titillium] lowercase italic'> works </span></motion.h1>
                 <motion.p
                     className='text-justify text-gray-400 text-sm'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
@@ -18,12 +24,6 @@ export const Process: React.FC = () => {
                     transition={{ duration: .5, delay: .1 }}
                 >If you can’t explain something simply, you don’t understand it well enough. - Albert Einstein
                 </motion.p>
-                <motion.h1 className='lg:text-4xl text-2xl font-bold mb-12 mt-6 relative tittle text-darkPrimary'
-                    initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
-                    whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                    transition={{ duration: .5, delay: .2 }}
-                >How it
-                    <span className='text-primary lg:text-5xl text-4xl font-[Titillium] lowercase italic'> works </span></motion.h1>
                 <motion.p
                     className='leading-loose text-justify'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
@@ -32,7 +32,7 @@ export const Process: React.FC = () => {
                 >Every successful project starts with understanding. I work closely with clients from first
                     contact to final deployment to deliver results that match their vision.</motion.p>
             </header>
-            <main className='w-full mb-20 flex justify-between text-sm text-darkPrimary'>
+            <main className='w-full mb-20 flex lg:flex-row flex-col justify-between text-sm text-darkPrimary'>
                 <motion.div className='stageBox'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
@@ -45,7 +45,7 @@ export const Process: React.FC = () => {
 
                         Discuss the Project</h1>
                     <div className='stageBoxContent'>
-                        <h2 className='italic mb-4 text-gray-500 text-lg'>Clear goals, defined scope.</h2>
+                        <h2 className='italic mb-4 text-gray-500 lg:text-lg text-sm'>Clear goals, defined scope.</h2>
                         <p>I start by talking with the client to fully understand their goals, features they need, and any technical requirements.
                             This helps set clear expectations and define the project scope from the beginning.</p>
                     </div>
@@ -63,7 +63,7 @@ export const Process: React.FC = () => {
 
                         Develop</h1>
                     <div className='stageBoxContent'>
-                        <h2 className='italic mb-4 text-gray-500 text-lg'>Engineering your vision.</h2>
+                        <h2 className='italic mb-4 text-gray-500 lg:text-lg text-sm'>Engineering your vision.</h2>
                         <p>I handle both the frontend and backend development, keeping the client updated with progress and demos.
                             Feedback during this stage ensures everything stays on track and fits the client's vision.</p>
                     </div>
@@ -81,7 +81,7 @@ export const Process: React.FC = () => {
 
                         Final Approvement</h1>
                     <div className='stageBoxContent'>
-                        <h2 className='italic mb-4 text-gray-500 text-lg'>Review, approve, launch.</h2>
+                        <h2 className='italic mb-4 text-gray-500 lg:text-lg text-sm'>Review, approve, launch.</h2>
                         <p>Once the app is complete and tested, I share the final version for review. After the client approves,
                             I deploy it and provide any needed support or documentation.</p>
                     </div>

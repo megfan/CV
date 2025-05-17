@@ -32,6 +32,6 @@
 @media (width <= 1280px) {
     .educationSection {
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
   }

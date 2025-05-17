@@ -19,10 +19,10 @@ function App() {
   return (
     <BrowserRouter>
       <motion.section id='loader_sec'
-        initial={{ y: 0, backgroundColor: '#f60797' }}
+        initial={{ y: 0, backgroundColor: '#2a2a2e' }}
         animate={{ backgroundColor: ['#f60797', '#2a2a2e', '#2a2a2e', '#2a2a2e', '#f60797'] }}
         whileInView={{ y: [0, 0, 0, 0, '-100vh'] }}
-        transition={{ duration: 3, delay: .1, times: [0, 0.25, 0.5, 0.8, 1] }}>
+        transition={{ duration: 2, times: [0, 0.25, 0.5, 0.8, 1] }}>
         <div className="pre-container">
           <div id="loader"></div>
         </div>

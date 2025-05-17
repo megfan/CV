@@ -1,21 +1,13 @@
 .stageBox {
-    @apply flex flex-col items-start relative w-1/3;
+    @apply flex flex-col items-start relative lg:w-1/3 w-full lg:mb-0 mb-20;
 }
+
 .stageBox:not(:last-child) {
     margin-right: 2rem;
 }
 
-/* .stageBox:after {
-        content: '\f101';
-        position: absolute;
-        bottom: 2px;
-        right: 40px;
-        color: #424242;
-        font-size: 16px;
-} */
-
 .stageBoxTitle {
-    @apply p-4 text-xl text-white flex bg-primary w-2/3 -mb-3 ml-6 z-10;
+    @apply p-4 lg:text-xl text-base text-white flex bg-primary lg:w-2/3 w-full -mb-3 lg:ml-6 z-10;
 }
 .stageBoxTitle:hover {
     transform: translateX(10px);
@@ -41,7 +33,7 @@
     @apply relative bg-lightGray lg:p-12 p-4 flex flex-col h-[100%];
 }
 .stageBoxContent p {
-    line-height: 2rem;
+     @apply lg:text-base text-xs lg:leading-normal leading-tight;
     color: gray;
 }
 

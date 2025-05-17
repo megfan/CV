@@ -8,6 +8,7 @@
 @import './styles/sideMenu.css';
 @import './styles/slider.css';
 @import './styles/process.css';
+@import './styles/skills.css';
 
 @theme {  
   --color-darkPrimary: #2a2a2e;

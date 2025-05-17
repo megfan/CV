@@ -91,6 +91,7 @@
     transition: all 700ms linear;
 }
 
+
 .beforeVertical:before {
     content: '';
     width: 10rem;
@@ -101,6 +102,11 @@
     position: absolute;
     transition: all 700ms linear;
 }
+@media (width <= 1280px) {
+    .beforeVertical:before {
+      top: 40px;
+    }
+  }
 
 .new-line {
     white-space: pre-line;
