@@ -101,15 +101,15 @@ export const languagesSkills: skillsDataProps[] = [
 
     {
         name: 'English',
-        percent: 'Fluent',
+        percent: '85%',
     },
     {
         name: 'Italian',
-        percent: 'Intermediate',
+        percent: '30%',
     },
     {
         name: 'Spanish',
-        percent: 'Basic',
+        percent: '10%',
     },
 ];
 

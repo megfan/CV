@@ -19,15 +19,16 @@ export const ContactPage: React.FC = () => {
                 <div className='lg:w-1/3 flex justify-center items-center no-wrap btnWIthBorders'>
                     <motion.button className='lg:py-6 py-2 px-8 font-bold text-primary transition-all hover:text-white hover:bg-primary
                  tracking-widest text-base bg-darkSec border-primary w-fit border-2'
+                 onClick={() => window.location.href = 'mailto:megfa@yahoo.com'}
                      initial={{ scale: .8 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: .3, type: "spring", stiffness: 100  }}>
-                        CONTACT ME
+                       Email Me
                     </motion.button>
                 </div>
             </header>
             <main className='h-full w-full flex lg:flex-row flex-col lg:sticky'>
-                <div className='z-10 flex flex-col lg:items-start items-center justify-center text-darkPrimary lg:p-40 p-10 text-sm lg:w-1/2 h-full bg-white'>
+                <div className='z-10 flex flex-col lg:items-start items-center justify-center text-darkPrimary lg:p-32 p-10 text-sm lg:w-1/2 h-full bg-white'>
                     <h1 className='text-2xl font-bold mb-12 mt-2 relative tittle'>
                         <span className='text-primary text-4xl font-[Titillium] italic'>Contact </span>details</h1>
                     <p className='leading-loose text-justify mb-10'>Have an idea for a website and need an experienced developer or designer? Get in touch! Together, we’ll create a modern and functional project tailored to your needs. Drop me a message, and let’s discuss the details!</p>
@@ -59,7 +60,7 @@ export const ContactPage: React.FC = () => {
                     </button>
                 </div>
             </main>
-            <footer className='bg-darkSec w-full h-30 no-wrap flex text-white lg:pl-40 items-center justify-between'>
+            <footer className='bg-darkSec w-full h-28 min-h-28 no-wrap flex text-white lg:pl-40 items-center justify-between'>
                 <p className='mt-2 lg:p-0 p-10'>© Małgorzata Staszewska 2025  /  All rights reserved. </p>
                 <button className='h-full w-30 -pr-10 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'>
                     <HashLink smooth to={'#'}>TOP</HashLink>

@@ -8,6 +8,7 @@ import clouds from "../../../assets/clouds.jpg";
 import fale from "../../../assets/fale.jpg";
 import cloudsPalm from "../../../assets/cloudsPalm.jpg";
 import tools from "../../../assets/tools.jpg";
+import languages from "../../../assets/languages.jpg";
 
 export const Skills: React.FC = () => {
 
@@ -141,7 +142,7 @@ export const Skills: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <motion.img src={cloudsPalm} className="sticky top-20 h-[100vh] w-1/4 object-cover"
+                        <motion.img src={languages} className="sticky top-20 h-[100vh] w-1/4 object-cover"
                             initial={{ y: 0 }}
                         />
 
@@ -185,9 +186,7 @@ export const Skills: React.FC = () => {
 
                     </section>
                     <section className='w-full h-[100vh] flex sticky top-0 bg-white'>
-                        <motion.img src={fale} className="sticky top-20 h-[100vh] w-1/4 object-cover"
-                            initial={{ y: 0 }}
-                        />
+                    
                         <div className='w-3/4 border-box px-30 py-40 flex flex-col justify-center hover:bg-gray-100'>
                             <motion.div className='lg:w-1/2 ml-30 w-full relative'
                                 initial={{ x: 140, filter: "blur(20px)" }}
@@ -220,11 +219,16 @@ export const Skills: React.FC = () => {
                                 </div>
                             </div>
                         </div>
+                           <motion.img src={cloudsPalm} className="sticky top-20 h-[100vh] w-1/4 object-cover"
+                            initial={{ y: 0 }}
+                        />
 
                     </section>
                     <section className='w-full h-[100vh] sticky top-0 bg-white flex'>
+                         <motion.img src={blocks} className="sticky top-20 h-[100vh] w-1/4 object-cover"
+                            initial={{ y: 0 }}
+                        />
                         <div className='w-3/4 py-30 px-20 flex flex-col border-box justify-center hover:bg-gray-100'>
-
                             <motion.div className='lg:w-1/2 ml-30 w-full relative'
                                 initial={{ x: 140, filter: "blur(20px)" }}
                                 whileInView={{ x: 0, filter: "blur(0px)" }}
@@ -256,9 +260,7 @@ export const Skills: React.FC = () => {
                                 })}
                             </div>
                         </div>
-                        <motion.img src={blocks} className="sticky top-20 h-[100vh] w-1/4 object-cover"
-                            initial={{ y: 0 }}
-                        />
+                    
                     </section>
                 </motion.div>
             </main>
