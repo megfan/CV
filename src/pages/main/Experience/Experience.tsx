@@ -22,7 +22,7 @@ export const Experience: React.FC = () => {
         <div className='z-20 bg-white xl:pr-20 lg:pr-40 gridPage w-full h-auto relative m-0 p-0 overflow-hidden' id="experience" ref={ref}>
             {/* {isDesktop ? ( */}
             <div className='bg-white h-auto flex flex-col w-full lg:pt-40 lg:pr-20 col-start-1 lg:col-start-2 px-10 lg:px-0 col-end-8 row-start-1 row-end-8'>
-                <span className='absolute top-0 lg:left-0 -left-5 bg-gray-300 z-20 h-full w-[1px] col-start-2' />
+                <span className='lg:absolute hidden top-0 lg:left-0 -left-5 bg-gray-300 z-20 h-full w-[1px] col-start-2' />
                 <motion.div className='flex flex-col text-darkPrimary lg:ml-50 text-sm mt-20 lg:mt-0'
                     initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}

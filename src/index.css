@@ -15,7 +15,7 @@
   --color-darkSec: #2C2D32;
   --color-primary: #f60797;
   --color-lightGray: #d7d7d747;
-  --color-darkThird: #202021;
+  --color-darkThird: #171717;
   --width-withSideBar: calc(100% -6rem);
   --grid-row-start-10: 10;
   --grid-row-start-11: 11;
@@ -50,7 +50,7 @@ body {
   --dark-primary: #2a2a2e;
   --primary: #f60797;
   --darkSec: #2C2D32;
-  --darkThird: #202021;
+  --darkThird: #171717;
   --light_primary: #fafaff;
   --light-secondary: #c9c9c9;
   --light-tertiary: #808080;

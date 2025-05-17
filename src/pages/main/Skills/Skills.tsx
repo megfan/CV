@@ -19,6 +19,8 @@ export const Skills: React.FC = () => {
     });
     const bg = "conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 40deg, rgb(235, 235, 235) 40deg 360deg)"
 
+    const isDesktop = window.innerWidth >= 1280;
+
     return (
         <div className='z-10 bg-white w-full relative h-auto flex flex-col items-start justify-start'
             id="skills"
@@ -41,7 +43,7 @@ export const Skills: React.FC = () => {
                     <section className='skillSection'>
                         <div className='contentBox'>
                             <motion.div className='contentBoxDescrition'
-                                initial={{ x: 140, filter: "blur(20px)" }}
+                                initial={{ x: isDesktop ? 140 : 0, filter: "blur(20px)" }}
                                 whileInView={{ x: 0, filter: "blur(0px)" }}
                                 transition={{ duration: .5 }}>
                                 <span className='contentBoxDescritionPinkLine'>01</span>
@@ -65,17 +67,17 @@ export const Skills: React.FC = () => {
                                 })}
                             </div>
                         </div>
-                        <motion.img src={clouds} className="motionImage"
+                        {isDesktop ? <motion.img src={clouds} className="motionImage"
                             initial={{ y: 0 }}
-                        />
+                        /> : null}
                     </section>
                     <section className='skillSection'>
-                        <motion.img src={fale} className="motionImage"
+                        {isDesktop ? <motion.img src={fale} className="motionImage"
                             initial={{ y: 0 }}
-                        />
+                        /> : null}
                         <div className='contentBox'>
                             <motion.div className='contentBoxDescrition'
-                                initial={{ x: 140, filter: "blur(20px)" }}
+                                initial={{ x: isDesktop ? 140 : 0, filter: "blur(20px)" }}
                                 whileInView={{ x: 0, filter: "blur(0px)" }}
                                 transition={{ duration: .5 }}>
                                 <span className='contentBoxDescritionPinkLine'>02</span>
@@ -108,7 +110,7 @@ export const Skills: React.FC = () => {
                     <section className='skillSection'>
                         <div className='contentBox'>
                             <motion.div className='contentBoxDescrition'
-                                initial={{ x: 140, filter: "blur(20px)" }}
+                                initial={{ x: isDesktop ? 140 : 0, filter: "blur(20px)" }}
                                 whileInView={{ x: 0, filter: "blur(0px)" }}
                                 transition={{ duration: .5 }}>
                                 <span className='contentBoxDescritionPinkLine'>03</span>
@@ -136,18 +138,18 @@ export const Skills: React.FC = () => {
                                 })}
                             </div>
                         </div>
-                        <motion.img src={languages} className="motionImage"
+                         {isDesktop ? <motion.img src={languages} className="motionImage"
                             initial={{ y: 0 }}
-                        />
+                        /> : null}
 
                     </section>
                     <section className='skillSection'>
-                        <motion.img src={tools} className="motionImage"
+                         {isDesktop ? <motion.img src={tools} className="motionImage"
                             initial={{ y: 0 }}
-                        />
+                        /> : null}
                         <div className='contentBox'>
                             <motion.div className='contentBoxDescrition'
-                                initial={{ x: 140, filter: "blur(20px)" }}
+                                initial={{ x: isDesktop ? 140 : 0, filter: "blur(20px)" }}
                                 whileInView={{ x: 0, filter: "blur(0px)" }}
                                 transition={{ duration: .5 }}>
                                 <span className='contentBoxDescritionPinkLine'>04</span>
@@ -178,10 +180,9 @@ export const Skills: React.FC = () => {
 
                     </section>
                     <section className='skillSection'>
-
                         <div className='contentBox'>
                             <motion.div className='contentBoxDescrition'
-                                initial={{ x: 140, filter: "blur(20px)" }}
+                                initial={{ x: isDesktop ? 140 : 0, filter: "blur(20px)" }}
                                 whileInView={{ x: 0, filter: "blur(0px)" }}
                                 transition={{ duration: .5 }}>
                                 <span className='contentBoxDescritionPinkLine'>05</span>
@@ -209,18 +210,18 @@ export const Skills: React.FC = () => {
                                 })}
                             </div>
                         </div>
-                        <motion.img src={cloudsPalm} className="motionImage"
+                          {isDesktop ? <motion.img src={cloudsPalm} className="motionImage"
                             initial={{ y: 0 }}
-                        />
+                        /> : null}
 
                     </section>
                     <section className='skillSection'>
-                        <motion.img src={blocks} className="motionImage"
+                          {isDesktop ? <motion.img src={blocks} className="motionImage"
                             initial={{ y: 0 }}
-                        />
+                        /> : null}
                         <div className='contentBox'>
                             <motion.div className='contentBoxDescrition'
-                                initial={{ x: 140, filter: "blur(20px)" }}
+                                initial={{ x: isDesktop ? isDesktop ? 140 : 0 : 0, filter: "blur(20px)" }}
                                 whileInView={{ x: 0, filter: "blur(0px)" }}
                                 transition={{ duration: .5 }}>
                                 <span className='contentBoxDescritionPinkLine'>06</span>

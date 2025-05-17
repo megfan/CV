@@ -33,7 +33,7 @@
     @apply relative bg-lightGray lg:p-12 p-4 flex flex-col h-[100%];
 }
 .stageBoxContent p {
-     @apply lg:text-base text-xs lg:leading-normal leading-tight;
+     @apply lg:text-base text-xs leading-normal;
     color: gray;
 }
 
