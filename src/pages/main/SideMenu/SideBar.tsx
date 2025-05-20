@@ -35,10 +35,10 @@ export const SideBar: React.FC = () => {
             </div>
          ) : (
             <div className='fixed top-0 left-0 z-50 px-2 bg-darkThird'>
-               <img src={logo} alt="logo" className='h-4 mt-8' />
+               <img src={logo} alt="logo" className='h-4 mt-4' />
                <button className='cursor-pointer burger w-5 text-gray-500 hover:text-white capitalize xl:mt-5 m-0 font-semibold text-xs font-[Poppins] tracking-widest'
                   onClick={() => setOpenMenu(!openMenu)}>
-                  <div className=' mt-8 mb-4 flex flex-col items-start'>
+                  <div className=' mt-4 mb-2 flex flex-col items-start'>
                      <span className={'burgerItem w-full ' + (openMenu ? 'activeFirst' : '')} />
                      <span className={'burgerItem ' + (openMenu ? 'w-0' : 'lg:w-2/3 w-full')} />
                      <span className={'burgerItem lg:w-0 w-full ' + (openMenu ? 'activeSec' : '')} />

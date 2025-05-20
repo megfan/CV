@@ -60,7 +60,7 @@ export const ContactPage: React.FC = () => {
                     </button>
                 </div>
             </main>
-            <footer className='bg-darkSec w-full h-28 min-h-28 no-wrap flex text-white lg:pl-40 items-center justify-between'>
+            <footer className='bg-darkSec w-full h-28 min-h-28 no-wrap flex text-white lg:pl-40 items-center justify-between lg:text-base text-sm'>
                 <p className='mt-2 lg:p-0 p-10'>© Małgorzata Staszewska 2025  /  All rights reserved. </p>
                 <button className='h-full w-30 -pr-10 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'>
                     <HashLink smooth to={'#'}>TOP</HashLink>
