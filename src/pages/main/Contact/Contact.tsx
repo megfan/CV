@@ -6,7 +6,7 @@ export const ContactPage: React.FC = () => {
 
 
     return (
-        <div className='z-30 bg-darkPrimary h-auto xl:h-[92vh] flex flex-col justify-between w-full relative'
+        <div className='z-30 bg-darkPrimary h-auto xl:h-auto flex flex-col justify-between w-full relative'
             id="contact">
             <header className='bg-darkSec w-full lg:h-40 no-wrap flex lg:flex-row flex-col py-4'>
                 <motion.button className='bg-darkSec text-white font-normal lg:text-2xl lg:px-20 px-5 py-5 lg:w-2/3'
