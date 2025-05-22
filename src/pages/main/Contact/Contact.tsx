@@ -1,6 +1,7 @@
 import React from 'react';
-import { HashLink } from "react-router-hash-link";
+import { NavHashLink } from "react-router-hash-link";
 import { motion } from 'framer-motion';
+import me from '../../../assets/me.jpg';
 
 export const ContactPage: React.FC = () => {
 
@@ -39,6 +40,7 @@ export const ContactPage: React.FC = () => {
                     </a>
                 </div>
                 <div className='z-10 flex flex-col bg-darkPrimary lg:p-20 p-10 lg:text-normal text-sm lg:w-1/2 items-center justify-center'>
+                        <img src={me} className='w-40 h-40 mb-10 rounded-[50%] object-cover' alt='portrait'/>
                     <div className='flex'>
                         <div className='lg:mr-16 mr-4 text-gray-500'>
                             <p className='leading-loose text-justify'>Phone</p>
@@ -62,8 +64,9 @@ export const ContactPage: React.FC = () => {
             </main>
             <footer className='bg-darkSec w-full h-28 min-h-28 no-wrap flex text-white lg:pl-40 items-center justify-between lg:text-base text-sm'>
                 <p className='mt-2 lg:p-0 p-10'>© Małgorzata Staszewska 2025  /  All rights reserved. </p>
-                <button className='h-full w-30 -pr-10 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'>
-                    <HashLink smooth to={'#'}>TOP</HashLink>
+                <button className='h-full w-30 -pr-10 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'
+                    onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
+                        TOP
                 </button>
             </footer>
         </div>

@@ -33,7 +33,8 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
       ? setOpenMenu(open)
       : handleClose()
 
-  }, [open])
+  }, [open]);
+  
   const handleClose = async () => {
     if (!scope.current) return;
     

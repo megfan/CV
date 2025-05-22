@@ -84,7 +84,7 @@ export const StartPage: React.FC = () => {
     }
 
     return (
-        <div className='mainPage gridPage bg-darkPrimary w-full m-0 p-0 relative overflow-hidden'>
+        <div className='mainPage gridPage bg-darkPrimary w-full m-0 p-0 relative overflow-hidden' id='startPage'>
             <motion.div className='col-start-1 col-end-7 row-start-1 row-end-6 relative flex justify-center items-center'
                 ref={ref}>
                 <motion.div

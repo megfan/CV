@@ -1,7 +1,7 @@
 import React,  {useEffect, useRef, useState} from 'react';
 import '../../styles/menuBar.css';
 import { motion } from "motion/react";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-scroll";
 import { ContactBar } from "./Contact/ContactBar";
 
 
@@ -26,12 +26,12 @@ export const MenuBar: React.FC = () => {
             </button>
             <nav className='col-start-2 col-end-5 ml-10'>
                 <ul className="text-gray-500 h-full w-full uppercase text-xs float-left flex items-center">
-                    <li className='menuBarItem'><HashLink smooth to={'#'}>start</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#about'}>about</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#experience'}>experience</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#skills'}>skills</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#gallery'}>gallery</HashLink></li>
-                    <li className='menuBarItem'><HashLink smooth to={'#contact'}>contact</HashLink></li>
+                    <li className='menuBarItem'><Link  to={'startPage'} spy >start</Link></li>
+                    <li className='menuBarItem'><Link  to={'about'} spy >about</Link></li>
+                    <li className='menuBarItem'><Link  to={'experience'} spy >experience</Link></li>
+                    <li className='menuBarItem'><Link  to={'skills'}>skills</Link></li>
+                    <li className='menuBarItem'><Link  to={'gallery'}>gallery</Link></li>
+                    <li className='menuBarItem'><Link  to={'contact'}>contact</Link></li>
                 </ul>
             </nav>
             <button className='btnWIthBorders font-semibold classicText col-end-7' onClick={() => setOpenContact(true)}>

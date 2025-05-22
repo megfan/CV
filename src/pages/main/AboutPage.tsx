@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion} from 'framer-motion';
 import aboutMe from '../../assets/aboutMe.jpg';
+import { Link } from "react-router";
 
 export const AboutPage: React.FC = () => {
 
@@ -48,11 +49,15 @@ export const AboutPage: React.FC = () => {
                     something new about problem-solving, precision, and creativity. Over time, I moved from the urgency of medicine to the art
                     of design, and eventually, to the language of code. Now, I blend the skills of empathy, creativity, and technical expertise
                     to craft seamless, meaningful digital experiences.</motion.p>
+                <Link  to={{
+                    pathname: "/gallery",
+                }}>
                 <motion.button className='py-4 px-6 lg:block hidden mt-10 uppercase font-bold text-white tracking-wider text-xs bg-primary w-fit'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                     transition={{ duration: .5, delay: .8 }}
                 >photography / soon</motion.button>
+                </Link>
             </div>
             {isDesktop && <>
                 <span className='gridVisibileItem col-start-1' />
