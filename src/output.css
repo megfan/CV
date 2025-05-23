@@ -6,7 +6,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(0.808 0.114 19.571);
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-amber-600: oklch(0.666 0.179 58.318);
+    --color-yellow-300: oklch(0.905 0.182 98.111);
     --color-pink-400: oklch(0.718 0.202 349.761);
     --color-gray-100: oklch(0.967 0.003 264.542);
     --color-gray-200: oklch(0.928 0.006 264.531);
@@ -401,6 +404,12 @@
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
+  .m-20 {
+    margin: calc(var(--spacing) * 20);
+  }
   .m-auto {
     margin: auto;
   }
@@ -455,6 +464,9 @@
   .mt-40 {
     margin-top: calc(var(--spacing) * 40);
   }
+  .mt-44 {
+    margin-top: calc(var(--spacing) * 44);
+  }
   .mt-50 {
     margin-top: calc(var(--spacing) * 50);
   }
@@ -502,6 +514,9 @@
   }
   .mb-20 {
     margin-bottom: calc(var(--spacing) * 20);
+  }
+  .mb-44 {
+    margin-bottom: calc(var(--spacing) * 44);
   }
   .-ml-10 {
     margin-left: calc(var(--spacing) * -10);
@@ -603,6 +618,9 @@
   .h-40 {
     height: calc(var(--spacing) * 40);
   }
+  .h-44 {
+    height: calc(var(--spacing) * 44);
+  }
   .h-50 {
     height: calc(var(--spacing) * 50);
   }
@@ -617,6 +635,9 @@
   }
   .h-\[20rem\] {
     height: 20rem;
+  }
+  .h-\[20vh\] {
+    height: 20vh;
   }
   .h-\[25vw\] {
     height: 25vw;
@@ -644,6 +665,9 @@
   }
   .h-\[80vh\] {
     height: 80vh;
+  }
+  .h-\[90vh\] {
+    height: 90vh;
   }
   .h-\[100vh\] {
     height: 100vh;
@@ -886,6 +910,9 @@
   .bg-\[\#ffffff21\] {
     background-color: #ffffff21;
   }
+  .bg-amber-600 {
+    background-color: var(--color-amber-600);
+  }
   .bg-darkPrimary {
     background-color: var(--color-darkPrimary);
   }
@@ -919,6 +946,9 @@
   .bg-primary {
     background-color: var(--color-primary);
   }
+  .bg-red-300 {
+    background-color: var(--color-red-300);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -927,6 +957,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-yellow-300 {
+    background-color: var(--color-yellow-300);
   }
   .bg-bottom {
     background-position: bottom;
@@ -1017,6 +1050,12 @@
   }
   .text-justify {
     text-align: justify;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-start {
+    text-align: start;
   }
   .font-\[Libre\] {
     font-family: Libre;

@@ -17,7 +17,7 @@ export const HeaderGallery: React.FC = () => {
         >Welcome to my <span className='text-primary text-7xl font-[Titilium]'>creative </span> space</motion.h1>
       {/* <h1 className='text-white text-6xl'>I'm Meg – a graphic designer and photographer with over 15 years of experience crafting visual identities and telling stories through images and design. I specialize in branding, editorial design, digital content, and creative photography for projects that need to stand out and speak with clarity. Whether it's a logo, a layout, or a lens – I bring ideas to life with purpose and personality.</h1> */}
         </div>
-        <motion.span className='h-64 w-1 bg-primary' 
+        <motion.span className='h-44 w-1 bg-primary' 
          initial={{ y: 300, scaleY: 0 }}
                     whileInView={{ y: 0, scaleY: 1 }}
                     transition={{ duration: 1 }} 

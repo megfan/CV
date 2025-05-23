@@ -3,6 +3,7 @@ import { MenuGallery } from './MenuGallery';
 import manJumping from '../../assets/gallery/manJumping.avif';
 import { StartGallery } from './StartGallery';
 import { HeaderGallery } from './HeaderGallery';
+import { PhotoGallery } from './PhotoGallery';
 
 export const Gallery: React.FC = () => {
 
@@ -12,6 +13,7 @@ export const Gallery: React.FC = () => {
         <MenuGallery />
         <HeaderGallery/>
         <StartGallery/>
+        <PhotoGallery/>
         <HeaderGallery/>
     </div>
   )

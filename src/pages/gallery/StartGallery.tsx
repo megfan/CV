@@ -8,7 +8,7 @@ export const StartGallery: React.FC = () => {
 
 
     return (
-        <div className="h-[200vh] relative bg-darkVery"
+        <div className="h-[200vh] relative bg-darkVery mt-44"
             ref={container}>
             <div className='sticky top-0 h-[100vh] overflow-hidden'>
                 {GalleryImages(container).map(({ src, scale }, index) => {
