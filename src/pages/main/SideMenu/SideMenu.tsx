@@ -3,9 +3,10 @@ import {
   useAnimate,
   motion,
 } from "framer-motion";
-import { HashLink } from "react-router-hash-link";
-import { hashLinksArray } from "./hashLinks";
+import { Link } from "react-scroll";
+import { mainLinksArray } from "../../../helpers/hashLinks";
 import '../../../styles/sideMenu.css';
+import { scramble, stopScramble } from "../../../helpers/scrambleFunction";
 
 const CYCLES_PER_LETTER = 4;
 const SHUFFLE_TIME = 30;
@@ -50,35 +51,6 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
     setOpen(false);
   };
 
-  const scramble = (txt: string, index: number) => {
-    let pos = 0;
-    intervalRef.current = setInterval(() => {
-      const scrambled = txt.split("")
-        .map((char, index) => {
-          if (pos / CYCLES_PER_LETTER > index) {
-            return char;
-          }
-          const randomCharIndex = Math.floor(Math.random() * CHARS.length);
-          const randomChar = CHARS[randomCharIndex];
-          return randomChar;
-        })
-        .join("");
-
-      setText(scrambled);
-      setIndex(index);
-      pos++;
-
-      if (pos >= txt.length * CYCLES_PER_LETTER) {
-        stopScramble();
-      }
-    }, SHUFFLE_TIME);
-  };
-
-  const stopScramble = () => {
-    clearInterval(intervalRef.current || undefined);
-    setIndex(null);
-  };
-
   return (
     <>
       {openMenu && (
@@ -109,10 +81,10 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
               <main className="text-neutral-400">
                 <nav className=''>
                   <ul className=" h-full w-full uppercase text-sm flex flex-col items-start">
-                    {hashLinksArray.map((link, idx) => {
+                    {mainLinksArray.map((link, idx) => {
                       return <motion.li className='sideMenu'
-                        onMouseEnter={() => scramble(link.name, idx)}
-                        onMouseLeave={() => stopScramble()}
+                        onMouseEnter={() => scramble(link, idx, intervalRef, setText, setIndex)}
+                        onMouseLeave={() => stopScramble(intervalRef, setIndex)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{
@@ -120,11 +92,12 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
                           delay: idx / 10,
                         }}
                       >
-                        <HashLink
+                        <Link
                           className="sideMenuItem"
-                          smooth to={link.hash}
+                          to={link}
+                          spy
                           onClick={handleClose}
-                        >{idx === index ? text : link.name}</HashLink>
+                        >{idx === index ? text : link}</Link>
                       </motion.li>
                     })}
                   </ul>

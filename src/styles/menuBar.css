@@ -1,5 +1,5 @@
 .menuBarItem {
-    @apply float-left mr-10 ml-4 flex font-semibold tracking-wide items-center; 
+    @apply float-left mr-10 ml-4 flex font-semibold tracking-wide items-center cursor-pointer; 
     transition: all 700ms linear;
 }
 .menuBarItem:hover {

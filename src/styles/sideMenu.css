@@ -5,6 +5,7 @@
     z-index: 1;
     letter-spacing: .2rem;
     display: flex;
+    cursor: pointer;
 }
 
 .sideMenu {

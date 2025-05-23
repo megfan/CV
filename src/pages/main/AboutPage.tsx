@@ -11,9 +11,9 @@ export const AboutPage: React.FC = () => {
     return (
         <div
             ref={targetRef}
-            className='relative bg-white h-[120vh] gridPage w-full'
+            className='relative bg-white h-[100vh] gridPage w-full'
             id="about">
-            <div className='z-10 mt-20 h-auto lg:w-1/4 lg:flex hidden items-start col-start-2 col-end-7 lg:row-start-2 row-start-1 row-end-6 relative'>
+            <div className='z-10 mt-10 h-auto lg:w-1/4 lg:flex hidden items-start col-start-2 col-end-7 lg:row-start-2 row-start-1 row-end-6 relative'>
                 <motion.img
                     src={aboutMe}
                     className="z-10"
@@ -23,7 +23,7 @@ export const AboutPage: React.FC = () => {
                     transition={{ duration: 2.5 }} />
                 <motion.div
                     initial={{ y: 240 }}
-                    whileInView={{ y: -140 }}
+                    whileInView={{ y: -80 }}
                     transition={{ duration: 2.5 }}
                     className='bg-primary h-96 w-24 p-12 absolute top-0 left-0 -ml-10 mt-4' />
             </div>

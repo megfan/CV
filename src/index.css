@@ -9,6 +9,7 @@
 @import './styles/slider.css';
 @import './styles/process.css';
 @import './styles/skills.css';
+@import './styles/startGallery.css';
 
 @theme {  
   --color-darkPrimary: #2a2a2e;
@@ -16,6 +17,7 @@
   --color-primary: #f60797;
   --color-lightGray: #d7d7d747;
   --color-darkThird: #171717cb;
+  --color-darkVery: #171717;
   --width-withSideBar: calc(100% -6rem);
   --grid-row-start-10: 10;
   --grid-row-start-11: 11;
@@ -51,6 +53,7 @@ body {
   --primary: #f60797;
   --darkSec: #2C2D32;
   --darkThird: #171717cb;
+  --darkVery: #171717;
   --light_primary: #fafaff;
   --light-secondary: #c9c9c9;
   --light-tertiary: #808080;

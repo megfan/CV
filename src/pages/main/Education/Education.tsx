@@ -9,7 +9,7 @@ export const Education: React.FC = () => {
     const ref = useRef(null);
  
     return (
-        <div className='z-10 sticky top-0 bg-darkPrimary h-[110vh] w-full flex justify-between'
+        <div className='z-10 bg-darkPrimary h-[110vh] w-full flex justify-between'
             id="education" ref={ref}>
             <div className='lg:w-1/2 w-full h-full flex flex-col justify-center items-center lg:p-30 p-12 '>
                 <header className='w-full lg:mb-20 mb-10 lg:text-base text-sm'>
@@ -43,7 +43,7 @@ export const Education: React.FC = () => {
                             whileInView={{y: 0, opacity: 1 }}
                             transition={{
                             duration: 0.45,
-                            delay: (index / 10) + .7,
+                            delay: (index / 10) + .3,
                             }}>
                         <p>{e.data}</p>
                         <h2 className={e.isTitle ? 'text-primary' : ''}>{e.name}</h2>
