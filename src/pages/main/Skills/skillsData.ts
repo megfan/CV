@@ -13,15 +13,15 @@ export const frontendSkills: skillsDataProps[] = [
 
     {
         name: 'JS / Typescript',
-        percent: '95%',
+        percent: '90%',
     },
     {
         name: 'React',
-        percent: '95%',
+        percent: '90%',
     },
     {
         name: 'Mobx',
-        percent: '95%',
+        percent: '85%',
     },
     {
         name: 'Redux',
@@ -29,7 +29,7 @@ export const frontendSkills: skillsDataProps[] = [
     },
     {
         name: 'GraphQL',
-        percent: '70%',
+        percent: '80%',
     },
     {
         name: 'ECMASCRIPT 6',
@@ -41,7 +41,7 @@ export const frontendSkills: skillsDataProps[] = [
     },
     {
         name: 'TAILWIND / MATERIAL',
-        percent: '80%',
+        percent: '90%',
     },
     {
         name: 'Angular',
@@ -57,14 +57,14 @@ export const backendSkills: skillsDataProps[] = [
 
     {
         name: 'NODE.JS',
-        percent: '50%',
+        percent: '70%',
     },
     {
         name: 'RESTful APIs',
         percent: '90%',
     },
     {
-        name: '.Net Core / EF',
+        name: '.Net / EF',
         percent: '20%',
     },
     {
@@ -77,7 +77,7 @@ export const testingToolsSkills: skillsDataProps[] = [
 
     {
         name: 'JIRA / ASANA / GIT',
-        percent: '80%',
+        percent: '70%',
     },
     {
         name: 'SCRUM / AGILE',
@@ -85,7 +85,7 @@ export const testingToolsSkills: skillsDataProps[] = [
     },
     {
         name: 'DESIGN PATTERNS',
-        percent: '60%',
+        percent: '70%',
     },
     {
         name: 'Performance',
@@ -122,6 +122,10 @@ export const designSkills: designSkillsProps[] = [
     {
         name: 'Illustartor',
         circle: 'conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 350deg, rgb(235, 235, 235) 350deg 360deg)'
+    },
+    {
+        name: 'AFTER EFFECT',
+        circle: 'conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 260deg, rgb(235, 235, 235) 260deg 360deg)'
     },
     {
         name: 'InDesign',
