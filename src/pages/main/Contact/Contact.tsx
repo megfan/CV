@@ -1,6 +1,5 @@
-import React from 'react';
-import { NavHashLink } from "react-router-hash-link";
 import { motion } from 'framer-motion';
+import React from 'react';
 import me from '../../../assets/me.jpg';
 
 export const ContactPage: React.FC = () => {

@@ -15,7 +15,7 @@ export const StartPage: React.FC = () => {
 
     const ref = useRef(null);
     const ref2 = useRef<HTMLDivElement>(null);
-    const { scrollYProgress, scrollY, scrollXProgress } = useScroll({
+    const { scrollYProgress, scrollY } = useScroll({
         target: ref,
         offset: ["start start", "end start"]
     });

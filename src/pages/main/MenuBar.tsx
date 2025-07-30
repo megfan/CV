@@ -1,17 +1,13 @@
-import React,  {useEffect, useRef, useState} from 'react';
-import '../../styles/menuBar.css';
 import { motion } from "motion/react";
+import React, { useRef, useState } from 'react';
 import { Link } from "react-scroll";
+import '../../styles/menuBar.css';
 import { ContactBar } from "./Contact/ContactBar";
 
 
 export const MenuBar: React.FC = () => {
     const ref = useRef(null)
     const [openContact, setOpenContact] = useState(false);
-
-    useEffect(() => {
-        console.log(window.location.hash)
-    }, [window.location.hash])
 
     return (<>
         <motion.div className='sticky w-full m-0 p-0 z-40 right-0 top-0 h-20 bg-darkPrimary inset-0 xl:grid hidden

@@ -1,10 +1,8 @@
-import work from '../../../assets/work.jpg';
-import work2 from '../../../assets/work2.jpg';
-import work3 from '../../../assets/work3.jpg';
-import imm from '../../../assets/imm.avif';
 import closi from '../../../assets/closi.avif';
 import coders from '../../../assets/coders.png';
 import granatowi from '../../../assets/granatowi.png';
+import imm from '../../../assets/imm.avif';
+import work from '../../../assets/work.jpg';
 
 interface experienceDataChildrenProps {
     title: string;

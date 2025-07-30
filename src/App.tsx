@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import './styles/App.css';
-import { Main } from './pages/main/Main';
+import Lenis from 'lenis';
+import { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router';
 import { Gallery } from './pages/gallery/Gallery';
-import { BrowserRouter, Routes, Route } from 'react-router';
-import Lenis from 'lenis'
+import { Main } from './pages/main/Main';
+import './styles/App.css';
 
 
 function App() {

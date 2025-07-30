@@ -8,7 +8,7 @@ export const Process: React.FC = () => {
     return (
         <div
             ref={ref}
-            className='top-0 z-20 lg:px-40 px-10 py-10 text-sm bg-white flex flex-col items-start justify-center w-full lg:h-[110vh]'
+            className='top-0 z-20 lg:px-40 px-10 py-20 text-sm bg-white flex flex-col items-start justify-center w-full lg:h-[110vh]'
             id="process">
             <header className='lg:w-1/2 w-full mb-20'>
                 <motion.h1 className='lg:text-4xl text-2xl font-bold mb-12 mt-6 relative tittle text-darkPrimary'

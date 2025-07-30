@@ -5,7 +5,7 @@ interface educationArrayProps {
     school: string;
     isTitle: boolean;
 }
-export const educationArray = [
+export const educationArray: educationArrayProps[] = [
     {
         data: '2020-2025',
         name: 'Next.JS, Advanced React, Bootstrap, .Net',

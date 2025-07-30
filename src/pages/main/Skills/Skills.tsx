@@ -1,22 +1,16 @@
+import { motion } from 'framer-motion';
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { frontendSkills, backendSkills, testingToolsSkills, languagesSkills, designSkills, services } from './skillsData';
-import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
-import skill from "../../../assets/1.jpg";
 import blocks from "../../../assets/blocks.jpg";
 import clouds from "../../../assets/clouds.jpg";
-import fale from "../../../assets/fale.jpg";
 import cloudsPalm from "../../../assets/cloudsPalm.jpg";
-import tools from "../../../assets/tools.jpg";
+import fale from "../../../assets/fale.jpg";
 import languages from "../../../assets/languages.jpg";
+import tools from "../../../assets/tools.jpg";
+import { backendSkills, designSkills, frontendSkills, languagesSkills, services, testingToolsSkills } from './skillsData';
 
 export const Skills: React.FC = () => {
 
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "end end"]
-    });
     const bg = "conic-gradient( from 0deg at 50% 50%, var(--primary) 0deg 40deg, rgb(235, 235, 235) 40deg 360deg)"
 
     const isDesktop = window.innerWidth >= 1280;

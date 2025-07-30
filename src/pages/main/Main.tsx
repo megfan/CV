@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
-import { SideBar } from './SideMenu/SideBar';
-import { MenuBar } from './MenuBar';
-import { StartPage } from './StartPage';
 import { AboutPage } from './AboutPage';
+import { ContactPage } from './Contact/Contact';
 import { Education } from './Education/Education';
 import { Experience } from './Experience/Experience';
-import { ContactPage } from './Contact/Contact';
+import { MenuBar } from './MenuBar';
+import { Process } from './Process';
+import { SideBar } from './SideMenu/SideBar';
 import { Skills } from './Skills/Skills';
 import { Slider } from './Slider/Slider';
-import { Process } from './Process';
+import { StartPage } from './StartPage';
 
 
 
@@ -16,7 +16,7 @@ export const Main: React.FC = () => {
 
   return (
     <>
-      {/* <motion.section id='loader_sec'
+      <motion.section id='loader_sec'
         initial={{ y: 0, backgroundColor: '#2a2a2e' }}
         animate={{ backgroundColor: ['#f60797', '#2a2a2e', '#2a2a2e', '#2a2a2e', '#f60797'] }}
         whileInView={{ y: [0, 0, 0, 0, '-100vh'] }}
@@ -25,7 +25,7 @@ export const Main: React.FC = () => {
           <div id="loader"></div>
         </div>
         <h4 className='text-primary text-xl tracking-wider mt-10 uppercase'>Loading</h4>
-      </motion.section> */}
+      </motion.section>
       <div className="flex w-full h-full">
         <SideBar />
         <div className='w-full flex flex-col m-0 p-0 relative'>
