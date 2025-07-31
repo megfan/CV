@@ -1,7 +1,6 @@
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import { Gallery } from './pages/gallery/Gallery';
 import { Main } from './pages/main/Main';
 import './output.css';
 
@@ -22,8 +21,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/CV" element={<Main />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/" element={<Main />} />
       </Routes>
     </BrowserRouter>
   );
