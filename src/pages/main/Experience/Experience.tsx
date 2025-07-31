@@ -42,7 +42,7 @@ export const Experience: React.FC = () => {
                             <h1 className='titleBeforeDecoration'>{alumbrados?.title}</h1>
                             <span className='titleLink text-primary'>{alumbrados?.link}</span>
                         </div>
-                        <div className='mt-30 h-auto w-1/3 lg:flex hidden items-center justify-center relative mx-10'>
+                        <div className='mt-32 h-auto w-1/3 lg:flex hidden items-center justify-center relative mx-10'>
                             <ParallaxPicFrame src={alumbrados?.pic ?? ''} styles={'object-cover bottom-0 w-1/2 h-2/3 bg-center absolute'} />
                         </div>
                         <div className='descriptionBox'>
@@ -53,7 +53,7 @@ export const Experience: React.FC = () => {
                     </motion.div>
 
                     {/* onwelo */}
-                    <motion.div className='flex flex-col text-gray-600 text-2xl items-start justify-start w-full mt-15 lg:pr-30 relative h-auto'
+                    <motion.div className='flex flex-col text-gray-600 text-2xl items-start justify-start w-full mt-15 lg:pr-32 relative h-auto'
                         initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
                         whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                         transition={{ duration: .5, delay: .2 }}>

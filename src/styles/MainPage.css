@@ -113,7 +113,7 @@
   }
 
 .chart {
-    @apply lg:w-30 w-[5rem] lg:h-30 h-[5rem];
+    @apply lg:w-[7.5rem] w-[5rem] lg:h-[7.5rem] h-[5rem];
     border-radius: 100%;
     display: grid;
     place-items: center;

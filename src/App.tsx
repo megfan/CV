@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import { Gallery } from './pages/gallery/Gallery';
 import { Main } from './pages/main/Main';
-import './styles/App.css';
+import './output.css';
 
 
 function App() {

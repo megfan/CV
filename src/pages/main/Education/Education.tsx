@@ -11,8 +11,8 @@ export const Education: React.FC = () => {
     return (
         <div className='z-10 bg-darkPrimary h-[110vh] w-full flex justify-between'
             id="education" ref={ref}>
-            <div className='lg:w-1/2 w-full h-full flex flex-col justify-center items-center lg:p-30 p-12 '>
-                <header className='w-full lg:mb-20 mb-10 lg:text-base text-sm'>
+            <div className='lg:w-2/3 w-full h-full flex flex-col justify-center items-center lg:p-32 p-12 '>
+                <header className='w-full lg:my-20 my-10 lg:text-base text-sm'>
                     <motion.span className='text-gray-400'
                         initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                         whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
@@ -52,9 +52,9 @@ export const Education: React.FC = () => {
                     })}
                 </main>
             </div>
-            <div className='w-1/2 h-full bg-pink-400 lg:flex hidden relative items-end justify-end overflow-hidden'>
+            <div className='w-1/3 h-full lg:flex hidden relative items-end justify-end overflow-hidden'>
                 <ParallaxPicFrame
-                    styles={'educationImg top-0 right-0 w-full h-2/3 bg-bottom absolute'}
+                    styles={'educationImg top-0 right-0 w-[150%] h-[300%] bg-bottom absolute'}
                     src={education} />
             </div>
         </div>

@@ -54,7 +54,7 @@ export const ContactBar = ({ open, setOpen }: ContactBarProps) => {
             style={{ y }}
 
           >
-            <div className="relative z-0 h-full p-30">
+            <div className="relative z-0 h-full p-32">
               <header className='w-full mb-20 no-wrap flex space-y-4'>
                 <button className=' text-white font-normal text-2xl'>Ready to talk about
                   <span className='text-primary text-4xl font-[Titillium] lowercase italic'> your </span> project?</button>

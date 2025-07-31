@@ -59,7 +59,7 @@ export const SideMenu = ({ open, setOpen }: SideMenuProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           onClick={handleClose}
-          className="fixed inset-0 z-40 bg-neutral-950/70"
+          className="fixed inset-0 z-50 bg-neutral-950/70"
         >
           <motion.div
             id="drawer"

@@ -28,7 +28,7 @@ export const ContactPage: React.FC = () => {
                 </div>
             </header>
             <main className='h-full w-full flex lg:flex-row flex-col lg:sticky'>
-                <div className='z-10 flex flex-col lg:items-start items-center justify-center text-darkPrimary lg:p-32 xl:p-72 p-10 text-sm lg:w-1/2 h-full bg-white'>
+                <div className='z-10 flex flex-col lg:items-start items-center justify-center text-darkPrimary lg:p-32 p-10 text-sm lg:w-1/2 h-full bg-white'>
                     <h1 className='text-2xl font-bold mb-12 mt-2 relative tittle'>
                         <span className='text-primary text-4xl font-[Titillium] italic'>Contact </span>details</h1>
                     <p className='leading-loose text-justify mb-10'>Have an idea for a website and need an experienced developer or designer? Get in touch! Together, we’ll create a modern and functional project tailored to your needs. Drop me a message, and let’s discuss the details!</p>
@@ -63,7 +63,7 @@ export const ContactPage: React.FC = () => {
             </main>
             <footer className='bg-darkSec w-full h-28 min-h-28 no-wrap flex text-white lg:pl-40 items-center justify-between lg:text-base text-sm'>
                 <p className='mt-2 lg:p-0 p-10'>© Małgorzata Staszewska 2025  /  All rights reserved. </p>
-                <button className='h-full w-30 -pr-10 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'
+                <button className='h-full w-32 -pr-10 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'
                     onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
                         TOP
                 </button>

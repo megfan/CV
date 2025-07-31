@@ -32,8 +32,8 @@ export const PhotoGallery: React.FC = () => {
                     that bring brands to life.</motion.h1>
             </div>
             <div className='w-full h-[90vh] flex sticky top-0 bg-yellow-300' ref={container}>
-                <img src={ela} alt='womanPortait' className='w-auto h-full ml-30' />
-                <div className='w-1/3 h-[90vh] ml-30 bg-red-300 overflow-hidden'>
+                <img src={ela} alt='womanPortait' className='w-auto h-full ml-32' />
+                <div className='w-1/3 h-[90vh] ml-32 bg-red-300 overflow-hidden'>
                     <div ref={container} className=''
                         style={{
                             backgroundPosition: "center",

@@ -7,7 +7,7 @@
 }
 
 .stageBoxTitle {
-    @apply p-4 lg:text-xl text-base text-white flex bg-primary lg:w-2/3 w-full -mb-3 lg:ml-6 z-10;
+    @apply p-4 lg:text-xl text-base text-white flex bg-primary -mb-3 lg:ml-6 w-4/5 z-10;
 }
 .stageBoxTitle:hover {
     transform: translateX(10px);

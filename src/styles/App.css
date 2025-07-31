@@ -109,3 +109,38 @@
     75% { border-width: 3px;}
     100% { border-width: 10px;}
 }
+
+
+
+html,body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Titilium", "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  width: 100%;
+}
+
+:root{
+  --dark-primary: #2a2a2e;
+  --primary: #f60797;
+  --darkSec: #2C2D32;
+  --darkThird: #171717cb;
+  --darkVery: #171717;
+  --light_primary: #fafaff;
+  --light-secondary: #c9c9c9;
+  --light-tertiary: #808080;
+  --grey: #565656;
+}

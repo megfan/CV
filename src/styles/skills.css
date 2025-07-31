@@ -7,15 +7,15 @@
 }
 
 .contentBox {
-    @apply w-full lg:w-3/4 box-border lg:px-30 py-40 flex flex-col justify-center items-start hover:bg-gray-100;
+    @apply w-full lg:w-3/4 box-border lg:px-[7.5rem] py-40 flex flex-col justify-center items-start hover:bg-gray-100;
 }
 
 .contentBoxDescrition {
-    @apply lg:w-1/2 lg:ml-30 w-full px-10 lg:px-0 relative;
+    @apply lg:w-1/2 lg:ml-[7.5rem] w-full px-10 lg:px-0 relative;
 }
 
 .contentBoxDescritionPinkLine {
-    @apply font-bold text-6xl absolute lg:bottom-10 lg:top-auto -top-10 lg:-left-30 right-10 text-gray-200;
+    @apply font-bold text-6xl absolute lg:bottom-10 lg:top-auto -top-10 lg:-left-[7.5rem] right-10 text-gray-200;
 }
 
 .contentBoxDescritionTitle {

@@ -17,7 +17,7 @@ export const MenuBar: React.FC = () => {
         >
             <button className='pl-16 w-auto relative flex flex-col items-start justify-center bg-darkSec classicText geologicalData 
             btnWIthBorders font-semibold col-start-1 col-end-2'>
-                <span>based in warsaw / poland</span>
+                <span>warsaw / poland</span>
                 <span>52°13′N  / 21°00′ E </span>
             </button>
             <nav className='col-start-2 col-end-5 ml-10'>

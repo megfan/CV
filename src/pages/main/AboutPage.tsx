@@ -27,7 +27,7 @@ export const AboutPage: React.FC = () => {
                     transition={{ duration: 2.5 }}
                     className='bg-primary h-96 w-24 p-12 absolute top-0 left-0 -ml-10 mt-4' />
             </div>
-            <div className='z-10 flex flex-col text-darkPrimary lg:-ml-20 mt-40 lg:col-start-4 col-start-2 col-end-6 lg:row-start-2 row-start-1 text-sm '>
+            <div className='z-10 flex flex-col text-darkPrimary lg:-ml-20 mt-16 lg:col-start-4 col-start-2 col-end-6 lg:row-start-2 row-start-1 text-sm '>
                 <motion.span className='text-gray-400'
                     initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}

@@ -224,13 +224,13 @@ export const Skills: React.FC = () => {
                                     from brand identity and UI/UX design to front-end implementation and website optimization —
                                     to help businesses stand out and grow online.</p>
                             </motion.div>
-                            <div className='w-full flex lg:flex-row h-[50vh] flex-col items-start justify-center mt-20 pb-25 px-30'>
+                            <div className='w-full flex lg:flex-row h-[50vh] flex-col items-start justify-center mt-20 pb-25 px-32'>
                                 {services.map((e, idx) => {
                                     return <div className='flex flex-col items-center w-full h-[40vh] font-sm uppercase 
                                 lg:text-base text-[10px] mb-2 hover:scale-110 duration-300' key={e.name}>
-                                        <div className='relative lg:flex hidden w-18 h-full mr-2'>
-                                            <div className='absolute bg-[#e5e5e5] h-full w-18 top-0' />
-                                            <motion.div className='absolute bg-primary h-full w-18 bottom-0'
+                                        <div className='relative flex w-16 h-full mr-2'>
+                                            <div className='absolute bg-[#e5e5e5] h-full w-16 top-0' />
+                                            <motion.div className='absolute bg-primary h-full w-16 bottom-0'
                                                 whileInView={{ height: e.percent, y: 0 }}
                                                 initial={{ height: "0%", y: 0 }}
                                                 transition={{

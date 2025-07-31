@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } from 'framer-motion';
+import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate, Variants } from 'framer-motion';
 import { cubicBezier } from 'motion';
 import { useSpring } from 'motion/react';
 import statue from '../../assets/statue.png';
@@ -81,7 +81,7 @@ export const StartPage: React.FC = () => {
                 ease: "easeOut"
             }
         }
-    }
+    } as Variants;
 
     return (
         <div className='mainPage gridPage bg-darkPrimary w-full m-0 p-0 relative overflow-hidden' id='startPage'>
