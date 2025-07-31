@@ -43,7 +43,7 @@ export const Experience: React.FC = () => {
                             <span className='titleLink text-primary'>{alumbrados?.link}</span>
                         </div>
                         <div className='mt-32 h-auto w-1/3 lg:flex hidden items-center justify-center relative mx-10'>
-                            <ParallaxPicFrame src={alumbrados?.pic ?? ''} styles={'object-cover bottom-0 w-1/2 h-2/3 bg-center absolute'} />
+                            <ParallaxPicFrame src={alumbrados?.pic ?? ''} styles={'object-cover bottom-0 w-full h-full bg-center absolute'} />
                         </div>
                         <div className='descriptionBox'>
                             <h1 className='descriptionTitle'>{alumbrados?.subtitle}</h1>
@@ -183,7 +183,7 @@ export const Experience: React.FC = () => {
                         <div className='bg-lightGray lg:p-12 p-4 flex lg:w-1/3 lg:mr-10 relative'>
                             <h1 className='titleBeforeDecoration'>{others?.title}</h1>
                             <button className='absolute lg:-right-40 -right-20 lg:top-auto top-16 hover:translate-x-12 duration-300'>
-                                <a href={require('../../../assets/CV.pdf')} type='button' target="_blank" rel="noreferrer" download={'CV'}
+                                <a href={require('../../../assets/MStaszewska_2025.pdf')} type='button' target="_blank" rel="noreferrer" download={'MStaszewska_2025'}
                                     className='w-40 py-4 px-12 uppercase font-bold text-white tracking-wider text-xs bg-primary'>
                                     download resume
                                 </a>

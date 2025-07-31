@@ -35,7 +35,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build:css": "postcss src/index.css -o src/output.css",
-    "watch:css": "postcss src/index.css -o src/output.css --watch"
+    "watch:css": "postcss src/index.css -o src/output.css --watch",
+    "minify:css": "npx tailwindcss -o build.css --minify"
   },
   "eslintConfig": {
     "extends": [

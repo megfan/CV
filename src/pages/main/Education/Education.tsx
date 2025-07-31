@@ -1,12 +1,16 @@
 import React, { useRef } from 'react';
-import { ParallaxPicFrame } from '../../../components/parallaxPicFrame';
 import "../../../styles/educationPage.css";
 import education from '../../../assets/edu.jpg';
 import { educationArray } from './educationData';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const Education: React.FC = () => {
     const ref = useRef(null);
+       const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
+    const paralaxY = useTransform(scrollYProgress, [0, 1], [100, -500]);
  
     return (
         <div className='z-10 bg-darkPrimary h-[110vh] w-full flex justify-between'
@@ -53,9 +57,10 @@ export const Education: React.FC = () => {
                 </main>
             </div>
             <div className='w-1/3 h-full lg:flex hidden relative items-end justify-end overflow-hidden'>
-                <ParallaxPicFrame
-                    styles={'educationImg top-0 right-0 w-[150%] h-[300%] bg-bottom absolute'}
-                    src={education} />
+            <div className='educationImg top-0 right-0 w-[150%] h-auto bg-bottom absolute'>
+                 <motion.img src={education} className="block scale-150" alt="aboutMe" style={{y: paralaxY}}
+                  transition={{ ease: "easeOut", duration: 0.5 }}/>
+            </div>
             </div>
         </div>
     )

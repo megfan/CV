@@ -20,15 +20,11 @@ export const StartPage: React.FC = () => {
         offset: ["start start", "end start"]
     });
     const paralaxCloud = useTransform(scrollYProgress, [0, 1], ["0", "100%"]);
-    const paralaxCar = useTransform(scrollYProgress, [1, 0], ["-100%", "0"]);
-    const paralaxPaintBrush = useTransform(scrollY,
-        [0, 1],
-        [0, 2],
-        { ease: cubicBezier(0.17, 0.67, 0.83, 0.67) });
-    const paralaxBrushes = useTransform(scrollY,
-        [0, 100],
-        [0, 60],
-        { clamp: false });
+    const paralaxCar = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+    const paralaxStatue = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
+    const paralaxPaintBrush = useTransform(scrollY, [0, 1], [0, 30], { ease: cubicBezier(0.17, 0.67, 0.83, 0.67) });
+    const paralaxBrushes = useTransform(scrollY,[0, -200], [0, 15], { clamp: true });
+    const paralaxXBrushes = useTransform(scrollY, [0, 100], [0, 30], { clamp: false });
 
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -124,22 +120,27 @@ export const StartPage: React.FC = () => {
                         <div className='relative flex h-full lg:w-1/2 w-full items-center justify-center '>
                             <motion.img className="w-[20%] h-[40%] object-contain z-30 absolute top-10 right-[35%] left-auto -rotate-5"
                                 src={statue}
-                                style={{ x: paralaxCar }}
+                                style={{ y: paralaxStatue }}
                             />
                             <motion.img
                                 className="w-[60%] h-[60%] object-contain z-30 absolute top-[10%] -left-[10%] rotate-20"
                                 src={car}
-                                style={{ x: paralaxCar }}
+                                style={{ x: paralaxCar, rotate: 20 }}
                             />
                             <motion.img
-                                className="w-[35%] h-[8%] z-30 absolute top-[47%] left-auto right-[-0%] -rotate-40"
+                                className="w-[35%] h-[8%] z-30 absolute top-[47%] left-auto right-0"
                                 src={brushes}
-                                style={{ y: paralaxBrushes }}
+                                style={{
+                                    y: paralaxBrushes,
+                                    x: paralaxXBrushes,
+                                    rotate: -55,
+                                }}
+
                             />
                             <motion.img
-                                className="w-[40%] h-[40%] object-contain z-10 absolute top-[10%] right-[5%] rotate-20 left-auto"
+                                className="w-[40%] h-[40%] object-contain z-10 absolute top-[10%] right-[5%] rotate-[30] left-auto"
                                 src={paintBrush}
-                                style={{ y: paralaxPaintBrush }}
+                                style={{ y: paralaxPaintBrush, rotate: 15 }}
                             />
                             <motion.img
                                 src={cloud}

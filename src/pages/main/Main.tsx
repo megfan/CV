@@ -17,7 +17,7 @@ export const Main: React.FC = () => {
 
   return (
     <>
-      {/* <motion.section id='loader_sec'
+      <motion.section id='loader_sec'
         initial={{ y: 0, backgroundColor: '#2a2a2e' }}
         animate={{ backgroundColor: ['#f60797', '#2a2a2e', '#2a2a2e', '#2a2a2e', '#f60797'] }}
         whileInView={{ y: [0, 0, 0, 0, '-100vh'] }}
@@ -26,7 +26,7 @@ export const Main: React.FC = () => {
           <div id="loader"></div>
         </div>
         <h4 className='text-primary text-xl tracking-wider mt-10 uppercase'>Loading</h4>
-      </motion.section> */}
+      </motion.section>
       <div className="flex w-full h-full">
         <SideBar />
         <div className='w-full flex flex-col m-0 p-0 relative'>

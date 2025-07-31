@@ -14,7 +14,7 @@ export const ParallaxPicFrame: React.FC<ParallaxPicFrameProps> = ({styles, src})
         offset: ["start start", "start end"]
     });
 
-    const paralax1 = useTransform(scrollYProgress, [1,0], ["15%", "-25%"]);
+    const paralax1 = useTransform(scrollYProgress, [1,0], ["15%", "-60%"]);
 
     return (
     <div ref={container} className={styles}  
