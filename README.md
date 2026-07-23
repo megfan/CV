@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 ## View:
-[Portfolio](https://megfan.github.io/CV)
+[Portfolio](https://megfan.github.io)
 
 ## Built With
 
