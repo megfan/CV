@@ -9,6 +9,7 @@ export const Experience: React.FC = () => {
     const ref = useRef(null);
     const isDesktop = window.innerWidth >= 1280;
 
+    const ergo = experienceData['ergo'];
     const alumbrados = experienceData['alumbrados'];
     const onwelo = experienceData['onwelo'];
     const coders = experienceData['coders'];
@@ -32,6 +33,26 @@ export const Experience: React.FC = () => {
                     <span className='text-gray-400'>The most difficult thing is the decision to act, the rest is merely tenacity - Amelia Earhart</span>
                 </motion.div>
                 <div className='z-10 w-full'>
+                    {/* ergo */}
+                    <motion.div className='containerBox'
+                        initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}
+                        whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                        transition={{ duration: .5, delay: .2 }}>
+                        <div className='bg-lightGray titleBox'>
+                            <p className=' duration'>{ergo?.duration}</p>
+                            <h1 className='titleBeforeDecoration'>{ergo?.title}</h1>
+                            <span className='titleLink text-primary'>{ergo?.link}</span>
+                        </div>
+                        <div className='descriptionBox w-1/2'>
+                            <h1 className='descriptionTitle'>{ergo?.subtitle}</h1>
+                            <p className='descriptionTxt'>{ergo?.description}</p>
+                            <p className='descriptionTechnologies'>{ergo?.technologies}</p>
+                        </div>
+                        <div className='mt-32 h-auto w-1/3 lg:flex hidden items-center justify-center relative mx-10'>
+                            <ParallaxPicFrame src={ergo?.pic ?? ''} styles={'object-cover bottom-0 w-full h-full bg-center absolute'} />
+                        </div>
+                    </motion.div>
+
                     {/* alumbrados */}
                     <motion.div className='containerBox'
                         initial={{ y: 60, opacity: 0, filter: "blur(20px)" }}

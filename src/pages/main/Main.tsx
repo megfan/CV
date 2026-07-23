@@ -31,7 +31,6 @@ export const Main: React.FC = () => {
         <SideBar />
         <div className='w-full flex flex-col m-0 p-0 relative'>
           <StartPage />
-          <MenuBar />
           <AboutPage />
           <Education />
           <Experience />

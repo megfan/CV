@@ -15,7 +15,7 @@ export const MenuBar: React.FC = () => {
                     initial={{top: 0}}
                     ref={ref}
         >
-            <button className='pl-16 w-auto relative flex flex-col items-start justify-center bg-darkSec classicText geologicalData 
+            {/* <button className='pl-16 w-auto relative flex flex-col items-start justify-center bg-darkSec classicText geologicalData 
             btnWIthBorders font-semibold col-start-1 col-end-2'>
                 <span>warsaw / poland</span>
                 <span>52°13′N  / 21°00′ E </span>
@@ -29,7 +29,7 @@ export const MenuBar: React.FC = () => {
                     <li className='menuBarItem'><Link  to={'gallery'}>gallery</Link></li>
                     <li className='menuBarItem'><Link  to={'contact'}>contact</Link></li>
                 </ul>
-            </nav>
+            </nav> */}
             <button className='btnWIthBorders font-semibold classicText col-end-7' onClick={() => setOpenContact(true)}>
                 Contact
             </button>

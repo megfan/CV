@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../../styles/sideBar.css';
 import { SideMenu } from "./SideMenu";
-import logo from "../../../assets/logo.svg";
+import logo from "../../../assets/logoPink.png";
 
 export const SideBar: React.FC = () => {
 
@@ -11,8 +11,7 @@ export const SideBar: React.FC = () => {
    return (<>
       {isDesktop
          ? (
-            <div className='sticky z-100 top-0 left-0 h-screen w-24 min-w-24 inset-0 bg-darkSec flex flex-col justify-between items-center'>
-               <div className='flex flex-col items-center'>
+              <div className='fixed top-0 left-0 z-50 py-0 px-12 bg-transparent flex  items-center justify-between w-full'> 
                   <img src={logo} alt="logo" className='h-8 mt-8' />
                   <button className='cursor-pointer burger w-8 text-gray-500 hover:text-white capitalize mt-5 font-semibold text-xs font-[Poppins] tracking-widest'
                      onClick={() => setOpenMenu(!openMenu)}>
@@ -21,17 +20,7 @@ export const SideBar: React.FC = () => {
                         <span className={'burgerItem ' + (openMenu ? 'w-0' : 'w-2/3')} />
                         <span className={'burgerItem w-0 ' + (openMenu ? 'activeSec' : '')} />
                      </div>
-                     <div>MENU</div>
                   </button>
-               </div>
-               <button className='w-full h-28 max-h-28 bg-primary text-white font-semibold text-xs font-[Poppins] tracking-widest'
-                  onClick={() => window.open(
-                     `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-                        'https://megfan.github.io/MegResume/'
-                     )}`,
-                     "_blank"
-                  )}
-               >SHARE</button>
             </div>
          ) : (
             <div className='fixed top-0 left-0 z-50 px-2 bg-darkThird'>

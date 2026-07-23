@@ -1,7 +1,7 @@
 .mainPage {
     font-size: calc(10px + 2vmin);
     color: #ffffff;
-    height: calc(100vh - 5rem);
+    height: 100vh;
 }
 @media (width <= 1280px) {
     .mainPage {height: 100vh;}

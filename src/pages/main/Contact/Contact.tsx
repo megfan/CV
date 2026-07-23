@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import me from '../../../assets/me.jpg';
+import mua1 from '../../../assets/mua1.png';
 
 export const ContactPage: React.FC = () => {
 
 
     return (
-        <div className='z-30 bg-darkPrimary h-auto xl:h-auto flex flex-col justify-between w-full relative'
+        <div className='z-30 bg-darkPrimary h-screen flex flex-col justify-between w-full relative'
             id="contact">
             <header className='bg-darkSec w-full lg:h-40 no-wrap flex lg:flex-row flex-col py-4'>
                 <motion.button className=' text-white font-normal lg:text-2xl lg:px-20 px-5 py-5 lg:w-2/3'
@@ -39,7 +39,7 @@ export const ContactPage: React.FC = () => {
                     </a>
                 </div>
                 <div className='z-10 flex flex-col bg-darkPrimary lg:p-20 p-10 lg:text-normal text-sm lg:w-1/2 items-center justify-center'>
-                        <img src={me} className='w-40 h-40 mb-10 rounded-[50%] object-cover' alt='portrait'/>
+                        <img src={mua1} className='w-40 h-40 mb-10 rounded-[50%] object-cover' alt='portrait'/>
                     <div className='flex'>
                         <div className='lg:mr-16 mr-4 text-gray-500'>
                             <p className='leading-loose text-justify'>Phone</p>

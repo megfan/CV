@@ -3,7 +3,7 @@
     transition: all 700ms linear;
 }
 .menuBarItem:hover {
-    color: #c3428f;
+    color: #25e4eb;
 }
 
 .menuBarItem:hover:before {

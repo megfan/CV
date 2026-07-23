@@ -91,9 +91,9 @@ export const StartPage: React.FC = () => {
                         transformStyle: "preserve-3d",
                         transform,
                     }}
-                    className="relative h-[80%] w-[80%] rounded-xl bg-transparent m-auto flex justify-between"
+                    className="relative h-full w-full rounded-xl bg-transparent m-auto flex justify-center items-center" 
                 >
-                    <div className='flex w-full items-center lg:flex-row flex-col'>
+                    <div className='flex items-center lg:flex-row flex-col w-3/4 justify-center p-40'>
                         <motion.div className='lg:w-1/2 w-full lg:ml-12 p-8'
                             //  initial={{ y: 40, opacity: 0, filter: "blur(20px)" }}
                             //  whileInView={{ y: 0, opacity: 1, filter: "blur(0px)"}}

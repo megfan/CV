@@ -3,6 +3,7 @@ import coders from '../../../assets/coders.png';
 import granatowi from '../../../assets/granatowi.png';
 import imm from '../../../assets/imm.avif';
 import work from '../../../assets/work.jpg';
+import ergo from '../../../assets/ergo.jpg';
 
 interface experienceDataChildrenProps {
     title: string;
@@ -23,14 +24,26 @@ interface experienceDataProps {
     employee: boolean;
     pic?: string;
     order: number;
-    children?: experienceDataChildrenProps[] 
+    children?: experienceDataChildrenProps[]
 }
 
 interface experienceDataObjectProps {
     [key: string]: experienceDataProps;
 }
 export const experienceData: experienceDataObjectProps = {
-    'alumbrados': 
+    'ergo':
+    {
+        title: 'Work for ERGO Technology & Services',
+        subtitle: "Microfrontend-Based Architecture for Multi-Module Web Applications",
+        duration: "2024 / 8 months",
+        link: 'www.aluvisagrupo.com',
+        description: 'Building modular, scalable microfrontend architectures / Developing key application modules such as an inbox system and password recovery flows / Migrating frontend functionality from Sitecore to Adobe Experience Manager (AEM) / Implementing modern solutions using React, TypeScript, and Vite / Utilizing the company’s CSS library to ensure design consistency / Translating graphic designs into high-quality, pixel-perfect interfaces / Ensuring seamless integration between microfrontends and backend services / Maintaining responsive design and cross-device compatibility',
+        technologies: 'REACT / JS / TYPESCRIPT / PRIME REACT / MATERIAL UI / REDUX / NODE.JS',
+        employee: true,
+        pic: ergo,
+        order: 1,
+    },
+      'alumbrados':
     {
         title: 'Work for Alubrados Varios',
         subtitle: "Application for Managing Poland's Road and Bridge Infrastructure",
@@ -41,8 +54,8 @@ export const experienceData: experienceDataObjectProps = {
         employee: true,
         pic: work,
         order: 1,
-},
-"onwelo":
+    },
+    "onwelo":
     {
         title: 'Work for Onwelo',
         duration: "2019 - 2024 / 4 years",
@@ -85,7 +98,7 @@ export const experienceData: experienceDataObjectProps = {
         pic: coders,
         order: 3,
     },
-      "imm":
+    "imm":
     {
         title: 'Work for Instytut Monitorowania Mediów',
         subtitle: "Brand Identity & Advertising Campaign Designer",
@@ -97,7 +110,7 @@ export const experienceData: experienceDataObjectProps = {
         order: 4,
         pic: imm
     },
-     "fakturownia":
+    "fakturownia":
     {
         title: 'Work for Fakturownia',
         subtitle: "Online platform allowing quick invoice creation and managing.",
@@ -108,7 +121,7 @@ export const experienceData: experienceDataObjectProps = {
         employee: true,
         order: 5,
     },
-     "closi":
+    "closi":
     {
         title: 'Work for Clos Brothers',
         subtitle: "Digital Advertising & Website Content Designer",
